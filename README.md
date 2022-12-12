@@ -8,6 +8,9 @@ The theme is available through [userstyles.world](http://www.userstyles.world) v
 
 
 ### Changelog
+v.1.2.2 -
+Fix color scheme of 'your work' page
+
 v.1.2.1 -
 Add support for Google Apps menu
 Add support for YouTube video popup

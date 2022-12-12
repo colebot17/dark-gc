@@ -367,9 +367,24 @@
         background-color: #212121;
     }
 
+    /* 'your work' cards */
     .uQ3ESd {
-        background-color: #191919;
+        /* card expansion background */
+        background-color: #212121;
     }
+    .P02DYb, .lXuxY .u73Apc {
+        /* expanded borders */
+        border-color: #333;
+    }
+    .OlXwxf.lXuxY:hover {
+        /* fix movement on hover change */
+        border-top: 0.0625rem solid transparent;
+    }
+    .tUJKGd.lXuxY:hover + .tUJKGd, .tUJKGd.lXuxY:focus-within + .tUJKGd {
+        /* fix movement on hover change */
+        border-top: 0.0625rem solid #292929;
+    }
+    
 
     .wQuPk .JsqLM.N4XV7d,
     .wQuPk .wMvEnb,
