@@ -8,6 +8,10 @@ The theme is available through [userstyles.world](http://www.userstyles.world) v
 
 
 ### Changelog
+v.1.2.1 -
+Add support for Google Apps menu
+Add support for YouTube video popup
+
 v.1.2.0 - The Teacher Update
 Fixes many bugs, big and small, on the teacher side of the platform, as well as a couple student-side tweaks. With this update, there are now almost no broken or unsupported areas of the site. If you encounter an issue, please report it on GitHub so it can be resolved.
 Known Issue: Some context menus do not appear where expected.
