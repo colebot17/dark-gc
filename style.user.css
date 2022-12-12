@@ -1,1281 +1,1525 @@
 /* ==UserStyle==
 @name         Google Classroom Dark Mode
-@version      20221210.03.27
+@version      20221211.08.09
 @namespace    userstyles.world/user/colebot
 @description  Dark Theme for Google Classroom - Supports both student and teacher views!
 @author       colebot
 @license      CC BY-SA - Creative Commons Attribution-ShareAlike
 ==/UserStyle== */
-
 @-moz-document domain("classroom.google.com") {
-body {
-    background-color: #191919;
-    color: #e0e0e0;
-}
-/* nav bar */
-.joJglb {
-    /* bottom border */
-    border-color: #121212;
-}
-.joJglb .QRiHXd {
-    background-color: inherit;
-}
-:is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .P3W0Dd-Ysl7Fe:focus, :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof).maXJsd:focus .P3W0Dd-Ysl7Fe, :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .maXJsd:focus .P3W0Dd-Ysl7Fe, 
-:is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .UISY8d-Ysl7Fe:hover, :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof).MymH0d:hover .UISY8d-Ysl7Fe, :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .MymH0d:hover .UISY8d-Ysl7Fe, .wZTANe .J1raN:hover {
-    /* nav buttons, focus/hover */
-    background-color: #272727;
-}
-.wZTANe .J1raN:hover {
-    /* non-current tab text color */
-    color: #e0e0e0;
-}
-.kYtXye .bFjUmb-Ysl7Fe.kRqvHe, :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof).bFjUmb-Ysl7Fe, :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .bFjUmb-Ysl7Fe, :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof).CNpREd.bFjUmb-Ysl7Fe, :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof).CNpREd .bFjUmb-Ysl7Fe {
-    /* loading bar - Eduardo */
-    background-color: #272727;
-}
-
-/* icons */
-svg,
-.gb_qa svg {
-    color: #dedede;
-}
-
-/* logo text */
-.IqJTee {
-    color: #dedede;
-}
-
-.QNajvd {
-    color: #dedede;
-}
-
-/* classes grid */
-.JwPp0e li {
-    background-color: #202020;
-    border-color: #202020;
-    filter: drop-shadow(0 0 5px #121212);
-}
-
-.JwPp0e li:hover {
-    filter: drop-shadow(0 0 5px black);
-}
-
-.JwPp0e li .QRiHXd {
-    background-color: inherit;
-}
-
-.SZ0kZe {
-    border-color: #121212;
-}
-
-.oBSRLe {
-    color: #e0e0e0;
-}
-
-.apFsO.onkcGd,
-.apFsO.onkcGd:visited {
-    color: #dedede;
-}
-
-.JPdR6b.hVNH5c.qjTEB {
-    background-color: transparent;
-}
-
-.JAPqpe {
-    background-color: #272727;
-    border-color: #272727;
-    border-radius: 5px;
-}
-
-.z80M1 {
-    color: #e0e0e0;
-}
-
-.z80M1:hover {
-    background-color: #313131;
-}
-
-.I7OXgf {
-    background-color: #202020;
-}
-
-.joJglb {
-    background-color: #202020;
-}
-
-.Qks78e,
-.QRiHXd {
-    background-color: inherit;
-}
-
-.thP79c:hover {
-    background-color: #181818;
-}
-
-.Shk6y {
-    color: #e0e0e0;
-}
-
-.asQXV {
-    color: #dedede;
-}
-
-.d4Fe0d {
-    background-color: #202020;
-    border-color: #202020;
-    filter: drop-shadow(0 0 5px #121212);
-}
-
-.EZrbnd {
-    color: #e0e0e0;
-}
-
-.nforOe,
-.onkcGd,
-.onkcGd:hover * {
-    color: #e0e0e0!important;
-}
-
-.OX4Vcb {
-    background-color: #202020;
-}
-
-.Xi8cpb:hover {
-    border-radius: 0 2rem 2rem 0;
-    background-color: #191919;
-}
-
-.FLgDTb {
-    background-color: #191919;
-    border-color: #191919;
-}
-
-.E5f6Vd {
-    border-color: #e0e0e0;
-}
-
-.ipmZkd {
-    color: #e0e0e0;
-}
-
-.tLDEHd {
-    color: #e0e0e0;
-}
-
-.EfLcNb {
-    color: #e0e0e0;
-}
-
-.X65jac {
-    color: #e0e0e0;
-}
-
-.ViCi4 {
-    color: #dedede;
-}
-
-.rpo4wf {
-    color: #e0e0e0;
-}
-
-.n4xnA,
-.qhnNic {
-    background-color: #202020;
-    border-color: #202020;
-    filter: drop-shadow(0 0 5px #121212);
-}
-
-.n4xnA {
-    filter: none;
-}
-
-/* class comments */
-.s2g3Xd, .ar1wE .eqqrO, .ySjuvd .eqqrO, .PeGHgb.Q8U8uc .Ono85c + .oh9CFb, .PeGHgb.Q8U8uc .ruTJle + .fETHd, .ZNE4y {
-    border-color: #333;
-    border-width: 1px;
-}
-
-.pco8Kc {
-    color: #dedede;
-}
-
-.zOtZye {
-    background-color: #202020;
-    color: #dedede;
-}
-
-.qk0lee .K6Ovqd {
-    color: #e0e0e0;
-}
-.qk0lee:hover .K6Ovqd {
-    color: #a0a0a0;
-}
-
-.hgjBDc {
-    background-color: #202020;
-}
-
-.WOPwXe {
-    color: #e0e0e0;
-}
-
-.I2pI {
-    color: #e0e0e0;
-}
-
-.oJeWuf {
-    color: #e0e0e0;
-}
-
-.OA0qNb {
-    background-color: #202020;
-}
-
-.jgvuAb {
-    border-color: #313131;
-}
-
-.mbHMhf {
-    background-color: #313131;
-}
-
-.ncFHed .MocG8c.KKjvXb {
-    background-color: #191919;
-}
-
-.DShyMc-AaTFfe .UISY8d-Ysl7Fe:hover,
-.DShyMc-AaTFfe.MymH0d:hover .UISY8d-Ysl7Fe,
-.DShyMc-AaTFfe .MymH0d:hover .UISY8d-Ysl7Fe {
-    background-color: #121212;
-}
-
-.wZTANe .J1raN {
-    color: #dedede;
-}
-
-.uqpvt {
-    filter: invert(.88);
-}
-
-.snByac {
-    color: #e0e0e0;
-}
-
-.NjE5zd {
-    color: #e0e0e0;
-}
-
-.W4hhKd {
-    color: #e0e0e0;
-}
-
-/* classwork category headers */
-.JBMs6:hover {
-    background-color: #202020;
-}
-
-.DShyMc-MzM4ODQ1NTAyODda .VnOHwf-Tvm9db {
-    color: #e0e0e0;
-}
-
-.DShyMc-MzM4ODQ1NTAyODda .UISY8d-Ysl7Fe:hover {
-    background-color: #121212;
-}
-
-.DShyMc-MzM4ODQ1NTAyODda .UISY8d-Ysl7Fe {
-    border-color: #121212;
-}
-
-.I2Bonc {
-    background-color: #202020;
-    border-color: #202020;
-}
-
-.BOW64 {
-    background-color: #121212;
-    border: 2px solid #202020;
-    border-radius: 5px;
-}
-
-.l7z6cd,
-.DPvwYc {
-    color: #e0e0e0;
-}
-
-.pOf0gc {
-    border-color: transparent;
-    background-color: transparent;
-}
-
-.A6dC2c {
-    color: #e0e0e0;
-}
-
-.DShyMc-MTQ3MzQxMzQxODA0.VnOHwf-Tvm9db,
-.DShyMc-MTQ3MzQxMzQxODA0 .VnOHwf-Tvm9db,
-.DShyMc-MTQ3MzQxMzQxODA0.CNpREd .VnOHwf-Tvm9db {
-    color: #e0e0e0;
-}
-
-.DShyMc-MTQ3MzQxMzQxODA0 .VBEdtc-Wvd9Cc:hover,
-.DShyMc-MTQ3MzQxMzQxODA0.MymH0d:hover .VBEdtc-Wvd9Cc,
-.DShyMc-MTQ3MzQxMzQxODA0 .MymH0d:hover .VBEdtc-Wvd9Cc {
-    color: #e0e0e0;
-}
-
-.DShyMc-MTQ3MzQxMzQxODA0 .UISY8d-Ysl7Fe:hover,
-.DShyMc-MTQ3MzQxMzQxODA0.MymH0d:hover .UISY8d-Ysl7Fe,
-.DShyMc-MTQ3MzQxMzQxODA0 .MymH0d:hover .UISY8d-Ysl7Fe {
-    background-color: #121212;
-}
-
-.DShyMc-MzM4ODQ1NTAyODda .nRLOzd:hover,
-.onkcGd:hover,
-.onkcGd:focus {
-    color: #e0e0e0;
-}
-
-.ksaOtd {
-    color: #e0e0e0;
-}
-
-.HG7HUc:hover {
-    background-color: #191919;
-}
-
-.HG7HUc * {
-    background-color: transparent!important;
-}
-
-.lXuxY,
-.pO6AMc,
-.PqkECe {
-    box-shadow: 0 0 5px #121212;
-    background-color: #212121;
-}
-
-.uQ3ESd {
-    background-color: #191919;
-}
-
-.wQuPk .JsqLM.N4XV7d,
-.wQuPk .wMvEnb,
-.wQuPk .wMvEnb.pCcXPe,
-.wQuPk .wMvEnb.N4XV7d,
-.wQuPk .JsqLM.pCcXPe {
-    color: #e0e0e0;
-}
-
-.TuHiFd {
-    border-color: #313131;
-    border-radius: 5px;
-}
-
-.bxp7vf {
-    border: none;
-}
-
-.pco8Kc html-blob span a {
-    color: #e0e0e0;
-}
-
-.DShyMc-MTIwNzY0OTYzOTc2 .VnOHwf-Tvm9db:hover,
-.DShyMc-MTIwNzY0OTYzOTc2 .VnOHwf-Tvm9db:focus {
-    background-color: #191919;
-}
-
-.ECOutf,
-.zaxms {
-    background-color: #313131;
-    border-color: #313131;
-    filter: drop-shadow(0 0 5px #191919);
-}
-
-.D3oBEe .qTs5Xc {
-    background-color: #313131;
-}
-
-.WdYux {
-    color: #e0e0e0;
-}
-
-.SNYuNc {
-    color: #e0e0e0;
-}
-
-.SFCE1b {
-    background-color: transparent!important;
-    border-radius: 10px;
-}
-
-.ee1HBc .tUJKGd:not(.xp2dJ):focus-within.boxOzd,
-.ee1HBc .tUJKGd:not(.xp2dJ) :focus-within.boxOzd,
-.ee1HBc .tUJKGd:not(.xp2dJ):focus-within.idtp4e,
-.ee1HBc .tUJKGd:not(.xp2dJ) :focus-within.idtp4e,
-.ee1HBc .ZoT1D:focus-within.boxOzd,
-.ee1HBc .ZoT1D :focus-within.boxOzd,
-.ee1HBc .ZoT1D:focus-within.idtp4e,
-.ee1HBc .ZoT1D :focus-within.idtp4e {
-    background-color: #232323;
-}
-
-/* classwork assignment list item */
-.jWCzBe.QRiHXd.idtp4e.u73Apc {
-    background-color: #191919;
-}
-
-.OlXwxf:hover .jWCzBe.QRiHXd.idtp4e.u73Apc,
-.jWCzBe.QRiHXd.idtp4e.u73Apc:focus-within {
-    background-color: #202020;
-}
-
-.OlXwxf:hover {
-    box-shadow: 0 0 5px #121212;
-}
-
-/* every assignment list item except the first one */
-.tUJKGd:not(:first-child) {
-    border: none;
-}
-
-.DShyMc-MTIwNzY0OTYzOTc2 .tUJKGd:not(.xp2dJ):not(.rZXyy):hover.j6KDAd,
-.DShyMc-MTIwNzY0OTYzOTc2 .tUJKGd:not(.xp2dJ):not(.rZXyy):hover.idtp4e,
-.DShyMc-MTIwNzY0OTYzOTc2 .tUJKGd:not(.xp2dJ):not(.rZXyy):hover .j6KDAd,
-.DShyMc-MTIwNzY0OTYzOTc2 .tUJKGd:not(.xp2dJ):not(.rZXyy):hover .idtp4e,
-.DShyMc-MTIwNzY0OTYzOTc2 .ZoT1D:hover.j6KDAd,
-.DShyMc-MTIwNzY0OTYzOTc2 .ZoT1D:hover.idtp4e,
-.DShyMc-MTIwNzY0OTYzOTc2 .ZoT1D:hover .j6KDAd,
-.DShyMc-MTIwNzY0OTYzOTc2 .ZoT1D:hover .idtp4e {
-    border-bottom: 1px solid #202020;
-}
-
-/* section list items */
-.g2MItd.MymH0d:hover .UISY8d-Ysl7Fe,
-.g2MItd .MymH0d:hover .UISY8d-Ysl7Fe,
-.g2MItd .UISY8d-Ysl7Fe:hover,
-.g2MItd.maXJsd:focus .P3W0Dd-Ysl7Fe,
-.g2MItd .maXJsd:focus .P3W0Dd-Ysl7Fe,
-.g2MItd .P3W0Dd-Ysl7Fe:focus {
-    background-color: #202020;
-}
-
-.feojCc,
-.zr19Sb .X1clqd {
-    background-color: #202020;
-    border-bottom: 1px solid #5F6368;
-}
-
-.DShyMc-MTc2Mjg4NzgwNzQz.VnOHwf-Tvm9db,
-.DShyMc-MTc2Mjg4NzgwNzQz .VnOHwf-Tvm9db,
-.DShyMc-MTc2Mjg4NzgwNzQz.CNpREd .VnOHwf-Tvm9db {
-    color: #e0e0e0;
-}
-
-.lziZub {
-    color: #e0e0e0;
-    background-color: inherit;
-}
-
-.QN3yse {
-    filter: invert(.89);
-}
-
-.rUtoef {
-    color: #e0e0e0;
-}
-
-.whsOnd {
-    color: #e0e0e0;
-}
-
-.dDKhVc,
-.qEVLZc {
-    color: #e0e0e0;
-}
-
-.aSjeL.aSjeL td {
-    background-color: #202020;
-}
-
-.KKjvXb[data-value="1"][aria-selected="true"] {
-    background-color: #313131;
-}
-
-.xdKj9c,
-.Je07k,
-tbody .qwFLJb {
-    background-color: #202020;
-    border: none;
-}
-
-.xdKj9c.kTKNNc,
-.Je07k.kTKNNc,
-tbody .qwFLJb.kTKNNc {
-    background-color: #191919;
-}
-
-.Evt7cb {
-    color: #e0e0e0;
-}
-
-.udxSmc {
-    color: #e0e0e0;
-}
-
-.cL8LOd {
-    border-color: #e0e0e0;
-}
-
-.jgvuAb .kRoyt {
-    background: #121212;
-    border-color: #121212;
-}
-
-.xVnXCf {
-    background-color: transparent;
-}
-
-.jWCzBe {
-    border-color: #999999;
-}
-
-.S9CVKb {
-    background-color: #191919;
-}
-
-.DShyMc-MTQ3MzQxMzQxODA0 .eumXzf:after {
-    border-color: #e0e0e0;
-}
-
-.jrhqBd {
-    background-color: #191919;
-    border-color: #191919;
-}
-
-.CJXzee a.rUnD6d:focus {
-    background-color: #191919;
-}
-
-.DShyMc-MTQ3MzQxMzQxODA0 .P3W0Dd-Ysl7Fe:focus {
-    background-color: #191919;
-}
-
-.DShyMc-MTQ3NjA5NzQ4MjUz .UISY8d-Ysl7Fe:hover,
-.DShyMc-MTQ3NjA5NzQ4MjUz.MymH0d:hover .UISY8d-Ysl7Fe,
-.DShyMc-MTQ3NjA5NzQ4MjUz .MymH0d:hover .UISY8d-Ysl7Fe {
-    background-color: #121212;
-}
-
-.VSWCL {
-    background-color: inherit;
-}
-
-.DShyMc-MTQ3NjA5NzQ4MjUz .P3W0Dd-Ysl7Fe:focus,
-.DShyMc-MTQ3NjA5NzQ4MjUz.maXJsd:focus .P3W0Dd-Ysl7Fe,
-.DShyMc-MTQ3NjA5NzQ4MjUz .maXJsd:focus .P3W0Dd-Ysl7Fe {
-    background-color: #121212;
-}
-
-.nZC2Ae {
-    color: #999999!important;
-}
-
-.U26fgb[aria-pressed=true] {
-    background-color: #191919!important;
-}
-
-.qk0lee:focus {
-    background-color: #202020;
-}
-
-.BnYgFe {
-    filter: invert(0.9);
-}
-
-.poFWNe {
-    color: #dedede;
-}
-
-.joJglb.kLHn3 {
-    box-shadow: 0 1px 2px 0 #121212, 0 2px 6px 2px #121212;
-}
-
-.IzVHde {
-    background-color: #202020;
-}
-
-.GWZ7yf {
-    box-shadow: none;
-    filter: drop-shadow(0 0 5px #121212);
-}
-
-.YkTkoe {
-    background-color: #202020;
-}
-
-/* link cards */
-.Qks78e, .QRiHXd {
-    background-color: transparent;
-}
-
-
-/* comment section on items in feed */
-.Aopndd {
-    background-color: #31313160;
-    border-color: transparent;
-}
-
-.Aopndd .RIDjNe {
-    background-color: #202020;
-    border-color: #191919;
-    border-width: 5px;
-    border-radius: 5px;
-}
-
-.Eajscb .vT1Gyc.N4XV7d {
-    color: #888888;
-}
-
-.Eajscb .vT1Gyc.pCcXPe {
-    color: #aaaaaa;
-}
-
-/* classwork page grades while loading */
-.neggzd {
-    text-shadow: 0 0 .7em #666;
-}
-
-/* to-do page list items */
-.MHxtic:hover {
-    box-shadow: none;
-    background-color: #202020;
-    filter: drop-shadow(0 0 5px #121212);
-    border-color: transparent;
-}
-.MHxtic:focus-within {
-    box-shadow: 0 0 10px #121212;
-    border-color: transparent;
-}
-
-/* 'announce something to your class' box */
-.qk0lee:focus::after {
-    background-color: transparent;
-}
-
-.v9TZ3c.bFjUmb-Tvm9db {
-    transition: height 1s;
-}
-
-/* to-do page class selector menu */
-
-.VfPpkd-uusGie-fmcmS {
-    color: #e0e0e0!important;
-}
-
-.VfPpkd-xl07Ob-XxIAqe.VfPpkd-xl07Ob-XxIAqe-OWXEXe-tsQazb.VfPpkd-xl07Ob.VfPpkd-YPmvEd.s8kOBc.dmaMHc.VfPpkd-xl07Ob-XxIAqe-OWXEXe-uxVfW-FNFY6c-uFfGwd.VfPpkd-xl07Ob-XxIAqe-OWXEXe-FNFY6c {
-    background-color: #202020;
-}
-
-.VfPpkd-rymPhb-fpDzbe-fmcmS {
-    color: #e0e0e0!important;
-}
-
-.MCs1Pd.HiC7Nc.VfPpkd-OkbHre.VfPpkd-aJasdd-RWgCYc-wQNmvb.VfPpkd-rymPhb-ibnC6b.VfPpkd-rymPhb-ibnC6b-OWXEXe-gk6SMd.VfPpkd-rymPhb-ibnC6b-OWXEXe-SfQLQb-Woal0c-RWgCYc, 
-.MCs1Pd.HiC7Nc.VfPpkd-OkbHre.VfPpkd-aJasdd-RWgCYc-wQNmvb.VfPpkd-rymPhb-ibnC6b.VfPpkd-rymPhb-ibnC6b-OWXEXe-gk6SMd.VfPpkd-rymPhb-ibnC6b-OWXEXe-SfQLQb-Woal0c-RWgCYc:is(:hover, :focus) {
-    background-color: transparent;
-}
-
-/* side navigation slide-out */
-.ETRkCe {
-    box-shadow: 0 4px 4px 0 #121212, 0 8px 12px 6px #121212;
-}
-.OX4Vcb {
-    padding-right: 10px;
-}
-
-.FLgDTb.pEwOBc.Aopndd {
-    background-color: #212121;
-    box-shadow: 0 0 12px 1px #121212;
-}
-
-/* 'your work' title */
-.z3vRcc {
-    color: #e0e0e0;
-}
-
-/* corners of turn in button */
-.CG2qQ.QRiHXd {
-    background-color: transparent;
-}
-
-/* context menu */
-.kCtYwe {
-    /* separator */
-    border-color: #333;
-}
-.z80M1.qs41qe > .aBBjbd {
-    /* click spread effect */
-    background-image: radial-gradient(circle farthest-side,#424242,#424242 80%,rgba(189,189,189,0) 100%);
-}
-
-/* report abuse screen */
-.V0wXVe, .QKgWhf .nalYvf {
-    /* background */
-    background-color: #212121;
-}
-.QKgWhf .ffVw8c {
-    /* title */
-    color: #e0e0e0;
-}
-.DY3Y7 .APALFe {
-    /* card background */
-    background-color: #292929;
-    border-radius: 5px;
-    transition: background-color 0.2s
-}
-.QKgWhf .DY3Y7 .APALFe:hover {
-    /* card background hover */
-    background-color: #333;
-}
-
-/* items in stream */
-/* fade forward animation */
-.ZoT1D.idtp4e {
-    transition: box-shadow 0.1s;
-}
-.ZoT1D:hover.idtp4e {
-    background-color: unset;
-    box-shadow: 0px 0px 10px 5px #141414;
-}
-
-.cSyPgb {
-    color: #a0a0a0;
-}
-
-.tCD5Mc.Aopndd {
-    background-color: #212121;
-    box-shadow: 0 0 12px 1px #121212;
-}
-
-.yPbwG.QRiHXd.Aopndd.tWKJ2 {
-    background-color: #282828;
-    border-radius: 5px;
-}
-
-.Fnu4gf,
-.bqfGyf {
-    filter: invert(0.8);
-}
-
-.gb_na svg,
-.gb_yc svg,
-.gb_Uc .gb_Wd,
-.gb_Kc .gb_Wd {
-    color: #e0e0e0;
-}
-
-/* 'google apps' icon */
-.gb_ua svg, .gb_Lc svg, .gb_7c .gb_9d, .gb_Wc .gb_9d {
-    color: #e0e0e0;
-    fill: #e0e0e0;
-}
-.gb_d[aria-expanded="true"] .gb_0e, .gb_d[aria-expanded="true"] .gb_1e {
-    color: #bbb;
-    fill: #bbb;
-}
-
-.gb_A[aria-expanded=true] .gb_Ne,
-.gb_A[aria-expanded=true] .gb_Oe {
-    fill: #c0c0c0;
-}
-
-.cfWmIb:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-fmcmS-wGMbrd {
-    color: #e0e0e0;
-}
-.cfWmIb:hover:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc:not(.VfPpkd-NLUYnc-V67aGc-OWXEXe-TATcMc-KLRBe) {
-    color: #999;
-}
-.cfWmIb:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-Brv4Fb, .cfWmIb:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-Ra9xwd, .cfWmIb:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-MpmGFe {
-    border-color: #e0e0e0;
-}
-
-.I7OXgf {
-    box-shadow: 0 0 5px #121212;
-}
-
-/* assignment title */
-.UvHKof.CNpREd.VnOHwf-Tvm9db,
-.UvHKof.CNpREd .VnOHwf-Tvm9db,
-.UvHKof.VnOHwf-Tvm9db,
-.UvHKof .VnOHwf-Tvm9db {
-    color: #e0e0e0;
-    fill: #e0e0e0;
-}
-.UvHKof .eumXzf:after {
-    border-color: #e0e0e0;
-}
-
-.UvHKof .n42Gr:not(:disabled),
-.UvHKof .n42Gr:not(:disabled).VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe,
-.UvHKof .n42Gr:not(:disabled):hover,
-.UvHKof .n42Gr:not(:disabled):not(.VfPpkd-ksKsZd-mWPk3d):focus {
-    color: #e0e0e0;
-}
-
-/* teacher mode */
-/* customize button */
-.YhQJj {
-    background-color: transparent;
-}
-
-/* 'select stream header image' buttons */
-.wlZwYd:not(:disabled) {
-    background-color: #292929!important;
-}
-
-/* theme image selector tab buttons */
-.WbUJNb:hover .VfPpkd-jY41G-V67aGc, .WbUJNb.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe .VfPpkd-jY41G-V67aGc, .WbUJNb:not(.VfPpkd-ksKsZd-mWPk3d):focus .VfPpkd-jY41G-V67aGc, .WbUJNb:active .VfPpkd-jY41G-V67aGc {
-    color: #e0e0e0;
-}
-.VfPpkd-YVzG2b {
-    border-radius: 5px;
-}
-
-/* new announcement class/student selectors */
-.cLpBac {
-    background-color: #292929;
-}
-
-/* new announcement 'for' heading */
-.iLjzDc {
-    color: #e0e0e0;
-}
-
-/* create assignment page */
-.TdC1bb {
-    /* main background */
-    background-color: #212121;
-}
-.e0prFf {
-    /* window title */
-    color: #e0e0e0;
-}
-.dKKcxf, .STMvPe {
-    /* schedule material date selectors */
-    background-color: #292929;
-    box-shadow: 0 0 10px #12121260;
-}
-.O98Lj {
-    /* date selector text */
-    color: #e0e0e0;
-}
-.XaepId {
-    /* date picker background */
-    background-color: #202020;
-    border-color: transparent;
-    border-radius: 5px;
-    box-shadow: 0 0 10px #121212;
-}
-.XaepId {
-    /* date picker month title */
-    color: #a0a0a0;
-}
-.XaepId-mrubje {
-    /* date picker weekday letters */
-    color: #666;
-}
-.XaepId-gElRsf {
-    /* date picker valid dates */
-    color: #a0a0a0;
-}
-.XaepId-gElRsf:not(.XaepId-lJi4pf-gElRsf, td.XaepId-gk6SMd):hover {
-    /* date picker valid date hover */
-    background-color: #333;
-}
-.XaepId-lJi4pf-gElRsf {
-    /* date picker invalid dates */
-    color: #333;
-}
-.y2d25 {
-    /* edit schedule box */
-    background-color: #262626;
-}
-.ECK80e {
-    /* edit schedule box divider */
-    border-color: #333;
-}
-.hja3X {
-    /* vertical border */
-    border-color: #333;
-}
-.Sl8ssb, .XZDC9d, .ry3kXd {
-    /* drop-downs */
-    background-color: #272727;
-    box-shadow: 0 0 10px #12121260;
-}
-.fWf7qe .Yalane, .fWf7qe:not(.RDPZE):hover .Yalane, .vnnr5e .I9OJHe, .vnnr5e .CIy9F,
-.vnnr5e:not(.RDPZE):hover .I9OJHe, .vnnr5e:not(.RDPZE):hover .CIy9F {
-    /* title field */
-    background-color: #333;
-}
-.jsbB5e.u3bW4e .hqfVKd, .jsbB5e.CDELXb.yaevDc .hqfVKd, .jsbB5e.IbzNie.yaevDc .hqfVKd, .fWf7qe:not(.yaevDc).u3bW4e .hqfVKd, .AkVYk:not(.yaevDc).u3bW4e .hqfVKd, .fWf7qe:not(.yaevDc).CDELXb .hqfVKd, .AkVYk:not(.yaevDc).CDELXb .hqfVKd, .fWf7qe:not(.yaevDc).IhU0Je .hqfVKd, .AkVYk:not(.yaevDc).IhU0Je .hqfVKd {
-    /* title field text */
-    color: #e0e0e0;
-}
-.AOhYp {
-    box-shadow: 0 0 5px #212121;
-}
-.bDkUbc {
-    /* topic dropdown divider */
-    border-color: #333;
-}
-.HyS0Qd .n9IS1, .HyS0Qd:not(.RDPZE):hover .n9IS1 {
-    /* create topic field */
-    background-color: #292929;
-}
-.Kqfayb {
-    /* rubric editor page title */
-    color: #e0e0e0;
-}
-.E8HiIc, .ft5Sbf, .C4yF5e, .OK63Pb:not(:last-child) {
-    /* borders */
-    border-color: #333;
-}
-.tl5cWb {
-    /* rubric editor main title */
-    color: #e0e0e0;
-}
-.BgHQ3e, .MuGjgf, .FMzRdf {
-    /* rubric description and control labels */
-    color: #999;
-}
-.Nep6Fb::before {
-    /* plus icon background */
-    background-color: #202020;
-}
-.cTRCQc .oJeWuf::before, .cTRCQc.RDPZE:hover .oJeWuf::before, .cTRCQc.u3bW4e.RDPZE .oJeWuf::before, .cTRCQc:hover .oJeWuf::before, .cTRCQc.u3bW4e .oJeWuf::before {
-    /* reuse rubric class dropdown */
-    background-color: #292929;
-    box-shadow: 0 0 10px #12121260;
-}
-.Dp5sUc .WvJxMd[data-expanded="true"] .oJeWuf::before {
-    /* reuse rubric class dropdown expanded */
-    background-color: #333;
-}
-.vPNssb .jBmls {
-    /* reuse rubric class dropdown expansion */
-    background-color: #313131;
-}
-.xUvfQb {
-    /* reuse rubric class dropdown text */
-    color: #e0e0e0;
-}
-.ShARAe {
-    /* reuse rubric table border */
-    border-color: #333;
-}
-.XDCFvf {
-    /* reuse rubric rubric title */
-    color: #e0e0e0;
-}
-.RpYYWb {
-    /* added rubric pill */
-    background-color: #292929;
-    border-color: #292929;
-    box-shadow: 0 0 10px #12121260;
-}
-.jlfrG::before, .jlfrG::after {
-    /* weird pieces we don't need */
-    display: none;
-}
-.jlfrG {
-    /* view rubric text */
-    color: #e0e0e0;
-}
-.OK1tJe {
-    /* view rubric collapsed criterion level */
-    background-color: #333;
-}
-.RMrItf {
-    /* view rubric possible points */
-    color: #999;
-}
-
-/* saved announcements */
-.z3vRcc-J3yWx {
-    /* 'saved announcements' title */
-    color: #e0e0e0;
-}
-:is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .tUJKGd:not(.xp2dJ):not(.rZXyy):hover.j6KDAd, :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .tUJKGd:not(.xp2dJ):not(.rZXyy):hover.idtp4e, :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .tUJKGd:not(.xp2dJ):not(.rZXyy):hover .j6KDAd, :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .tUJKGd:not(.xp2dJ):not(.rZXyy):hover .idtp4e, :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ZoT1D:hover.j6KDAd, :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ZoT1D:hover.idtp4e, :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ZoT1D:hover .j6KDAd, :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ZoT1D:hover .idtp4e,
-:is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .tUJKGd:not(.xp2dJ):focus-within.boxOzd, :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .tUJKGd:not(.xp2dJ):focus-within.idtp4e, :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .tUJKGd:not(.xp2dJ) :focus-within.boxOzd, :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .tUJKGd:not(.xp2dJ) :focus-within.idtp4e, :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ZoT1D:focus-within.boxOzd, :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ZoT1D:focus-within.idtp4e, :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ZoT1D :focus-within.boxOzd, :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ZoT1D :focus-within.idtp4e, 
-.kYtXye .UISY8d-Ysl7Fe:hover, .kYtXye.MymH0d:hover .UISY8d-Ysl7Fe, .kYtXye .MymH0d:hover .UISY8d-Ysl7Fe,
-.kYtXye .P3W0Dd-Ysl7Fe:focus, .kYtXye.maXJsd:focus .P3W0Dd-Ysl7Fe, .kYtXye .maXJsd:focus .P3W0Dd-Ysl7Fe {
-    background-color: #292929;
-}
-.tUJKGd:not(:first-child), .G3xBUc + .G3xBUc {
-    border-top: .0625rem solid #292929;
-}
-
-/* dropdowns */
-.VfPpkd-xl07Ob-XxIAqe, .q6oraf .VfPpkd-StrnGf-rymPhb {
-    background-color: #212121;
-    color: #e0e0e0!important;
-}
-.VfPpkd-StrnGf-rymPhb-clz4Ic {
-    border-bottom-color: #606060;
-}
-:not(.VfPpkd-StrnGf-rymPhb-ibnC6b-OWXEXe-OWB6Me).VfPpkd-StrnGf-rymPhb-ibnC6b .VfPpkd-StrnGf-rymPhb-pZXsl::before, :not(.VfPpkd-StrnGf-rymPhb-ibnC6b-OWXEXe-OWB6Me).VfPpkd-StrnGf-rymPhb-ibnC6b .VfPpkd-StrnGf-rymPhb-pZXsl::after,
-:not(.VfPpkd-rymPhb-ibnC6b-OWXEXe-OWB6Me).VfPpkd-rymPhb-ibnC6b .VfPpkd-rymPhb-pZXsl::before, :not(.VfPpkd-rymPhb-ibnC6b-OWXEXe-OWB6Me).VfPpkd-rymPhb-ibnC6b .VfPpkd-rymPhb-pZXsl::after {
-    /* list item hover color */
-    background-color: #e0e0e0;
-}
-.VfPpkd-rymPhb-ibnC6b, .VfPpkd-StrnGf-rymPhb-ibnC6b {
-    /* list item */
-    border-radius: 5px;
-}
-.bzD7fd {
-    /* create assignment dropdown */
-    border-radius: 20px;
-    padding: 10px 5px 5px 5px;
-}
-
-/* gradebook */
-.fHar6b, .RUkyfb, thead .vvqDLc, .fum4Tb, .go6aXd, tbody .vvqDLc {
-    /* table background */
-    background-color: inherit;
-}
-.go6aXd.xAKnLc, .fum4Tb.xAKnLc, tbody .vvqDLc.xAKnLc {
-    /* class average row background */
-    background-color: #212121;
-}
-.fHar6b, .RUkyfb, .go6aXd, .fum4Tb, .vvqDLc {
-    /* table borders */
-    border-color: #484848;
-}
-.fHar6b.tLDEHd {
-    /* center 'sort by' dropdown using flexbox on container */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.N8HYTb {
-    /* 'sort by' dropdown */
-    padding-left: 2.875rem;
-    padding-right: 2.125rem;
-    margin: 0;
-}
-
-/* assignment page */
-.BQ5ILd, .a4YS1c, .g5FCDc {
-    /* borders */
-    border-color: #333;
-}
-.DC55n td {
-    background-color: inherit;
-    border-color: #333;
-}
-.xlHPle .VfPpkd-fmcmS-yrriRe:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-fmcmS-wGMbrd {
-    /* assignment points value selector */
-    color: #e0e0e0;
-}
-.xlHPle .VfPpkd-fmcmS-yrriRe:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-fmcmS-wGMbrd::placeholder {
-    /* assignment points value selector placeholder */
-    color: #999;
-}
-.xlHPle .VfPpkd-StrnGf-rymPhb {
-    /* assignment points value selector dropdown */
-    color: #e0e0e0;
-}
-.kcAzD:focus::before {
-    /* sidebar 'sort by' cell border */
-    border-color: transparent;
-}
-:is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ybOdnf:not(.RDPZE).iWO5td, :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ybOdnf:not(.RDPZE) .OA0qNb .LMgvRb[aria-selected="true"], :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .NqFm6:not(.RDPZE) .tWfTvb [role="option"][aria-selected="true"], 
-.ncFHed .MocG8c.KKjvXb {
-    /* sidebar 'sort by' dropdown */
-    background-color: #292929;
-    border-radius: 5px;
-}
-.jgvuAb .kRoyt {
-    /* sidebar 'sort by' click effect */
-    background-color: #313131;
-}
-.TJtJXb:hover td, .tYQn5c:hover td, .DC55n:hover td {
-    /* sidebar student list items hover */
-    background-color: #272727;
-}
-.oqnjOc td.Fk0vXe {
-    /* sidebar student list item internal borders */
-    border-left-color: #333;
-}
-.Evt7cb, .Evt7cb:visited {
-    /* sidebar section headers */
-    color: #e0e0e0;
-}
-.YrFhrf {
-    /* turned in/assigned/graded big numbers */
-    color: #e0e0e0;
-}
-.yHjGtf {
-    /* turned in/assigned/graded number dividers */
-    border-color: #333;
-}
-.dDKhVc {
-    /* light-color labels */
-    color: #999
-}
-.I2XGyb.jgvuAb {
-    /* extra space around student work filter and folder button */
-    margin-top: 10px;
-    margin-left: 0;
-}
-.hYt5f.EfvGO {
-    /* extra space above student work cards */
-    margin-top: 20px;
-}
-.hYt5f.EfvGO .WkZsyc {
-    /* student work card */
-    background-color: #212121;
-    border-radius: 5px;
-}
-.J33wTc, .IMvYId:not(table), .Y5vSD {
-    /* lighter text on student work comment thread screen */
-    color: #999;
-}
-table.IMvYId {
-    /* text color on history table */
-    color: #a0a0a0;
-}
-.nk37z {
-    color: #e0e0e0;
-}
-.oleV8d {
-    /* private comment message field */
-    border-color: #484848;
-}
-.bswVrf {
-    /* private comment message field placeholder text */
-    color: #484848;
-}
-.LsqTRb {
-    /* private comment message field placeholder text */
-    color: #e0e0e0;
-}
-.Y5FYJe.RDPZE svg {
-    /* private comment message field post button - inactive */
-    color: #484848;
-    fill: #484848;
-}
-.kbngx tr {
-    /* history table - odd rows */
-    background-color: #292929;
-}
-.kbngx tr:nth-child(2n) {
-    /* history table - even rows */
-    background-color: #252525;
-}
-
-
-/* teacher class settings */
-.XKbOjc {
-    /* give each section a lighter color and a box-shadow */
-    background-color: #292929;
-    box-shadow: 0 0 10px #212121;
-}
-.nCP5yc:disabled .VfPpkd-vQzf8d {
-    /* disabled save button */
-    color: #484848;
-}
-/* input fields and drop-down boxes */
-.WmnPA:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me),
-.xlHPle .VfPpkd-fmcmS-yrriRe:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me),
-.hqBSCb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me) .VfPpkd-TkwUic {
-    background-color: #31313160;
-    box-shadow: 0 0 10px #12121260;
-}
-.WmnPA:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-fmcmS-wGMbrd {
-    /* color of text inputed in */
-    color: #e0e0e0;
-}
-.xlHPle .VfPpkd-fmcmS-yrriRe:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc,
-.WmnPA:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc {
-    /* color of placeholder (when inactive) */
-    color: #a0a0a0;
-}
-.xSP5ic, .xSP5ic.yHy1rc {
-    /* info icon */
-    color: #a0a0a0;
-}
-
-/* people view */
-/* disabled 'actions' button */
-.Rj2Mlf:disabled {
-    border-color: #666666;
-}
-.Rj2Mlf:disabled .VfPpkd-vQzf8d, .Rj2Mlf:disabled .VfPpkd-kBDsod svg {
-    color: #666666;
-}
-:is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .UISY8d-Ysl7Fe:hover, :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof).MymH0d:hover .UISY8d-Ysl7Fe, :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .MymH0d:hover .UISY8d-Ysl7Fe,
-:is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .P3W0Dd-Ysl7Fe:focus, :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof).maXJsd:focus .P3W0Dd-Ysl7Fe, :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .maXJsd:focus .P3W0Dd-Ysl7Fe {
-    /* student row hover color */
-    background-color: #212121;
-}
-/* invite pop-up */
-.t1IGPc, .pIQtMd, .AZW99, .Co16uf, .I4p4db, .TCFlue, .c1x9qf, .ATUW8c, .ATUW8c:hover {
-    background-color: #202020;
-    color: #e0e0e0;
-}
-.CobWe, .HNcB0e, .bNkTzb {
-    /* the no-longer mysterious borders */
-    border-bottom-color: #484848;
-}
-.ATUW8c, .ATUW8c:hover {
-    /* added invitees */
-    box-shadow: 0 0 0 1px #484848 inset;
-}
-.PNwDub {
-    /* potential invitee names */
-    color: #e0e0e0;
-}
-.G1zVib {
-    /* potential invitee emails */
-    color: #999999;
-}
-.AZW99:hover {
-    /* potential invitee list item hover */
-    background-color: #292929;
-    border-radius: 10px;
-}
-
-/* popup message bottom left */
-.LhKRUe {
-    box-shadow: 0 0 5px #121212;
-    background-color: #202020;
-    color: #e0e0e0;
-}
-
-/* check box */
-.Ne8lhe .VfPpkd-muHVFf-bMcfAe:enabled:not(:checked):not(:indeterminate):not([data-indeterminate="true"]) ~ .VfPpkd-YQoJzd {
-    /* inactive */
-    border-color: #a0a0a0;
-}
-.Ne8lhe:hover .VfPpkd-muHVFf-bMcfAe:enabled:not(:checked):not(:indeterminate):not([data-indeterminate="true"]) ~ .VfPpkd-YQoJzd,
-.Ne8lhe:not(:disabled):active .VfPpkd-muHVFf-bMcfAe:enabled:checked ~ .VfPpkd-YQoJzd, .Ne8lhe:not(:disabled):active .VfPpkd-muHVFf-bMcfAe:enabled:indeterminate ~ .VfPpkd-YQoJzd, .Ne8lhe:not(:disabled):active .VfPpkd-muHVFf-bMcfAe[data-indeterminate="true"]:enabled ~ .VfPpkd-YQoJzd,
-.Ne8lhe:not(:disabled):active .VfPpkd-muHVFf-bMcfAe:enabled:not(:checked):not(:indeterminate):not([data-indeterminate="true"]) ~ .VfPpkd-YQoJzd,
-.Ne8lhe.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe .VfPpkd-muHVFf-bMcfAe:enabled:not(:checked):not(:indeterminate):not([data-indeterminate="true"]) ~ .VfPpkd-YQoJzd, .Ne8lhe:not(.VfPpkd-ksKsZd-mWPk3d):focus .VfPpkd-muHVFf-bMcfAe:enabled:not(:checked):not(:indeterminate):not([data-indeterminate="true"]) ~ .VfPpkd-YQoJzd {
-    /* on hover, focus, or that weird in-between state */
-    border-color: #e0e0e0;
-}
-
-/* view more button */
-.VfPpkd-vQzf8d {
-    color: #e0e0e0;
-}
-
-/* teacher appreciation week */
-.WagS8 {
-    background-color: #202020;
-    border-bottom-color: #121212;
-    /*box-shadow: 0 0 5px #121212;*/
-}
+    body {
+        background-color: #191919;
+        color: #e0e0e0;
+    }
+    /* nav bar */
+    .joJglb {
+        /* bottom border */
+        border-color: #121212;
+    }
+    .joJglb .QRiHXd {
+        background-color: inherit;
+    }
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .P3W0Dd-Ysl7Fe:focus,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof).maXJsd:focus .P3W0Dd-Ysl7Fe,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .maXJsd:focus .P3W0Dd-Ysl7Fe,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .UISY8d-Ysl7Fe:hover,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof).MymH0d:hover .UISY8d-Ysl7Fe,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .MymH0d:hover .UISY8d-Ysl7Fe,
+    .wZTANe .J1raN:hover {
+        /* nav buttons, focus/hover */
+        background-color: #272727;
+    }
+    .wZTANe .J1raN:hover {
+        /* non-current tab text color */
+        color: #e0e0e0;
+    }
+    .kYtXye .bFjUmb-Ysl7Fe.kRqvHe,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof).bFjUmb-Ysl7Fe,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .bFjUmb-Ysl7Fe,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof).CNpREd.bFjUmb-Ysl7Fe,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof).CNpREd .bFjUmb-Ysl7Fe {
+        /* loading bar - Eduardo */
+        background-color: #272727;
+    }
+
+    /* icons */
+    svg,
+    .gb_qa svg {
+        color: #dedede;
+    }
+
+    /* logo text */
+    .IqJTee {
+        color: #dedede;
+    }
+
+    .QNajvd {
+        color: #dedede;
+    }
+
+    /* classes grid */
+    .JwPp0e li {
+        background-color: #202020;
+        border-color: #202020;
+        filter: drop-shadow(0 0 5px #121212);
+    }
+
+    .JwPp0e li:hover {
+        filter: drop-shadow(0 0 5px black);
+    }
+
+    .JwPp0e li .QRiHXd {
+        background-color: inherit;
+    }
+
+    .SZ0kZe {
+        border-color: #121212;
+    }
+
+    .oBSRLe {
+        color: #e0e0e0;
+    }
+
+    .apFsO.onkcGd,
+    .apFsO.onkcGd:visited {
+        color: #dedede;
+    }
+
+    .JPdR6b.hVNH5c.qjTEB {
+        background-color: transparent;
+    }
+
+    .JAPqpe {
+        background-color: #272727;
+        border-color: #272727;
+        border-radius: 5px;
+    }
+
+    .z80M1 {
+        color: #e0e0e0;
+    }
+
+    .z80M1:hover {
+        background-color: #313131;
+    }
+
+    .I7OXgf {
+        background-color: #202020;
+    }
+
+    .joJglb {
+        background-color: #202020;
+    }
+
+    .Qks78e,
+    .QRiHXd {
+        background-color: inherit;
+    }
+
+    .thP79c:hover {
+        background-color: #181818;
+    }
+
+    .Shk6y {
+        color: #e0e0e0;
+    }
+
+    .asQXV {
+        color: #dedede;
+    }
+
+    .d4Fe0d {
+        background-color: #202020;
+        border-color: #202020;
+        filter: drop-shadow(0 0 5px #121212);
+    }
+
+    .EZrbnd {
+        color: #e0e0e0;
+    }
+
+    .nforOe,
+    .onkcGd,
+    .onkcGd:hover * {
+        color: #e0e0e0!important;
+    }
+
+    .OX4Vcb {
+        background-color: #202020;
+    }
+
+    .Xi8cpb:hover {
+        border-radius: 0 2rem 2rem 0;
+        background-color: #191919;
+    }
+
+    .FLgDTb {
+        background-color: #191919;
+        border-color: #191919;
+    }
+
+    .E5f6Vd {
+        border-color: #e0e0e0;
+    }
+
+    .ipmZkd {
+        color: #e0e0e0;
+    }
+
+    .tLDEHd {
+        color: #e0e0e0;
+    }
+
+    .EfLcNb {
+        color: #e0e0e0;
+    }
+
+    .X65jac {
+        color: #e0e0e0;
+    }
+
+    .ViCi4 {
+        color: #dedede;
+    }
+
+    .rpo4wf {
+        color: #e0e0e0;
+    }
+
+    .n4xnA,
+    .qhnNic {
+        background-color: #202020;
+        border-color: #202020;
+        filter: drop-shadow(0 0 5px #121212);
+    }
+
+    .n4xnA {
+        filter: none;
+    }
+
+    /* class comments */
+    .s2g3Xd,
+    .ar1wE .eqqrO,
+    .ySjuvd .eqqrO,
+    .PeGHgb.Q8U8uc .Ono85c + .oh9CFb,
+    .PeGHgb.Q8U8uc .ruTJle + .fETHd,
+    .ZNE4y {
+        border-color: #333;
+        border-width: 1px;
+    }
+
+    .pco8Kc {
+        color: #dedede;
+    }
+
+    .zOtZye {
+        background-color: #202020;
+        color: #dedede;
+    }
+
+    .qk0lee .K6Ovqd {
+        color: #e0e0e0;
+    }
+    .qk0lee:hover .K6Ovqd {
+        color: #a0a0a0;
+    }
+
+    .hgjBDc {
+        background-color: #202020;
+    }
+
+    .WOPwXe {
+        color: #e0e0e0;
+    }
+
+    .I2pI {
+        color: #e0e0e0;
+    }
+
+    .oJeWuf {
+        color: #e0e0e0;
+    }
+
+    .OA0qNb {
+        background-color: #202020;
+    }
+
+    .jgvuAb {
+        border-color: #313131;
+    }
+
+    .mbHMhf {
+        background-color: #313131;
+    }
+
+    .ncFHed .MocG8c.KKjvXb {
+        background-color: #191919;
+    }
+
+    .DShyMc-AaTFfe .UISY8d-Ysl7Fe:hover,
+    .DShyMc-AaTFfe.MymH0d:hover .UISY8d-Ysl7Fe,
+    .DShyMc-AaTFfe .MymH0d:hover .UISY8d-Ysl7Fe {
+        background-color: #121212;
+    }
+
+    .wZTANe .J1raN {
+        color: #dedede;
+    }
+
+    .uqpvt {
+        filter: invert(.88);
+    }
+
+    .snByac {
+        color: #e0e0e0;
+    }
+
+    .NjE5zd {
+        color: #e0e0e0;
+    }
+
+    .W4hhKd {
+        color: #e0e0e0;
+    }
+
+    /* classwork category headers */
+    .JBMs6:hover {
+        background-color: #202020;
+    }
+
+    .DShyMc-MzM4ODQ1NTAyODda .VnOHwf-Tvm9db {
+        color: #e0e0e0;
+    }
+
+    .DShyMc-MzM4ODQ1NTAyODda .UISY8d-Ysl7Fe:hover {
+        background-color: #121212;
+    }
+
+    .DShyMc-MzM4ODQ1NTAyODda .UISY8d-Ysl7Fe {
+        border-color: #121212;
+    }
+
+    .I2Bonc {
+        background-color: #202020;
+        border-color: #202020;
+    }
+
+    .BOW64 {
+        background-color: #121212;
+        border: 2px solid #202020;
+        border-radius: 5px;
+    }
+
+    .l7z6cd,
+    .DPvwYc {
+        color: #e0e0e0;
+    }
+
+    .pOf0gc {
+        border-color: transparent;
+        background-color: transparent;
+    }
+
+    .A6dC2c {
+        color: #e0e0e0;
+    }
+
+    .DShyMc-MTQ3MzQxMzQxODA0.VnOHwf-Tvm9db,
+    .DShyMc-MTQ3MzQxMzQxODA0 .VnOHwf-Tvm9db,
+    .DShyMc-MTQ3MzQxMzQxODA0.CNpREd .VnOHwf-Tvm9db {
+        color: #e0e0e0;
+    }
+
+    .DShyMc-MTQ3MzQxMzQxODA0 .VBEdtc-Wvd9Cc:hover,
+    .DShyMc-MTQ3MzQxMzQxODA0.MymH0d:hover .VBEdtc-Wvd9Cc,
+    .DShyMc-MTQ3MzQxMzQxODA0 .MymH0d:hover .VBEdtc-Wvd9Cc {
+        color: #e0e0e0;
+    }
+
+    .DShyMc-MTQ3MzQxMzQxODA0 .UISY8d-Ysl7Fe:hover,
+    .DShyMc-MTQ3MzQxMzQxODA0.MymH0d:hover .UISY8d-Ysl7Fe,
+    .DShyMc-MTQ3MzQxMzQxODA0 .MymH0d:hover .UISY8d-Ysl7Fe {
+        background-color: #121212;
+    }
+
+    .DShyMc-MzM4ODQ1NTAyODda .nRLOzd:hover,
+    .onkcGd:hover,
+    .onkcGd:focus {
+        color: #e0e0e0;
+    }
+
+    .ksaOtd {
+        color: #e0e0e0;
+    }
+
+    .HG7HUc:hover {
+        background-color: #191919;
+    }
+
+    .HG7HUc * {
+        background-color: transparent!important;
+    }
+
+    .lXuxY,
+    .pO6AMc,
+    .PqkECe {
+        box-shadow: 0 0 5px #121212;
+        background-color: #212121;
+    }
+
+    .uQ3ESd {
+        background-color: #191919;
+    }
+
+    .wQuPk .JsqLM.N4XV7d,
+    .wQuPk .wMvEnb,
+    .wQuPk .wMvEnb.pCcXPe,
+    .wQuPk .wMvEnb.N4XV7d,
+    .wQuPk .JsqLM.pCcXPe {
+        color: #e0e0e0;
+    }
+
+    .TuHiFd {
+        border-color: #313131;
+        border-radius: 5px;
+    }
+
+    .bxp7vf {
+        border: none;
+    }
+
+    .pco8Kc html-blob span a {
+        color: #e0e0e0;
+    }
+
+    .DShyMc-MTIwNzY0OTYzOTc2 .VnOHwf-Tvm9db:hover,
+    .DShyMc-MTIwNzY0OTYzOTc2 .VnOHwf-Tvm9db:focus {
+        background-color: #191919;
+    }
+
+    .ECOutf,
+    .zaxms {
+        background-color: #313131;
+        border-color: #313131;
+        filter: drop-shadow(0 0 5px #191919);
+    }
+
+    .D3oBEe .qTs5Xc {
+        background-color: #313131;
+    }
+
+    .WdYux {
+        color: #e0e0e0;
+    }
+
+    .SNYuNc {
+        color: #e0e0e0;
+    }
+
+    .SFCE1b {
+        background-color: transparent!important;
+        border-radius: 10px;
+    }
+
+    .ee1HBc .tUJKGd:not(.xp2dJ):focus-within.boxOzd,
+    .ee1HBc .tUJKGd:not(.xp2dJ) :focus-within.boxOzd,
+    .ee1HBc .tUJKGd:not(.xp2dJ):focus-within.idtp4e,
+    .ee1HBc .tUJKGd:not(.xp2dJ) :focus-within.idtp4e,
+    .ee1HBc .ZoT1D:focus-within.boxOzd,
+    .ee1HBc .ZoT1D :focus-within.boxOzd,
+    .ee1HBc .ZoT1D:focus-within.idtp4e,
+    .ee1HBc .ZoT1D :focus-within.idtp4e {
+        background-color: #232323;
+    }
+
+    /* classwork assignment list item */
+    .jWCzBe.QRiHXd.idtp4e.u73Apc {
+        background-color: #191919;
+    }
+
+    .OlXwxf:hover .jWCzBe.QRiHXd.idtp4e.u73Apc,
+    .jWCzBe.QRiHXd.idtp4e.u73Apc:focus-within {
+        background-color: #202020;
+    }
+
+    .OlXwxf:hover {
+        box-shadow: 0 0 5px #121212;
+    }
+
+    /* every assignment list item except the first one */
+    .tUJKGd:not(:first-child) {
+        border: none;
+    }
+
+    .DShyMc-MTIwNzY0OTYzOTc2 .tUJKGd:not(.xp2dJ):not(.rZXyy):hover.j6KDAd,
+    .DShyMc-MTIwNzY0OTYzOTc2 .tUJKGd:not(.xp2dJ):not(.rZXyy):hover.idtp4e,
+    .DShyMc-MTIwNzY0OTYzOTc2 .tUJKGd:not(.xp2dJ):not(.rZXyy):hover .j6KDAd,
+    .DShyMc-MTIwNzY0OTYzOTc2 .tUJKGd:not(.xp2dJ):not(.rZXyy):hover .idtp4e,
+    .DShyMc-MTIwNzY0OTYzOTc2 .ZoT1D:hover.j6KDAd,
+    .DShyMc-MTIwNzY0OTYzOTc2 .ZoT1D:hover.idtp4e,
+    .DShyMc-MTIwNzY0OTYzOTc2 .ZoT1D:hover .j6KDAd,
+    .DShyMc-MTIwNzY0OTYzOTc2 .ZoT1D:hover .idtp4e {
+        border-bottom: 1px solid #202020;
+    }
+
+    /* section list items */
+    .g2MItd.MymH0d:hover .UISY8d-Ysl7Fe,
+    .g2MItd .MymH0d:hover .UISY8d-Ysl7Fe,
+    .g2MItd .UISY8d-Ysl7Fe:hover,
+    .g2MItd.maXJsd:focus .P3W0Dd-Ysl7Fe,
+    .g2MItd .maXJsd:focus .P3W0Dd-Ysl7Fe,
+    .g2MItd .P3W0Dd-Ysl7Fe:focus {
+        background-color: #202020;
+    }
+
+    .feojCc,
+    .zr19Sb .X1clqd {
+        background-color: #202020;
+        border-bottom: 1px solid #5F6368;
+    }
+
+    .DShyMc-MTc2Mjg4NzgwNzQz.VnOHwf-Tvm9db,
+    .DShyMc-MTc2Mjg4NzgwNzQz .VnOHwf-Tvm9db,
+    .DShyMc-MTc2Mjg4NzgwNzQz.CNpREd .VnOHwf-Tvm9db {
+        color: #e0e0e0;
+    }
+
+    .lziZub {
+        color: #e0e0e0;
+        background-color: inherit;
+    }
+
+    .QN3yse {
+        filter: invert(.89);
+    }
+
+    .rUtoef {
+        color: #e0e0e0;
+    }
+
+    .whsOnd {
+        color: #e0e0e0;
+    }
+
+    .dDKhVc,
+    .qEVLZc {
+        color: #e0e0e0;
+    }
+
+    .aSjeL.aSjeL td {
+        background-color: #202020;
+    }
+
+    .KKjvXb[data-value="1"][aria-selected="true"] {
+        background-color: #313131;
+    }
+
+    .xdKj9c,
+    .Je07k,
+    tbody .qwFLJb {
+        background-color: #202020;
+        border: none;
+    }
+
+    .xdKj9c.kTKNNc,
+    .Je07k.kTKNNc,
+    tbody .qwFLJb.kTKNNc {
+        background-color: #191919;
+    }
+
+    .Evt7cb {
+        color: #e0e0e0;
+    }
+
+    .udxSmc {
+        color: #e0e0e0;
+    }
+
+    .cL8LOd {
+        border-color: #e0e0e0;
+    }
+
+    .jgvuAb .kRoyt {
+        background: #121212;
+        border-color: #121212;
+    }
+
+    .xVnXCf {
+        background-color: transparent;
+    }
+
+    .jWCzBe {
+        border-color: #999999;
+    }
+
+    .S9CVKb {
+        background-color: #191919;
+    }
+
+    .DShyMc-MTQ3MzQxMzQxODA0 .eumXzf:after {
+        border-color: #e0e0e0;
+    }
+
+    .jrhqBd {
+        background-color: #191919;
+        border-color: #191919;
+    }
+
+    .CJXzee a.rUnD6d:focus {
+        background-color: #191919;
+    }
+
+    .DShyMc-MTQ3MzQxMzQxODA0 .P3W0Dd-Ysl7Fe:focus {
+        background-color: #191919;
+    }
+
+    .DShyMc-MTQ3NjA5NzQ4MjUz .UISY8d-Ysl7Fe:hover,
+    .DShyMc-MTQ3NjA5NzQ4MjUz.MymH0d:hover .UISY8d-Ysl7Fe,
+    .DShyMc-MTQ3NjA5NzQ4MjUz .MymH0d:hover .UISY8d-Ysl7Fe {
+        background-color: #121212;
+    }
+
+    .VSWCL {
+        background-color: inherit;
+    }
+
+    .DShyMc-MTQ3NjA5NzQ4MjUz .P3W0Dd-Ysl7Fe:focus,
+    .DShyMc-MTQ3NjA5NzQ4MjUz.maXJsd:focus .P3W0Dd-Ysl7Fe,
+    .DShyMc-MTQ3NjA5NzQ4MjUz .maXJsd:focus .P3W0Dd-Ysl7Fe {
+        background-color: #121212;
+    }
+
+    .nZC2Ae {
+        color: #999999!important;
+    }
+
+    .U26fgb[aria-pressed=true] {
+        background-color: #191919!important;
+    }
+
+    .qk0lee:focus {
+        background-color: #202020;
+    }
+
+    .BnYgFe {
+        filter: invert(0.9);
+    }
+
+    .poFWNe {
+        color: #dedede;
+    }
+
+    .joJglb.kLHn3 {
+        box-shadow: 0 1px 2px 0 #121212, 0 2px 6px 2px #121212;
+    }
+
+    .IzVHde {
+        background-color: #202020;
+    }
+
+    .GWZ7yf {
+        box-shadow: none;
+        filter: drop-shadow(0 0 5px #121212);
+    }
+
+    .YkTkoe {
+        background-color: #202020;
+    }
+
+    /* link cards */
+    .Qks78e,
+    .QRiHXd {
+        background-color: transparent;
+    }
+
+
+    /* comment section on items in feed */
+    .Aopndd {
+        background-color: #31313160;
+        border-color: transparent;
+    }
+
+    .Aopndd .RIDjNe {
+        background-color: #202020;
+        border-color: #191919;
+        border-width: 5px;
+        border-radius: 5px;
+    }
+
+    .Eajscb .vT1Gyc.N4XV7d {
+        color: #888888;
+    }
+
+    .Eajscb .vT1Gyc.pCcXPe {
+        color: #aaaaaa;
+    }
+
+    /* classwork page grades while loading */
+    .neggzd {
+        text-shadow: 0 0 .7em #666;
+    }
+
+    /* to-do page list items */
+    .MHxtic:hover {
+        box-shadow: none;
+        background-color: #202020;
+        filter: drop-shadow(0 0 5px #121212);
+        border-color: transparent;
+    }
+    .MHxtic:focus-within {
+        box-shadow: 0 0 10px #121212;
+        border-color: transparent;
+    }
+
+    /* 'announce something to your class' box */
+    .qk0lee:focus::after {
+        background-color: transparent;
+    }
+
+    .v9TZ3c.bFjUmb-Tvm9db {
+        transition: height 1s;
+    }
+
+    /* to-do page class selector menu */
+    .VfPpkd-uusGie-fmcmS {
+        color: #e0e0e0!important;
+    }
+
+    .VfPpkd-xl07Ob-XxIAqe.VfPpkd-xl07Ob-XxIAqe-OWXEXe-tsQazb.VfPpkd-xl07Ob.VfPpkd-YPmvEd.s8kOBc.dmaMHc.VfPpkd-xl07Ob-XxIAqe-OWXEXe-uxVfW-FNFY6c-uFfGwd.VfPpkd-xl07Ob-XxIAqe-OWXEXe-FNFY6c {
+        background-color: #202020;
+    }
+
+    .VfPpkd-rymPhb-fpDzbe-fmcmS {
+        color: #e0e0e0!important;
+    }
+
+    .MCs1Pd.HiC7Nc.VfPpkd-OkbHre.VfPpkd-aJasdd-RWgCYc-wQNmvb.VfPpkd-rymPhb-ibnC6b.VfPpkd-rymPhb-ibnC6b-OWXEXe-gk6SMd.VfPpkd-rymPhb-ibnC6b-OWXEXe-SfQLQb-Woal0c-RWgCYc,
+    .MCs1Pd.HiC7Nc.VfPpkd-OkbHre.VfPpkd-aJasdd-RWgCYc-wQNmvb.VfPpkd-rymPhb-ibnC6b.VfPpkd-rymPhb-ibnC6b-OWXEXe-gk6SMd.VfPpkd-rymPhb-ibnC6b-OWXEXe-SfQLQb-Woal0c-RWgCYc:is(:hover, :focus) {
+        background-color: transparent;
+    }
+
+    /* side navigation slide-out */
+    .ETRkCe {
+        box-shadow: 0 4px 4px 0 #121212, 0 8px 12px 6px #121212;
+    }
+    .OX4Vcb {
+        padding-right: 10px;
+    }
+
+    .FLgDTb.pEwOBc.Aopndd {
+        background-color: #212121;
+        box-shadow: 0 0 12px 1px #121212;
+    }
+
+    /* 'your work' title */
+    .z3vRcc {
+        color: #e0e0e0;
+    }
+
+    /* corners of turn in button */
+    .CG2qQ.QRiHXd {
+        background-color: transparent;
+    }
+
+    /* context menu */
+    .kCtYwe {
+        /* separator */
+        border-color: #333;
+    }
+    .z80M1.qs41qe > .aBBjbd {
+        /* click spread effect */
+        background-image: radial-gradient(circle farthest-side, #424242, #424242 80%, rgba(189, 189, 189, 0) 100%);
+    }
+
+    /* report abuse screen */
+    .V0wXVe,
+    .QKgWhf .nalYvf {
+        /* background */
+        background-color: #212121;
+    }
+    .QKgWhf .ffVw8c {
+        /* title */
+        color: #e0e0e0;
+    }
+    .DY3Y7 .APALFe {
+        /* card background */
+        background-color: #292929;
+        border-radius: 5px;
+        transition: background-color 0.2s
+    }
+    .QKgWhf .DY3Y7 .APALFe:hover {
+        /* card background hover */
+        background-color: #333;
+    }
+
+    /* items in stream */
+    /* fade forward animation */
+    .ZoT1D.idtp4e {
+        transition: box-shadow 0.1s;
+    }
+    .ZoT1D:hover.idtp4e {
+        background-color: unset;
+        box-shadow: 0px 0px 10px 5px #141414;
+    }
+
+    .cSyPgb {
+        color: #a0a0a0;
+    }
+
+    .tCD5Mc.Aopndd {
+        background-color: #212121;
+        box-shadow: 0 0 12px 1px #121212;
+    }
+
+    .yPbwG.QRiHXd.Aopndd.tWKJ2 {
+        background-color: #282828;
+        border-radius: 5px;
+    }
+
+    .Fnu4gf,
+    .bqfGyf {
+        filter: invert(0.8);
+    }
+
+    .gb_na svg,
+    .gb_yc svg,
+    .gb_Uc .gb_Wd,
+    .gb_Kc .gb_Wd {
+        color: #e0e0e0;
+    }
+
+    /* 'google apps' icon */
+    .gb_ua svg,
+    .gb_Lc svg,
+    .gb_7c .gb_9d,
+    .gb_Wc .gb_9d {
+        color: #e0e0e0;
+        fill: #e0e0e0;
+    }
+    .gb_d[aria-expanded="true"] .gb_0e,
+    .gb_d[aria-expanded="true"] .gb_1e {
+        color: #bbb;
+        fill: #bbb;
+    }
+
+    .gb_A[aria-expanded=true] .gb_Ne,
+    .gb_A[aria-expanded=true] .gb_Oe {
+        fill: #c0c0c0;
+    }
+
+    .cfWmIb:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-fmcmS-wGMbrd {
+        color: #e0e0e0;
+    }
+    .cfWmIb:hover:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc:not(.VfPpkd-NLUYnc-V67aGc-OWXEXe-TATcMc-KLRBe) {
+        color: #999;
+    }
+    .cfWmIb:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-Brv4Fb,
+    .cfWmIb:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-Ra9xwd,
+    .cfWmIb:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-MpmGFe {
+        border-color: #e0e0e0;
+    }
+
+    .I7OXgf {
+        box-shadow: 0 0 5px #121212;
+    }
+
+    /* assignment title */
+    .UvHKof.CNpREd.VnOHwf-Tvm9db,
+    .UvHKof.CNpREd .VnOHwf-Tvm9db,
+    .UvHKof.VnOHwf-Tvm9db,
+    .UvHKof .VnOHwf-Tvm9db {
+        color: #e0e0e0;
+        fill: #e0e0e0;
+    }
+    .UvHKof .eumXzf:after {
+        border-color: #e0e0e0;
+    }
+
+    .UvHKof .n42Gr:not(:disabled),
+    .UvHKof .n42Gr:not(:disabled).VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe,
+    .UvHKof .n42Gr:not(:disabled):hover,
+    .UvHKof .n42Gr:not(:disabled):not(.VfPpkd-ksKsZd-mWPk3d):focus {
+        color: #e0e0e0;
+    }
+
+    /* teacher mode */
+    /* customize button */
+    .YhQJj {
+        background-color: transparent;
+    }
+
+    /* 'select stream header image' buttons */
+    .wlZwYd:not(:disabled) {
+        background-color: #292929!important;
+    }
+
+    /* theme image selector tab buttons */
+    .WbUJNb:hover .VfPpkd-jY41G-V67aGc,
+    .WbUJNb.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe .VfPpkd-jY41G-V67aGc,
+    .WbUJNb:not(.VfPpkd-ksKsZd-mWPk3d):focus .VfPpkd-jY41G-V67aGc,
+    .WbUJNb:active .VfPpkd-jY41G-V67aGc {
+        color: #e0e0e0;
+    }
+    .VfPpkd-YVzG2b {
+        border-radius: 5px;
+    }
+
+    /* new announcement class/student selectors */
+    .cLpBac {
+        background-color: #292929;
+    }
+
+    /* new announcement 'for' heading */
+    .iLjzDc {
+        color: #e0e0e0;
+    }
+
+    /* create assignment page */
+    .TdC1bb {
+        /* main background */
+        background-color: #212121;
+    }
+    .e0prFf {
+        /* window title */
+        color: #e0e0e0;
+    }
+    .dKKcxf,
+    .STMvPe {
+        /* schedule material date selectors */
+        background-color: #292929;
+        box-shadow: 0 0 10px #12121260;
+    }
+    .O98Lj {
+        /* date selector text */
+        color: #e0e0e0;
+    }
+    .XaepId {
+        /* date picker background */
+        background-color: #202020;
+        border-color: transparent;
+        border-radius: 5px;
+        box-shadow: 0 0 10px #121212;
+    }
+    .XaepId {
+        /* date picker month title */
+        color: #a0a0a0;
+    }
+    .XaepId-mrubje {
+        /* date picker weekday letters */
+        color: #666;
+    }
+    .XaepId-gElRsf {
+        /* date picker valid dates */
+        color: #a0a0a0;
+    }
+    .XaepId-gElRsf:not(.XaepId-lJi4pf-gElRsf, td.XaepId-gk6SMd):hover {
+        /* date picker valid date hover */
+        background-color: #333;
+    }
+    .XaepId-lJi4pf-gElRsf {
+        /* date picker invalid dates */
+        color: #333;
+    }
+    .y2d25 {
+        /* edit schedule box */
+        background-color: #262626;
+    }
+    .ECK80e {
+        /* edit schedule box divider */
+        border-color: #333;
+    }
+    .hja3X {
+        /* vertical border */
+        border-color: #333;
+    }
+    .Sl8ssb,
+    .XZDC9d,
+    .ry3kXd {
+        /* drop-downs */
+        background-color: #272727;
+        box-shadow: 0 0 10px #12121260;
+    }
+    .fWf7qe .Yalane,
+    .fWf7qe:not(.RDPZE):hover .Yalane,
+    .vnnr5e .I9OJHe,
+    .vnnr5e .CIy9F,
+    .vnnr5e:not(.RDPZE):hover .I9OJHe,
+    .vnnr5e:not(.RDPZE):hover .CIy9F {
+        /* title field */
+        background-color: #333;
+    }
+    .jsbB5e.u3bW4e .hqfVKd,
+    .jsbB5e.CDELXb.yaevDc .hqfVKd,
+    .jsbB5e.IbzNie.yaevDc .hqfVKd,
+    .fWf7qe:not(.yaevDc).u3bW4e .hqfVKd,
+    .AkVYk:not(.yaevDc).u3bW4e .hqfVKd,
+    .fWf7qe:not(.yaevDc).CDELXb .hqfVKd,
+    .AkVYk:not(.yaevDc).CDELXb .hqfVKd,
+    .fWf7qe:not(.yaevDc).IhU0Je .hqfVKd,
+    .AkVYk:not(.yaevDc).IhU0Je .hqfVKd {
+        /* title field text */
+        color: #e0e0e0;
+    }
+    .AOhYp {
+        box-shadow: 0 0 5px #212121;
+    }
+    .bDkUbc {
+        /* topic dropdown divider */
+        border-color: #333;
+    }
+    .HyS0Qd .n9IS1,
+    .HyS0Qd:not(.RDPZE):hover .n9IS1 {
+        /* create topic field */
+        background-color: #292929;
+    }
+    .Kqfayb {
+        /* rubric editor page title */
+        color: #e0e0e0;
+    }
+    .E8HiIc,
+    .ft5Sbf,
+    .C4yF5e,
+    .OK63Pb:not(:last-child) {
+        /* borders */
+        border-color: #333;
+    }
+    .tl5cWb {
+        /* rubric editor main title */
+        color: #e0e0e0;
+    }
+    .BgHQ3e,
+    .MuGjgf,
+    .FMzRdf {
+        /* rubric description and control labels */
+        color: #999;
+    }
+    .Nep6Fb::before {
+        /* plus icon background */
+        background-color: #202020;
+    }
+    .cTRCQc .oJeWuf::before,
+    .cTRCQc.RDPZE:hover .oJeWuf::before,
+    .cTRCQc.u3bW4e.RDPZE .oJeWuf::before,
+    .cTRCQc:hover .oJeWuf::before,
+    .cTRCQc.u3bW4e .oJeWuf::before {
+        /* reuse rubric class dropdown */
+        background-color: #292929;
+        box-shadow: 0 0 10px #12121260;
+    }
+    .Dp5sUc .WvJxMd[data-expanded="true"] .oJeWuf::before {
+        /* reuse rubric class dropdown expanded */
+        background-color: #333;
+    }
+    .vPNssb .jBmls {
+        /* reuse rubric class dropdown expansion */
+        background-color: #313131;
+    }
+    .xUvfQb {
+        /* reuse rubric class dropdown text */
+        color: #e0e0e0;
+    }
+    .ShARAe {
+        /* reuse rubric table border */
+        border-color: #333;
+    }
+    .XDCFvf {
+        /* reuse rubric rubric title */
+        color: #e0e0e0;
+    }
+    .RpYYWb {
+        /* added rubric pill */
+        background-color: #292929;
+        border-color: #292929;
+        box-shadow: 0 0 10px #12121260;
+    }
+    .jlfrG::before,
+    .jlfrG::after {
+        /* weird pieces we don't need */
+        display: none;
+    }
+    .jlfrG {
+        /* view rubric text */
+        color: #e0e0e0;
+    }
+    .OK1tJe {
+        /* view rubric collapsed criterion level */
+        background-color: #333;
+    }
+    .RMrItf {
+        /* view rubric possible points */
+        color: #999;
+    }
+
+    /* saved announcements */
+    .z3vRcc-J3yWx {
+        /* 'saved announcements' title */
+        color: #e0e0e0;
+    }
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .tUJKGd:not(.xp2dJ):not(.rZXyy):hover.j6KDAd,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .tUJKGd:not(.xp2dJ):not(.rZXyy):hover.idtp4e,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .tUJKGd:not(.xp2dJ):not(.rZXyy):hover .j6KDAd,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .tUJKGd:not(.xp2dJ):not(.rZXyy):hover .idtp4e,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ZoT1D:hover.j6KDAd,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ZoT1D:hover.idtp4e,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ZoT1D:hover .j6KDAd,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ZoT1D:hover .idtp4e,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .tUJKGd:not(.xp2dJ):focus-within.boxOzd,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .tUJKGd:not(.xp2dJ):focus-within.idtp4e,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .tUJKGd:not(.xp2dJ) :focus-within.boxOzd,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .tUJKGd:not(.xp2dJ) :focus-within.idtp4e,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ZoT1D:focus-within.boxOzd,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ZoT1D:focus-within.idtp4e,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ZoT1D :focus-within.boxOzd,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ZoT1D :focus-within.idtp4e,
+    .kYtXye .UISY8d-Ysl7Fe:hover,
+    .kYtXye.MymH0d:hover .UISY8d-Ysl7Fe,
+    .kYtXye .MymH0d:hover .UISY8d-Ysl7Fe,
+    .kYtXye .P3W0Dd-Ysl7Fe:focus,
+    .kYtXye.maXJsd:focus .P3W0Dd-Ysl7Fe,
+    .kYtXye .maXJsd:focus .P3W0Dd-Ysl7Fe {
+        background-color: #292929;
+    }
+    .tUJKGd:not(:first-child),
+    .G3xBUc + .G3xBUc {
+        border-top: .0625rem solid #292929;
+    }
+
+    /* dropdowns */
+    .VfPpkd-xl07Ob-XxIAqe,
+    .q6oraf .VfPpkd-StrnGf-rymPhb {
+        background-color: #212121;
+        color: #e0e0e0!important;
+    }
+    .VfPpkd-StrnGf-rymPhb-clz4Ic {
+        border-bottom-color: #606060;
+    }
+    :not(.VfPpkd-StrnGf-rymPhb-ibnC6b-OWXEXe-OWB6Me).VfPpkd-StrnGf-rymPhb-ibnC6b .VfPpkd-StrnGf-rymPhb-pZXsl::before,
+    :not(.VfPpkd-StrnGf-rymPhb-ibnC6b-OWXEXe-OWB6Me).VfPpkd-StrnGf-rymPhb-ibnC6b .VfPpkd-StrnGf-rymPhb-pZXsl::after,
+    :not(.VfPpkd-rymPhb-ibnC6b-OWXEXe-OWB6Me).VfPpkd-rymPhb-ibnC6b .VfPpkd-rymPhb-pZXsl::before,
+    :not(.VfPpkd-rymPhb-ibnC6b-OWXEXe-OWB6Me).VfPpkd-rymPhb-ibnC6b .VfPpkd-rymPhb-pZXsl::after {
+        /* list item hover color */
+        background-color: #e0e0e0;
+    }
+    .VfPpkd-rymPhb-ibnC6b,
+    .VfPpkd-StrnGf-rymPhb-ibnC6b {
+        /* list item */
+        border-radius: 5px;
+    }
+    .bzD7fd {
+        /* create assignment dropdown */
+        border-radius: 20px;
+        padding: 10px 5px 5px 5px;
+    }
+
+    /* gradebook */
+    .fHar6b,
+    .RUkyfb,
+    thead .vvqDLc,
+    .fum4Tb,
+    .go6aXd,
+    tbody .vvqDLc {
+        /* table background */
+        background-color: inherit;
+    }
+    .go6aXd.xAKnLc,
+    .fum4Tb.xAKnLc,
+    tbody .vvqDLc.xAKnLc {
+        /* class average row background */
+        background-color: #212121;
+    }
+    .fHar6b,
+    .RUkyfb,
+    .go6aXd,
+    .fum4Tb,
+    .vvqDLc {
+        /* table borders */
+        border-color: #484848;
+    }
+    .fHar6b.tLDEHd {
+        /* center 'sort by' dropdown using flexbox on container */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .N8HYTb {
+        /* 'sort by' dropdown */
+        padding-left: 2.875rem;
+        padding-right: 2.125rem;
+        margin: 0;
+    }
+
+    /* assignment page */
+    .BQ5ILd,
+    .a4YS1c,
+    .g5FCDc {
+        /* borders */
+        border-color: #333;
+    }
+    .DC55n td {
+        background-color: inherit;
+        border-color: #333;
+    }
+    .xlHPle .VfPpkd-fmcmS-yrriRe:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-fmcmS-wGMbrd {
+        /* assignment points value selector */
+        color: #e0e0e0;
+    }
+    .xlHPle .VfPpkd-fmcmS-yrriRe:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-fmcmS-wGMbrd::placeholder {
+        /* assignment points value selector placeholder */
+        color: #999;
+    }
+    .xlHPle .VfPpkd-StrnGf-rymPhb {
+        /* assignment points value selector dropdown */
+        color: #e0e0e0;
+    }
+    .kcAzD:focus::before {
+        /* sidebar 'sort by' cell border */
+        border-color: transparent;
+    }
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ybOdnf:not(.RDPZE).iWO5td,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ybOdnf:not(.RDPZE) .OA0qNb .LMgvRb[aria-selected="true"],
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .NqFm6:not(.RDPZE) .tWfTvb [role="option"][aria-selected="true"],
+    .ncFHed .MocG8c.KKjvXb {
+        /* sidebar 'sort by' dropdown */
+        background-color: #292929;
+        border-radius: 5px;
+    }
+    .jgvuAb .kRoyt {
+        /* sidebar 'sort by' click effect */
+        background-color: #313131;
+    }
+    .TJtJXb:hover td,
+    .tYQn5c:hover td,
+    .DC55n:hover td {
+        /* sidebar student list items hover */
+        background-color: #272727;
+    }
+    .oqnjOc td.Fk0vXe {
+        /* sidebar student list item internal borders */
+        border-left-color: #333;
+    }
+    .Evt7cb,
+    .Evt7cb:visited {
+        /* sidebar section headers */
+        color: #e0e0e0;
+    }
+    .YrFhrf {
+        /* turned in/assigned/graded big numbers */
+        color: #e0e0e0;
+    }
+    .yHjGtf {
+        /* turned in/assigned/graded number dividers */
+        border-color: #333;
+    }
+    .dDKhVc {
+        /* light-color labels */
+        color: #999
+    }
+    .I2XGyb.jgvuAb {
+        /* extra space around student work filter and folder button */
+        margin-top: 10px;
+        margin-left: 0;
+    }
+    .hYt5f.EfvGO {
+        /* extra space above student work cards */
+        margin-top: 20px;
+    }
+    .hYt5f.EfvGO .WkZsyc {
+        /* student work card */
+        background-color: #212121;
+        border-radius: 5px;
+    }
+    .J33wTc,
+    .IMvYId:not(table),
+    .Y5vSD {
+        /* lighter text on student work comment thread screen */
+        color: #999;
+    }
+    table.IMvYId {
+        /* text color on history table */
+        color: #a0a0a0;
+    }
+    .nk37z {
+        color: #e0e0e0;
+    }
+    .oleV8d {
+        /* private comment message field */
+        border-color: #484848;
+    }
+    .bswVrf {
+        /* private comment message field placeholder text */
+        color: #484848;
+    }
+    .LsqTRb {
+        /* private comment message field placeholder text */
+        color: #e0e0e0;
+    }
+    .Y5FYJe.RDPZE svg {
+        /* private comment message field post button - inactive */
+        color: #484848;
+        fill: #484848;
+    }
+    .kbngx tr {
+        /* history table - odd rows */
+        background-color: #292929;
+    }
+    .kbngx tr:nth-child(2n) {
+        /* history table - even rows */
+        background-color: #252525;
+    }
+
+
+    /* teacher class settings */
+    .XKbOjc {
+        /* give each section a lighter color and a box-shadow */
+        background-color: #292929;
+        box-shadow: 0 0 10px #212121;
+    }
+    .nCP5yc:disabled .VfPpkd-vQzf8d {
+        /* disabled save button */
+        color: #484848;
+    }
+    /* input fields and drop-down boxes */
+    .WmnPA:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me),
+    .xlHPle .VfPpkd-fmcmS-yrriRe:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me),
+    .hqBSCb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me) .VfPpkd-TkwUic {
+        background-color: #31313160;
+        box-shadow: 0 0 10px #12121260;
+    }
+    .WmnPA:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-fmcmS-wGMbrd {
+        /* color of text inputed in */
+        color: #e0e0e0;
+    }
+    .xlHPle .VfPpkd-fmcmS-yrriRe:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc,
+    .WmnPA:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc {
+        /* color of placeholder (when inactive) */
+        color: #a0a0a0;
+    }
+    .xSP5ic,
+    .xSP5ic.yHy1rc {
+        /* info icon */
+        color: #a0a0a0;
+    }
+
+    /* people view */
+    /* disabled 'actions' button */
+    .Rj2Mlf:disabled {
+        border-color: #666666;
+    }
+    .Rj2Mlf:disabled .VfPpkd-vQzf8d,
+    .Rj2Mlf:disabled .VfPpkd-kBDsod svg {
+        color: #666666;
+    }
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .UISY8d-Ysl7Fe:hover,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof).MymH0d:hover .UISY8d-Ysl7Fe,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .MymH0d:hover .UISY8d-Ysl7Fe,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .P3W0Dd-Ysl7Fe:focus,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof).maXJsd:focus .P3W0Dd-Ysl7Fe,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .maXJsd:focus .P3W0Dd-Ysl7Fe {
+        /* student row hover color */
+        background-color: #212121;
+    }
+    /* invite pop-up */
+    .t1IGPc,
+    .pIQtMd,
+    .AZW99,
+    .Co16uf,
+    .I4p4db,
+    .TCFlue,
+    .c1x9qf,
+    .ATUW8c,
+    .ATUW8c:hover {
+        background-color: #202020;
+        color: #e0e0e0;
+    }
+    .CobWe,
+    .HNcB0e,
+    .bNkTzb {
+        /* the no-longer mysterious borders */
+        border-bottom-color: #484848;
+    }
+    .ATUW8c,
+    .ATUW8c:hover {
+        /* added invitees */
+        box-shadow: 0 0 0 1px #484848 inset;
+    }
+    .PNwDub {
+        /* potential invitee names */
+        color: #e0e0e0;
+    }
+    .G1zVib {
+        /* potential invitee emails */
+        color: #999999;
+    }
+    .AZW99:hover {
+        /* potential invitee list item hover */
+        background-color: #292929;
+        border-radius: 10px;
+    }
+
+    /* popup message bottom left */
+    .LhKRUe {
+        box-shadow: 0 0 5px #121212;
+        background-color: #202020;
+        color: #e0e0e0;
+    }
+
+    /* check box */
+    .Ne8lhe .VfPpkd-muHVFf-bMcfAe:enabled:not(:checked):not(:indeterminate):not([data-indeterminate="true"]) ~ .VfPpkd-YQoJzd {
+        /* inactive */
+        border-color: #a0a0a0;
+    }
+    .Ne8lhe:hover .VfPpkd-muHVFf-bMcfAe:enabled:not(:checked):not(:indeterminate):not([data-indeterminate="true"]) ~ .VfPpkd-YQoJzd,
+    .Ne8lhe:not(:disabled):active .VfPpkd-muHVFf-bMcfAe:enabled:checked ~ .VfPpkd-YQoJzd,
+    .Ne8lhe:not(:disabled):active .VfPpkd-muHVFf-bMcfAe:enabled:indeterminate ~ .VfPpkd-YQoJzd,
+    .Ne8lhe:not(:disabled):active .VfPpkd-muHVFf-bMcfAe[data-indeterminate="true"]:enabled ~ .VfPpkd-YQoJzd,
+    .Ne8lhe:not(:disabled):active .VfPpkd-muHVFf-bMcfAe:enabled:not(:checked):not(:indeterminate):not([data-indeterminate="true"]) ~ .VfPpkd-YQoJzd,
+    .Ne8lhe.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe .VfPpkd-muHVFf-bMcfAe:enabled:not(:checked):not(:indeterminate):not([data-indeterminate="true"]) ~ .VfPpkd-YQoJzd,
+    .Ne8lhe:not(.VfPpkd-ksKsZd-mWPk3d):focus .VfPpkd-muHVFf-bMcfAe:enabled:not(:checked):not(:indeterminate):not([data-indeterminate="true"]) ~ .VfPpkd-YQoJzd {
+        /* on hover, focus, or that weird in-between state */
+        border-color: #e0e0e0;
+    }
+
+    /* view more button */
+    .VfPpkd-vQzf8d {
+        color: #e0e0e0;
+    }
+
+    /* teacher appreciation week */
+    .WagS8 {
+        background-color: #202020;
+        border-bottom-color: #121212;
+        /*box-shadow: 0 0 5px #121212;*/
+    }
+
+    /* youtube link popup */
+    .lGIiYb {
+        /* header */
+        background-color: #212121;
+        border-color: #333;
+    }
+    .cuHavc {
+        /* youtube logo */
+        //filter: invert(100%);
+        background-color: #e0e0e0; //border-radius: 5px;
+        padding: 5px;
+        clip-path: polygon(15.279135px 0px,
+        calc(100% - 15.279135px) 0px,
+        calc(100% - 13.674921px) 0.007572px,
+        calc(100% - 12.071563px) 0.055599px,
+        calc(100% - 10.472733px) 0.181094px,
+        calc(100% - 8.887202px) 0.420528px,
+        calc(100% - 7.334257px) 0.818771px,
+        calc(100% - 5.843606px) 1.405951px,
+        calc(100% - 4.454662px) 2.201942px,
+        calc(100% - 3.437545px) 3.437545px,
+        calc(100% - 2.641554px) 4.826489px,
+        calc(100% - 2.054374px) 6.31714px,
+        calc(100% - 1.656131px) 7.870085px,
+        calc(100% - 1.416697px) 9.455616px,
+        calc(100% - 1.291202px) 11.054446px,
+        calc(100% - 1.243175px) 12.657804px,
+        calc(100% - 1.243175px) calc(100% - 12.657804px),
+        calc(100% - 1.291202px) calc(100% - 11.054446px),
+        calc(100% - 1.416697px) calc(100% - 9.455616px),
+        calc(100% - 1.656131px) calc(100% - 7.870085px),
+        calc(100% - 2.054374px) calc(100% - 6.31714px),
+        calc(100% - 2.641554px) calc(100% - 4.826489px),
+        calc(100% - 3.437545px) calc(100% - 3.437545px),
+        calc(100% - 4.454662px) calc(100% - 2.201942px),
+        calc(100% - 5.843606px) calc(100% - 1.405951px),
+        calc(100% - 7.334257px) calc(100% - 0.818771px),
+        calc(100% - 8.887202px) calc(100% - 0.420528px),
+        calc(100% - 10.472733px) calc(100% - 0.181094px),
+        calc(100% - 12.071563px) calc(100% - 0.055599px),
+        calc(100% - 13.674921px) calc(100% - 0.007572px),
+        calc(100% - 15.279135px) 100%,
+        15.279135px 100%,
+        13.674921px calc(100% - 0.007572px),
+        12.071563px calc(100% - 0.055599px),
+        10.472733px calc(100% - 0.181094px),
+        8.887202px calc(100% - 0.420528px),
+        7.334257px calc(100% - 0.818771px),
+        5.843606px calc(100% - 1.405951px),
+        4.454662px calc(100% - 2.201942px),
+        3.437545px calc(100% - 3.437545px),
+        2.641554px calc(100% - 4.826489px),
+        2.054374px calc(100% - 6.31714px),
+        1.656131px calc(100% - 7.870085px),
+        1.416697px calc(100% - 9.455616px),
+        1.291202px calc(100% - 11.054446px),
+        1.243175px calc(100% - 12.657804px),
+        1.243175px 12.657804px,
+        1.291202px 11.054446px,
+        1.416697px 9.455616px,
+        1.656131px 7.870085px,
+        2.054374px 6.31714px,
+        2.641554px 4.826489px,
+        3.437545px 3.437545px,
+        4.454662px 2.201942px,
+        5.843606px 1.405951px,
+        7.334257px 0.818771px,
+        8.887202px 0.420528px,
+        10.472733px 0.181094px,
+        12.071563px 0.055599px,
+        13.674921px 0.007572px,
+        15.279135px 0px);
+    }
+    .VfPpkd-Bz112c-LgbsSe {
+        /* icon buttons */
+        color: #e0e0e0;
+    }
+}
+@-moz-document domain("ogs.google.com") {
+    /* google apps menu */
+    .EHzcec {
+        /* entire box */
+        background: rgba( 0, 0, 0, 0.25);
+        box-shadow: 0 0 5px #121212;
+        backdrop-filter: blur( 5px);
+        -webkit-backdrop-filter: blur( 5px);
+        border-radius: 10px;
+        border: 1px solid #33333360;
+    }
+    .Rq5Gcb {
+        /* items text */
+        color: #a0a0a0;
+    }
+    .tX9u1b:hover,
+    .tX9u1b:active,
+    .tX9u1b:active:focus {
+        /* items hover */
+        background-color: #00000048;
+    }
+    .tX9u1b:hover .Rq5Gcb,
+    .tX9u1b:active:hover .Rq5Gcb,
+    .o07G5 .tX9u1b:active .Rq5Gcb,
+    .o07G5 .tX9u1b:active:hover .Rq5Gcb {
+        /* items hover/drag text */
+        background-color: transparent;
+    }
+    .o07G5 .tX9u1b:active,
+    .o07G5 .tX9u1b:active:focus {
+        /* items drag */
+        background-color: #00000048;
+        border-color: transparent;
+        box-shadow: none;
+    }
+    .dGrefb {
+        /* borders */
+        border-color: #33333360;
+    }
+    .NQV3m {
+        /* 'more from google workplace' button */
+        background-color: #00000060;
+        border-color: #33333360;
+        transition: box-shadow 0.2s;
+    }
+    .NQV3m:hover,
+    .NQV3m:active,
+    .NQV3m:active:focus {
+        /* 'more from google workplace' button hover */
+        background-color: #00000080;
+        border-color: #33333360;
+        box-shadow: 0 0 5px #12121260;
+    }
 }
