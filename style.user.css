@@ -41,6 +41,15 @@
         /* loading bar - Eduardo */
         background-color: #272727;
     }
+    .A6dC2c-J3yWx {
+        /* class title */
+        color: #e0e0e0;
+    }
+    
+    /* classroom title text */
+    .rpo4wf-J3yWx {
+        color: #e0e0e0!important;
+    }
 
     /* icons */
     svg,
@@ -59,17 +68,36 @@
 
     /* classes grid */
     .JwPp0e li {
+        /* class options menu items */
         background-color: #202020;
         border-color: #202020;
-        filter: drop-shadow(0 0 5px #121212);
+        box-shadow: none;
     }
 
     .JwPp0e li:hover {
-        filter: drop-shadow(0 0 5px black);
+        /* class options menu items hover */
+        box-shadow: none;
     }
 
     .JwPp0e li .QRiHXd {
+        /* class options menu items text */
         background-color: inherit;
+    }
+    
+    .rZXyy.YwNp1, .rZXyy:not(.u0dx8e):not(.ILo0B):not(.xp2dJ):hover, .rZXyy:not(.u0dx8e):not(.ILo0B):not(.xp2dJ):focus {
+        /* remove extra box shadow for class cards */
+        box-shadow: none;
+    }
+    
+    /* underneath dragged class */
+    .TisIWb .kKn9Nc::before {
+        background-color: transparent;
+    }
+    
+    /* move class pop-up */
+    .dDKhVc-Wvd9Cc {
+        /* 'after' text label */
+        color: #999;
     }
 
     .SZ0kZe {
@@ -159,7 +187,7 @@
     }
 
     .E5f6Vd {
-        border-color: #e0e0e0;
+        border-color: #161616;
     }
 
     .ipmZkd {
@@ -190,7 +218,7 @@
     .qhnNic {
         background-color: #202020;
         border-color: #202020;
-        filter: drop-shadow(0 0 5px #121212);
+        box-shadow: 0 0 5px #121212;
     }
 
     .n4xnA {
@@ -243,6 +271,11 @@
     .OA0qNb {
         background-color: #202020;
     }
+    
+    .ybOdnf .OA0qNb {
+        /* shadow behind dropdown menus */
+        box-shadow: 0 0 10px #121212;
+    }
 
     .jgvuAb {
         border-color: #313131;
@@ -271,7 +304,13 @@
     }
 
     .snByac {
+        /* button text */
         color: #e0e0e0;
+        transition: color .2s .1s;
+    }
+    :is(.Y5sE8d.RDPZE, .YhQJj.RDPZE, .An19kf.RDPZE) .snByac {
+        /* disabled button text */
+        color: #606060;
     }
 
     .NjE5zd {
@@ -280,6 +319,11 @@
 
     .W4hhKd {
         color: #e0e0e0;
+    }
+    
+    /* join class page */
+    .gKkZCe {
+        border-color: #121212;
     }
 
     /* classwork category headers */
@@ -366,6 +410,17 @@
         box-shadow: 0 0 5px #121212;
         background-color: #212121;
     }
+    
+    /* settings */
+    .z3vRcc, .tDxNLe {
+        color: #e0e0e0;
+    }
+    
+    /* section view */
+    .xPAMbf {
+        /* assignment internal borders */
+        border-color: #333;
+    }
 
     /* 'your work' cards */
     .uQ3ESd {
@@ -383,6 +438,11 @@
     .tUJKGd.lXuxY:hover + .tUJKGd, .tUJKGd.lXuxY:focus-within + .tUJKGd {
         /* fix movement on hover change */
         border-top: 0.0625rem solid #292929;
+    }
+    
+    .d6CWTd {
+        /* people list borders */
+        border-color: #333;
     }
     
 
@@ -416,7 +476,7 @@
     .zaxms {
         background-color: #313131;
         border-color: #313131;
-        filter: drop-shadow(0 0 5px #191919);
+        box-shadow: 0 0 5px #191919;
     }
 
     .D3oBEe .qTs5Xc {
@@ -436,14 +496,14 @@
         border-radius: 10px;
     }
 
-    .ee1HBc .tUJKGd:not(.xp2dJ):focus-within.boxOzd,
-    .ee1HBc .tUJKGd:not(.xp2dJ) :focus-within.boxOzd,
-    .ee1HBc .tUJKGd:not(.xp2dJ):focus-within.idtp4e,
-    .ee1HBc .tUJKGd:not(.xp2dJ) :focus-within.idtp4e,
-    .ee1HBc .ZoT1D:focus-within.boxOzd,
-    .ee1HBc .ZoT1D :focus-within.boxOzd,
-    .ee1HBc .ZoT1D:focus-within.idtp4e,
-    .ee1HBc .ZoT1D :focus-within.idtp4e {
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .tUJKGd:not(.xp2dJ):focus-within.boxOzd,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .tUJKGd:not(.xp2dJ) :focus-within.boxOzd,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .tUJKGd:not(.xp2dJ):focus-within.idtp4e,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .tUJKGd:not(.xp2dJ) :focus-within.idtp4e,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ZoT1D:focus-within.boxOzd,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ZoT1D :focus-within.boxOzd,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ZoT1D:focus-within.idtp4e,
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ZoT1D :focus-within.idtp4e {
         background-color: #232323;
     }
 
@@ -459,6 +519,9 @@
 
     .OlXwxf:hover {
         box-shadow: 0 0 5px #121212;
+    }
+    .MHxtic:not(:last-child) {
+        border-color: #333;
     }
 
     /* every assignment list item except the first one */
@@ -553,18 +616,8 @@
     .cL8LOd {
         border-color: #e0e0e0;
     }
-
-    .jgvuAb .kRoyt {
-        background: #121212;
-        border-color: #121212;
-    }
-
     .xVnXCf {
         background-color: transparent;
-    }
-
-    .jWCzBe {
-        border-color: #999999;
     }
 
     .S9CVKb {
@@ -633,12 +686,22 @@
     }
 
     .GWZ7yf {
-        box-shadow: none;
-        filter: drop-shadow(0 0 5px #121212);
+        box-shadow: 0 0 5px #121212;
     }
 
     .YkTkoe {
         background-color: #202020;
+    }
+    
+    /* archived class page */
+    .WufxEd .ynt9Dc .VfPpkd-WLXbod, .WufxEd .ynt9Dc {
+        /* banner */
+        background-color: #202020;
+        border-color: #121212;
+    }
+    .geqPvd .VfPpkd-Rj7Y9b {
+        /* banner text */
+        color: #e0e0e0;
     }
 
     /* link cards */
@@ -647,8 +710,7 @@
         background-color: transparent;
     }
 
-
-    /* comment section on items in feed */
+    /* background background on items in feed (and '1 class comment' section) */
     .Aopndd {
         background-color: #31313160;
         border-color: transparent;
@@ -676,9 +738,8 @@
 
     /* to-do page list items */
     .MHxtic:hover {
-        box-shadow: none;
         background-color: #202020;
-        filter: drop-shadow(0 0 5px #121212);
+        box-shadow: 0 0 5px #121212;
         border-color: transparent;
     }
     .MHxtic:focus-within {
@@ -804,15 +865,11 @@
     }
 
     /* 'google apps' icon */
-    .gb_ua svg,
-    .gb_Lc svg,
-    .gb_7c .gb_9d,
-    .gb_Wc .gb_9d {
+    .gb_Ha svg, .gb_Lc svg, .gb_7c .gb_fd, .gb_Wc .gb_fd {
         color: #e0e0e0;
         fill: #e0e0e0;
     }
-    .gb_d[aria-expanded="true"] .gb_0e,
-    .gb_d[aria-expanded="true"] .gb_1e {
+    .gb_d[aria-expanded="true"] .gb_j {
         color: #bbb;
         fill: #bbb;
     }
@@ -887,6 +944,37 @@
     /* new announcement 'for' heading */
     .iLjzDc {
         color: #e0e0e0;
+    }
+    
+    /* assignments page */
+    .tfGBod.tfGBod:not(.xp2dJ), .tfGBod.xp2dJ .jWCzBe, .tfGBod.xp2dJ .iobNdf {
+        /* expanded assignment background */
+        background-color: #292929;
+    }
+    .jgvuAb .kRoyt {
+        
+        background-color: red;
+        border-color: #121212;
+    }
+
+    .O9YpHb {
+        /* expanded assignment internal border */
+        border-color: #333;
+    }
+    
+    /* draft assignments */
+    .ubqkMe .jWCzBe .iobNdf, .J2ZeGc .jWCzBe .iobNdf, .svdjhb .jWCzBe .iobNdf {
+        /* icon background */
+        background-color: #333;
+    }
+    
+    .ubqkMe .jWCzBe .iobNdf svg, .J2ZeGc .jWCzBe .iobNdf svg, .svdjhb .jWCzBe .iobNdf svg {
+        /* icon foreground */
+        color: #999;
+    }
+    .ubqkMe .kByKEb, .RyF19b .kByKEb, .J2ZeGc .kByKEb, .svdjhb .kByKEb {
+        /* text */
+        color: #999;
     }
 
     /* create assignment page */
@@ -986,6 +1074,10 @@
     .HyS0Qd:not(.RDPZE):hover .n9IS1 {
         /* create topic field */
         background-color: #292929;
+    }
+    .Y5sE8d.RDPZE, .YhQJj.RDPZE, .An19kf.RDPZE {
+        /* disabled assign button */
+        background-color: transparent;
     }
     .Kqfayb {
         /* rubric editor page title */
@@ -1092,6 +1184,7 @@
     .kYtXye .P3W0Dd-Ysl7Fe:focus,
     .kYtXye.maXJsd:focus .P3W0Dd-Ysl7Fe,
     .kYtXye .maXJsd:focus .P3W0Dd-Ysl7Fe {
+        /* saved announcements hover color */
         background-color: #292929;
     }
     .tUJKGd:not(:first-child),
@@ -1162,7 +1255,11 @@
         padding-right: 2.125rem;
         margin: 0;
     }
-
+    .Pbki4b.O0HS9e::before {
+        /* assignment row internal borders */
+        border-color: #333;
+    }
+    
     /* assignment page */
     .BQ5ILd,
     .a4YS1c,
@@ -1414,7 +1511,6 @@
     }
     .cuHavc {
         /* youtube logo */
-        //filter: invert(100%);
         background-color: #e0e0e0; //border-radius: 5px;
         padding: 5px;
         clip-path: polygon(15.279135px 0px,
@@ -1483,6 +1579,32 @@
         /* icon buttons */
         color: #e0e0e0;
     }
+    
+    /* new sidebar */
+    .Tabkde .OX4Vcb {
+        background-color: #202020;
+    }
+    
+    .Tabkde {
+        border-color: #121212;
+    }
+    
+    .F4Ol1b .STek2d:hover, .F4Ol1b .STek2d:focus-within {
+          box-shadow: 0 4px 4px 0 #121212,0 8px 12px 6px #121212;
+    }
+    
+    .vdOCJb .LlcfK {
+        right: -0.1rem;
+    }
+
+    /* header */
+    .mwJvDe .KEDCCd {
+        background-color: #202020;
+        border-color: #121212;
+    }
+    .sw3lj {
+        box-shadow: 0 2px 6px 2px #121212;
+    }
 }
 @-moz-document domain("ogs.google.com") {
     /* google apps menu */
@@ -1536,5 +1658,9 @@
         background-color: #00000080;
         border-color: #33333360;
         box-shadow: 0 0 5px #12121260;
+    }
+    
+    .LVal7b {
+        background-color: transparent;
     }
 }
