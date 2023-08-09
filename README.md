@@ -8,6 +8,15 @@ The theme is available through [userstyles.world](http://www.userstyles.world) v
 
 
 ### Changelog
+v.1.3.0 -
+Add support for the new sidebar design, as well as a few tweaks to keep everything looking great.
+
+v.1.2.4 -
+Fix position and color of context menus on class list page
+
+v.1.2.3 -
+Fix white background behind dragged class on class list page
+
 v.1.2.2 -
 Fix color scheme of 'your work' page
 
