@@ -1,20 +1,56 @@
 /* ==UserStyle==
 @name         Google Classroom Dark Mode
-@version      20221211.08.09
+@version      1.5.7
 @namespace    userstyles.world/user/colebot
 @description  Dark Theme for Google Classroom - Supports both student and teacher views!
 @author       colebot
 @license      CC BY-SA - Creative Commons Attribution-ShareAlike
 ==/UserStyle== */
 @-moz-document domain("classroom.google.com") {
+    :root {
+        --border-ultra-heavy: #666666;
+        --border-heavy: #555555;
+        --border-med-heavy: #444444;
+        --border-normal: #333333;
+        --border-light: #292929;
+        
+        --text-ultra-bright: #ffffff;
+        --text-bright: #e0e0e0;
+        --text-med-bright: #dedede;
+        --text-med: #c0c0c0;
+        --text-med-med-dark: #b0b0b0;
+        --text-med-dark: #a0a0a0;
+        --text-dark: #999999;
+        
+        --general-text-button: var(--text-med-med-dark);
+        --general-text-button-hover: var(--text-bright);
+        
+        --icon-button: var(--text-bright);
+        --icon-button-active: var(--text-med-med-dark);
+    }
+    
+    :root {
+        /* the color for the background ripple effect on icon buttons */
+        --mdc-ripple-color: #666;
+    }
+    
+    
     body {
         background-color: #191919;
-        color: #e0e0e0;
+        color: var(--text-bright);
+    }
+    .B7SYid {
+        /* assignment detail page heading */
+        color: var(--text-bright);
+    }
+    .VfPpkd-I9GLp-yrriRe {
+        /* certain type of text label */
+        color: Var(--text-med-bright);
     }
     /* nav bar */
     .joJglb {
         /* bottom border */
-        border-color: #121212;
+        border-color: var(--border-normal);
     }
     .joJglb .QRiHXd {
         background-color: inherit;
@@ -25,45 +61,71 @@
     :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .UISY8d-Ysl7Fe:hover,
     :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof).MymH0d:hover .UISY8d-Ysl7Fe,
     :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .MymH0d:hover .UISY8d-Ysl7Fe,
-    .wZTANe .J1raN:hover {
+    .wZTANe .J1raN:hover, .hN1OOc.eumXzf:hover, .hN1OOc.eumXzf:focus {
         /* nav buttons, focus/hover */
         background-color: #272727;
     }
     .wZTANe .J1raN:hover {
         /* non-current tab text color */
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
-    .kYtXye .bFjUmb-Ysl7Fe.kRqvHe,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof).bFjUmb-Ysl7Fe,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .bFjUmb-Ysl7Fe,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof).CNpREd.bFjUmb-Ysl7Fe,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof).CNpREd .bFjUmb-Ysl7Fe {
-        /* loading bar - Eduardo */
+    
+    .joJglb .bFjUmb-Ysl7Fe, .kYtXye .bFjUmb-Ysl7Fe.kRqvHe, .bFjUmb-Ysl7Fe.aP3ZPb, .Po14Kd {
+        /* loading bar (for loading the entire page, loading subpages, and loading posts in stream) */
         background-color: #272727;
     }
+    
+    .Xi8cpb:hover .LlcfK, .qr5cDe:hover .LlcfK {
+        /* sidebar items on hover */
+        background-color: #ffffff12!important;
+    }
+    
+    .bFjUmb-Ysl7Fe.Fh209b {
+        /* sidebar items when active/selected */
+        background-color: #ffffff20!important;
+    }
+    
+    .VfPpkd-rymPhb-clz4Ic {
+        background-color: var(--border-normal);
+    }
+    
     .A6dC2c-J3yWx {
         /* class title */
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
     
     /* classroom title text */
     .rpo4wf-J3yWx {
-        color: #e0e0e0!important;
+        color: var(--text-bright)!important;
     }
 
     /* icons */
-    svg,
-    .gb_qa svg {
-        color: #dedede;
+    
+    .xSP5ic:not([disabled]), .xSP5ic:not([disabled]).yHy1rc {
+        /* side bar icons */
+        color: var(--text-med-dark);
+        fill: var(--text-med-dark);
+    }
+    
+    .gb_Na svg, .gb_Rc svg, .gb_dd .gb_ld, .gb_3c .gb_ld, .gb_d[aria-expanded=true] .gb_i {
+        /* google apps icon */
+        color: var(--text-med-bright);
+        fill: var(--text-med-bright);
+    }
+    /* icon button hover */
+    .VfPpkd-Bz112c-LgbsSe:hover, .gb_Fc .gb_Qd.gb_me button:hover svg, .gb_Qd button:hover svg, .gb_d:hover {
+        background-color: #ffffff20;
+        border-radius: 500px;
+        transition: background-color 0.1s;
     }
 
     /* logo text */
     .IqJTee {
-        color: #dedede;
+        color: var(--text-med-bright);
     }
 
     .QNajvd {
-        color: #dedede;
+        color: var(--text-med-bright);
     }
 
     /* classes grid */
@@ -97,20 +159,68 @@
     /* move class pop-up */
     .dDKhVc-Wvd9Cc {
         /* 'after' text label */
-        color: #999;
+        color: var(--text-dark);
     }
 
-    .SZ0kZe {
-        border-color: #121212;
+    /* add attachment popup item icons */
+    .xSP5ic, .xSP5ic.yHy1rc {
+        color: var(--text-bright);
+        fill: var(--text-bright);
     }
-
+    
+    /* upcoming assignments panel */
+    /* box */
+    .d4Fe0d {
+        background-color: #202020;
+        border-color: var(--border-light);
+    }
+    /* multiple upcoming assignment divider */
+    .WMQb5e .oBSRLe {
+        border-color: #363636;
+    }
+    /* upcoming assignment due date headers */
     .oBSRLe {
-        color: #e0e0e0;
+        color: var(--text-med-dark);
+    }
+    /* view all assignments button */
+    .n42Gr:not(:disabled) {
+        color: var(--general-text-button)!important;
+        transition: color .2s;
+    }
+    /* view all assignments button on hover */
+    .n42Gr:not(:disabled):is(:hover, :active, :focus) {
+        color: var(--general-text-button-hover)!important;
+    }
+    
+    .J9GwTe img, .J9GwTe .DPvwYc {
+        /* link attachment icon */
+        color: var(--text-bright);
+    }
+    
+    .UvHKof .HyS0Qd:not(.RDPZE).u3bW4e .snByac, .UvHKof .HyS0Qd input:not([disabled]):focus~.snByac, .UvHKof .fWf7qe:not(.RDPZE).u3bW4e .snByac, .UvHKof .D3oBEe:not(.RDPZE).u3bW4e .snByac, .UvHKof .D3oBEe input:not([disabled]):focus~.snByac, .UvHKof .AkVYk:not(.RDPZE).u3bW4e .snByac, .UvHKof .vnnr5e:not(.RDPZE).u3bW4e .snByac {
+        /* accent text on black-themed classes */
+        color: var(--text-med-dark);
+    }
+    
+    /* help button in corner */
+    .N6nSod {
+        background-color: #272727d9;
+    }
+    
+    
+    /* class card middle border */
+    .SZ0kZe {
+        border-top: none;
+    }
+    
+    /* input fields content */
+    .zuzKle.xVPuB, .zuzKle.vnnr5e {
+        color: var(--text-med-bright);
     }
 
     .apFsO.onkcGd,
     .apFsO.onkcGd:visited {
-        color: #dedede;
+        color: var(--text-med-bright);
     }
 
     .JPdR6b.hVNH5c.qjTEB {
@@ -124,7 +234,7 @@
     }
 
     .z80M1 {
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
 
     .z80M1:hover {
@@ -149,36 +259,24 @@
     }
 
     .Shk6y {
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
 
     .asQXV {
-        color: #dedede;
-    }
-
-    .d4Fe0d {
-        background-color: #202020;
-        border-color: #202020;
-        filter: drop-shadow(0 0 5px #121212);
+        color: var(--text-med-bright);
     }
 
     .EZrbnd {
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
 
-    .nforOe,
-    .onkcGd,
-    .onkcGd:hover * {
-        color: #e0e0e0!important;
+    .nforOe, .onkcGd:not(.Vx8Sxd), .onkcGd:not(.Vx8Sxd):hover * {
+        /* links on hover */
+        color: var(--text-bright)!important;
     }
 
     .OX4Vcb {
         background-color: #202020;
-    }
-
-    .Xi8cpb:hover {
-        border-radius: 0 2rem 2rem 0;
-        background-color: #191919;
     }
 
     .FLgDTb {
@@ -187,38 +285,33 @@
     }
 
     .E5f6Vd {
-        border-color: #161616;
+        border-color: #666;
     }
 
     .ipmZkd {
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
 
+    /* secondary description text in several places */
     .tLDEHd {
-        color: #e0e0e0;
+        color: var(--text-med-dark);
     }
 
     .EfLcNb {
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
 
     .X65jac {
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
 
+    /* setting labels */
     .ViCi4 {
-        color: #dedede;
+        color: var(--text-med);
     }
 
     .rpo4wf {
-        color: #e0e0e0;
-    }
-
-    .n4xnA,
-    .qhnNic {
-        background-color: #202020;
-        border-color: #202020;
-        box-shadow: 0 0 5px #121212;
+        color: var(--text-bright);
     }
 
     .n4xnA {
@@ -232,24 +325,28 @@
     .PeGHgb.Q8U8uc .Ono85c + .oh9CFb,
     .PeGHgb.Q8U8uc .ruTJle + .fETHd,
     .ZNE4y {
-        border-color: #333;
+        border-color: var(--border-normal);
         border-width: 1px;
     }
 
     .pco8Kc {
-        color: #dedede;
+        color: var(--text-med-bright);
     }
 
     .zOtZye {
         background-color: #202020;
-        color: #dedede;
+        color: var(--text-med-bright);
     }
-
+    
+    
+    /* 'announce something to your class' bar */
     .qk0lee .K6Ovqd {
-        color: #e0e0e0;
+        /* label text */
+        color: var(--text-med);
     }
     .qk0lee:hover .K6Ovqd {
-        color: #a0a0a0;
+        /* label text on hover */
+        color: var(--text-bright);
     }
 
     .hgjBDc {
@@ -257,15 +354,19 @@
     }
 
     .WOPwXe {
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
 
     .I2pI {
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
 
     .oJeWuf {
-        color: #e0e0e0;
+        color: var(--text-bright);
+    }
+    
+    .arstne {
+        border-left-color: #e0e0e1;
     }
 
     .OA0qNb {
@@ -296,7 +397,7 @@
     }
 
     .wZTANe .J1raN {
-        color: #dedede;
+        color: var(--text-med-bright);
     }
 
     .uqpvt {
@@ -305,34 +406,44 @@
 
     .snByac {
         /* button text */
-        color: #e0e0e0;
-        transition: color .2s .1s;
+        color: var(--text-med-med-dark);
+        transition: all .3s cubic-bezier(0.4,0,0.2,1);
     }
     :is(.Y5sE8d.RDPZE, .YhQJj.RDPZE, .An19kf.RDPZE) .snByac {
         /* disabled button text */
         color: #606060;
     }
+    .l3F1ye .snByac {
+        /* accented button text */
+        color: var(--text-bright);
+    }
 
     .NjE5zd {
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
 
     .W4hhKd {
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
     
     /* join class page */
+    /* top border */
     .gKkZCe {
-        border-color: #121212;
+        border-color: #666;
+    } 
+    /* switch account button */
+    .AeAAkf {
+        border-color: #666;
     }
 
     /* classwork category headers */
-    .JBMs6:hover {
+    .boxOzd:hover {
+        /* when clickable */
         background-color: #202020;
     }
 
     .DShyMc-MzM4ODQ1NTAyODda .VnOHwf-Tvm9db {
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
 
     .DShyMc-MzM4ODQ1NTAyODda .UISY8d-Ysl7Fe:hover {
@@ -353,31 +464,26 @@
         border: 2px solid #202020;
         border-radius: 5px;
     }
-
-    .l7z6cd,
-    .DPvwYc {
-        color: #e0e0e0;
-    }
-
+    
     .pOf0gc {
         border-color: transparent;
         background-color: transparent;
     }
 
     .A6dC2c {
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
 
     .DShyMc-MTQ3MzQxMzQxODA0.VnOHwf-Tvm9db,
     .DShyMc-MTQ3MzQxMzQxODA0 .VnOHwf-Tvm9db,
     .DShyMc-MTQ3MzQxMzQxODA0.CNpREd .VnOHwf-Tvm9db {
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
 
     .DShyMc-MTQ3MzQxMzQxODA0 .VBEdtc-Wvd9Cc:hover,
     .DShyMc-MTQ3MzQxMzQxODA0.MymH0d:hover .VBEdtc-Wvd9Cc,
     .DShyMc-MTQ3MzQxMzQxODA0 .MymH0d:hover .VBEdtc-Wvd9Cc {
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
 
     .DShyMc-MTQ3MzQxMzQxODA0 .UISY8d-Ysl7Fe:hover,
@@ -389,11 +495,11 @@
     .DShyMc-MzM4ODQ1NTAyODda .nRLOzd:hover,
     .onkcGd:hover,
     .onkcGd:focus {
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
 
     .ksaOtd {
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
 
     .HG7HUc:hover {
@@ -413,13 +519,13 @@
     
     /* settings */
     .z3vRcc, .tDxNLe {
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
     
     /* section view */
     .xPAMbf {
         /* assignment internal borders */
-        border-color: #333;
+        border-color: var(--border-normal);
     }
 
     /* 'your work' cards */
@@ -427,22 +533,14 @@
         /* card expansion background */
         background-color: #212121;
     }
-    .P02DYb, .lXuxY .u73Apc {
+    .P02DYb, .lXuxY .u73Apc, .VDj5V {
         /* expanded borders */
-        border-color: #333;
-    }
-    .OlXwxf.lXuxY:hover {
-        /* fix movement on hover change */
-        border-top: 0.0625rem solid transparent;
-    }
-    .tUJKGd.lXuxY:hover + .tUJKGd, .tUJKGd.lXuxY:focus-within + .tUJKGd {
-        /* fix movement on hover change */
-        border-top: 0.0625rem solid #292929;
+        border-color: var(--border-normal);
     }
     
     .d6CWTd {
         /* people list borders */
-        border-color: #333;
+        border-color: var(--border-normal);
     }
     
 
@@ -451,11 +549,11 @@
     .wQuPk .wMvEnb.pCcXPe,
     .wQuPk .wMvEnb.N4XV7d,
     .wQuPk .JsqLM.pCcXPe {
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
 
     .TuHiFd {
-        border-color: #313131;
+        border-color: var(--border-normal);
         border-radius: 5px;
     }
 
@@ -464,7 +562,7 @@
     }
 
     .pco8Kc html-blob span a {
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
 
     .DShyMc-MTIwNzY0OTYzOTc2 .VnOHwf-Tvm9db:hover,
@@ -484,32 +582,16 @@
     }
 
     .WdYux {
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
 
     .SNYuNc {
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
 
     .SFCE1b {
         background-color: transparent!important;
         border-radius: 10px;
-    }
-
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .tUJKGd:not(.xp2dJ):focus-within.boxOzd,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .tUJKGd:not(.xp2dJ) :focus-within.boxOzd,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .tUJKGd:not(.xp2dJ):focus-within.idtp4e,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .tUJKGd:not(.xp2dJ) :focus-within.idtp4e,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ZoT1D:focus-within.boxOzd,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ZoT1D :focus-within.boxOzd,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ZoT1D:focus-within.idtp4e,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ZoT1D :focus-within.idtp4e {
-        background-color: #232323;
-    }
-
-    /* classwork assignment list item */
-    .jWCzBe.QRiHXd.idtp4e.u73Apc {
-        background-color: #191919;
     }
 
     .OlXwxf:hover .jWCzBe.QRiHXd.idtp4e.u73Apc,
@@ -521,12 +603,7 @@
         box-shadow: 0 0 5px #121212;
     }
     .MHxtic:not(:last-child) {
-        border-color: #333;
-    }
-
-    /* every assignment list item except the first one */
-    .tUJKGd:not(:first-child) {
-        border: none;
+        border-color: var(--border-normal);
     }
 
     .DShyMc-MTIwNzY0OTYzOTc2 .tUJKGd:not(.xp2dJ):not(.rZXyy):hover.j6KDAd,
@@ -549,7 +626,37 @@
     .g2MItd .P3W0Dd-Ysl7Fe:focus {
         background-color: #202020;
     }
-
+    
+    /* class selector on to-do page border */
+    .ReCbLb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me) .VfPpkd-NSFCdd-Brv4Fb, .ReCbLb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me) .VfPpkd-NSFCdd-Ra9xwd, .ReCbLb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me) .VfPpkd-NSFCdd-MpmGFe {
+        border-color: #666;
+    }
+    
+    /* class selector on to-do page border hover */
+    .ReCbLb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me):not(.VfPpkd-O1htCb-OWXEXe-XpnDCe) .VfPpkd-TkwUic:hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-Brv4Fb, .ReCbLb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me):not(.VfPpkd-O1htCb-OWXEXe-XpnDCe) .VfPpkd-TkwUic:hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-Ra9xwd, .ReCbLb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me):not(.VfPpkd-O1htCb-OWXEXe-XpnDCe) .VfPpkd-TkwUic:hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-MpmGFe {
+        border-color: var(--text-med-dark);
+    }
+    
+    /* class selector on to-do page dropdown arrow */
+    .ReCbLb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me) .VfPpkd-t08AT-Bz112c {
+        fill: #666;
+    }
+    
+    /* class selector on to-do page dropdown arrow hover */
+    .ReCbLb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me):not(.VfPpkd-O1htCb-OWXEXe-XpnDCe):hover .VfPpkd-t08AT-Bz112c {
+        fill: var(--text-med-dark);
+    }
+    
+    /* disabled icon buttons */
+    .yHy1rc:disabled {
+        color: #444;
+    }
+    
+    /* normal assignment status text ('turned in') */
+    .asQXV-FGzYL {
+        color: var(--text-med);
+    }
+    
     .feojCc,
     .zr19Sb .X1clqd {
         background-color: #202020;
@@ -559,11 +666,11 @@
     .DShyMc-MTc2Mjg4NzgwNzQz.VnOHwf-Tvm9db,
     .DShyMc-MTc2Mjg4NzgwNzQz .VnOHwf-Tvm9db,
     .DShyMc-MTc2Mjg4NzgwNzQz.CNpREd .VnOHwf-Tvm9db {
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
 
     .lziZub {
-        color: #e0e0e0;
+        color: var(--text-bright);
         background-color: inherit;
     }
 
@@ -572,16 +679,16 @@
     }
 
     .rUtoef {
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
 
     .whsOnd {
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
 
     .dDKhVc,
     .qEVLZc {
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
 
     .aSjeL.aSjeL td {
@@ -606,26 +713,23 @@
     }
 
     .Evt7cb {
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
 
     .udxSmc {
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
 
     .cL8LOd {
-        border-color: #e0e0e0;
+        border-color: var(--text-bright);
     }
     .xVnXCf {
         background-color: transparent;
     }
-
-    .S9CVKb {
-        background-color: #191919;
-    }
+    
 
     .DShyMc-MTQ3MzQxMzQxODA0 .eumXzf:after {
-        border-color: #e0e0e0;
+        border-color: var(--text-bright);
     }
 
     .jrhqBd {
@@ -658,11 +762,7 @@
     }
 
     .nZC2Ae {
-        color: #999999!important;
-    }
-
-    .U26fgb[aria-pressed=true] {
-        background-color: #191919!important;
+        color: var(--text-dark)!important;
     }
 
     .qk0lee:focus {
@@ -674,7 +774,15 @@
     }
 
     .poFWNe {
-        color: #dedede;
+        /* inputs */
+        color: var(--text-med-bright);
+    }
+    .poFWNe[disabled], .W9wDc.RDPZE .qTs5Xc {
+        color: #666;
+    }
+    .HyS0Qd.RDPZE .n9IS1 {
+        /* disabled input background */
+        background-color: #292929;
     }
 
     .joJglb.kLHn3 {
@@ -685,10 +793,6 @@
         background-color: #202020;
     }
 
-    .GWZ7yf {
-        box-shadow: 0 0 5px #121212;
-    }
-
     .YkTkoe {
         background-color: #202020;
     }
@@ -697,30 +801,55 @@
     .WufxEd .ynt9Dc .VfPpkd-WLXbod, .WufxEd .ynt9Dc {
         /* banner */
         background-color: #202020;
-        border-color: #121212;
-    }
+        border-color: var(--border-light);
+    } 
     .geqPvd .VfPpkd-Rj7Y9b {
         /* banner text */
-        color: #e0e0e0;
+        color: var(--text-bright);
+    }
+    
+    /* add class comment field */
+    .q1Kmyc {
+        border-color: var(--border-med-heavy);
     }
 
-    /* link cards */
-    .Qks78e,
-    .QRiHXd {
-        background-color: transparent;
-    }
-
-    /* background background on items in feed (and '1 class comment' section) */
+    /* background background on items in feed (and '1 class comment' section), as well as link items within assignments */
+    /* it's kind of the "card" class */
     .Aopndd {
         background-color: #31313160;
-        border-color: transparent;
+        border-color: var(--border-light);
     }
 
     .Aopndd .RIDjNe {
         background-color: #202020;
-        border-color: #191919;
-        border-width: 5px;
-        border-radius: 5px;
+        border-color: var(--border-normal);
+        border-width: 1px;
+    }
+    
+    
+    /* link cards */
+    .pOf0gc.QRiHXd.Aopndd.M4LFnf, .r0VQac.QRiHXd.Aopndd {
+        background-color: #ffffff10;
+    }
+    .pOf0gc.QRiHXd.Aopndd.M4LFnf:has(.yixX5e:is(:hover, :focus)), .r0VQac.QRiHXd.Aopndd:has(.yixX5e:is(:hover, :focus)) {
+        /* on hover and focus */
+        background-color: #ffffff20;
+    }
+    .Qks78e, .QRiHXd {
+        /* foreground section */
+        background-color: transparent;
+    }
+    .Niache {
+        /* background on preview */
+        background-color: white;
+    }
+    .onkcGd:hover, .onkcGd:focus, .etFl5b, .etFl5b:visited, .etFl5b:hover, .etFl5b:focus, .eL9Cfb, .eL9Cfb:visited, .eL9Cfb:hover, .eL9Cfb:focus, .L5mE7d, .L5mE7d:visited, .L5mE7d:hover, .L5mE7d:focus, .OGhwGf:hover, .OGhwGf:focus, .UtdKPb:hover, .UtdKPb:focus, .yixX5e:hover .UtdKPb, .yixX5e:focus .UtdKPb {
+        color: var(--text-bright);
+    }
+    
+    .MymH0d:hover .VBEdtc-Wvd9Cc, .MymH0d:focus .VBEdtc-Wvd9Cc {
+        /* assignment link hover color */
+        color: var(--text-bright)!important;
     }
 
     .Eajscb .vT1Gyc.N4XV7d {
@@ -751,14 +880,51 @@
     .qk0lee:focus::after {
         background-color: transparent;
     }
-
-    .v9TZ3c.bFjUmb-Tvm9db {
-        transition: height 1s;
+    .xVPuB .snByac, .vnnr5e .snByac {
+        /* input box label when un-focused */
+        color: #777;
+    }
+    
+    /* rich text controls */
+    .xVPuB .Aworge, .vnnr5e .Aworge {
+        /* default color */
+        color: var(--text-med-dark);
+    }
+    .EN2Rfc:not(.RDPZE) .XTO5bf:hover, .EN2Rfc:not(.RDPZE) .XTO5bf.y7OZL {
+        /* hover (darken icon fill color) */
+        color: var(--text-ultra-bright);
+    }
+    .U26fgb[aria-pressed=true] {
+        /* active */
+        background-color: #ffffff12!important;
+    }
+    .fKz7Od:not(.RDPZE):hover, .WzwrXb:not(.RDPZE):not(.K2mXPb):hover {
+        /* prevent fading */
+        opacity: 1;
+    }
+    .fKz7Od .VTBa7b {
+        /* active radial effect */
+        background: var(--border-normal);
+    }
+    /* attach content buttons */
+    .svNSpd {
+        /* border */
+        border-color: #444;
+    }
+    .LgeCif {
+        color: var(--text-med)!important;
+    }
+    .LgeCif:hover {
+        color: var(--text-bright)!important;
+    }
+    /* post button on black themed classes */
+    .UvHKof .bDxw8b:not(:disabled) {
+        background-color: #555;
     }
 
     /* to-do page class selector menu */
     .VfPpkd-uusGie-fmcmS {
-        color: #e0e0e0!important;
+        color: var(--text-bright)!important;
     }
 
     .VfPpkd-xl07Ob-XxIAqe.VfPpkd-xl07Ob-XxIAqe-OWXEXe-tsQazb.VfPpkd-xl07Ob.VfPpkd-YPmvEd.s8kOBc.dmaMHc.VfPpkd-xl07Ob-XxIAqe-OWXEXe-uxVfW-FNFY6c-uFfGwd.VfPpkd-xl07Ob-XxIAqe-OWXEXe-FNFY6c {
@@ -766,7 +932,7 @@
     }
 
     .VfPpkd-rymPhb-fpDzbe-fmcmS {
-        color: #e0e0e0!important;
+        color: var(--text-bright)!important;
     }
 
     .MCs1Pd.HiC7Nc.VfPpkd-OkbHre.VfPpkd-aJasdd-RWgCYc-wQNmvb.VfPpkd-rymPhb-ibnC6b.VfPpkd-rymPhb-ibnC6b-OWXEXe-gk6SMd.VfPpkd-rymPhb-ibnC6b-OWXEXe-SfQLQb-Woal0c-RWgCYc,
@@ -789,7 +955,7 @@
 
     /* 'your work' title */
     .z3vRcc {
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
 
     /* corners of turn in button */
@@ -800,7 +966,7 @@
     /* context menu */
     .kCtYwe {
         /* separator */
-        border-color: #333;
+        border-color: var(--border-normal);
     }
     .z80M1.qs41qe > .aBBjbd {
         /* click spread effect */
@@ -815,7 +981,7 @@
     }
     .QKgWhf .ffVw8c {
         /* title */
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
     .DY3Y7 .APALFe {
         /* card background */
@@ -827,19 +993,47 @@
         /* card background hover */
         background-color: #333;
     }
+    
+    /* class header */
+    .v9TZ3c:not(.GWZ7yf) {
+        /* when not expanded */
+        border: 1px solid transparent;
+    }
 
     /* items in stream */
     /* fade forward animation */
     .ZoT1D.idtp4e {
         transition: box-shadow 0.1s;
     }
-    .ZoT1D:hover.idtp4e {
+    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .xWw7yd:hover.h7Ww0 {
         background-color: unset;
         box-shadow: 0px 0px 10px 5px #141414;
     }
-
+    
+    .xWw7yd:hover.rXdid, .xWw7yd:hover.h7Ww0, .xWw7yd:hover .rXdid, .xWw7yd:hover .h7Ww0 {
+        /* items in stream background hover */
+        background-color: #272727;
+    }
+    
+    /* small screen assignment popup */
+    .mCb5vb .df5yGe {
+        /* top border */
+        border-color: var(--border-heavy);
+    }
+    
+    /* small link items */
+    .VkhHKd {
+        border-color: var(--border-med-heavy);
+    }
+    .VkhHKd:hover {
+        border-color: var(--border-heavy);
+    }
+    .VkhHKd:active {
+        border-color: var(--border-ultra-heavy);
+    }
+    
     .cSyPgb {
-        color: #a0a0a0;
+        color: var(--text-med-dark);
     }
 
     .tCD5Mc.Aopndd {
@@ -861,34 +1055,53 @@
     .gb_yc svg,
     .gb_Uc .gb_Wd,
     .gb_Kc .gb_Wd {
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
 
-    /* 'google apps' icon */
-    .gb_Ha svg, .gb_Lc svg, .gb_7c .gb_fd, .gb_Wc .gb_fd {
-        color: #e0e0e0;
-        fill: #e0e0e0;
+    /* 'google apps' icon (this one is tricky because google keeps changing it) */
+    [class*="gb_"] svg, [class*="gb_"] [class*="gb_"] {
+        /* google apps icon collapsed */
+        color: var(--icon-button);
+        fill: var(--icon-button);
     }
-    .gb_d[aria-expanded="true"] .gb_j {
-        color: #bbb;
-        fill: #bbb;
+    .gb_d[aria-expanded="true"] [class*="gb_"] {
+        /* google apps icon expanded */
+        color: var(--icon-button-active);
+        fill: var(--icon-button-active);
     }
 
     .gb_A[aria-expanded=true] .gb_Ne,
     .gb_A[aria-expanded=true] .gb_Oe {
-        fill: #c0c0c0;
+        fill: var(--text-med);
     }
 
     .cfWmIb:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-fmcmS-wGMbrd {
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
+    
+    /* input fields */
     .cfWmIb:hover:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc:not(.VfPpkd-NLUYnc-V67aGc-OWXEXe-TATcMc-KLRBe) {
-        color: #999;
+        /* placeholder when inactive + hover */
+        color: var(--text-bright);
+    }
+    .cfWmIb:hover:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe) .VfPpkd-NLUYnc-V67aGc {
+        /* placeholder when filled + inactive + hover */
+        color: var(--text-bright);
+    }
+    .cfWmIb:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc {
+        /* placeholder when inactive */
+        color: var(--text-med-dark);
     }
     .cfWmIb:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-Brv4Fb,
     .cfWmIb:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-Ra9xwd,
     .cfWmIb:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-MpmGFe {
-        border-color: #e0e0e0;
+        border-color: var(--text-bright);
+    }
+    
+    .cfWmIb.VfPpkd-fmcmS-yrriRe-OWXEXe-UJflGc:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-Brv4Fb, .cfWmIb.VfPpkd-fmcmS-yrriRe-OWXEXe-UJflGc:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-Ra9xwd, .cfWmIb.VfPpkd-fmcmS-yrriRe-OWXEXe-UJflGc:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-MpmGFe, .cfWmIb.VfPpkd-fmcmS-yrriRe-OWXEXe-UJflGc:hover:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc, .cfWmIb.VfPpkd-fmcmS-yrriRe-OWXEXe-UJflGc:hover:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me)+.VfPpkd-fmcmS-yrriRe-W0vJo-RWgCYc .VfPpkd-fmcmS-yrriRe-W0vJo-fmcmS {
+        /* border when error + hover */
+        border-color: red;
+        color: red;
     }
 
     .I7OXgf {
@@ -900,24 +1113,37 @@
     .UvHKof.CNpREd .VnOHwf-Tvm9db,
     .UvHKof.VnOHwf-Tvm9db,
     .UvHKof .VnOHwf-Tvm9db {
-        color: #e0e0e0;
-        fill: #e0e0e0;
+        color: var(--text-bright);
+        fill: var(--text-bright);
     }
     .UvHKof .eumXzf:after {
-        border-color: #e0e0e0;
+        border-color: var(--text-bright);
     }
 
     .UvHKof .n42Gr:not(:disabled),
     .UvHKof .n42Gr:not(:disabled).VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe,
     .UvHKof .n42Gr:not(:disabled):hover,
     .UvHKof .n42Gr:not(:disabled):not(.VfPpkd-ksKsZd-mWPk3d):focus {
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
 
     /* teacher mode */
+    .fyExH {
+        /* no school use warning checkbox */ 
+        background-color: #292929;
+        border-radius: 10px;
+    }
+    
+    .gMIble {
+        /* checkboxes */
+        filter: invert(1);
+    }
+    
+    
     /* customize button */
     .YhQJj {
-        background-color: transparent;
+        background-color: #00000070;
+        backdrop-filter: blur(5px);
     }
 
     /* 'select stream header image' buttons */
@@ -926,11 +1152,14 @@
     }
 
     /* theme image selector tab buttons */
+    .WbUJNb .VfPpkd-jY41G-V67aGc {
+        color: var(--text-med-dark);
+    }
     .WbUJNb:hover .VfPpkd-jY41G-V67aGc,
     .WbUJNb.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe .VfPpkd-jY41G-V67aGc,
     .WbUJNb:not(.VfPpkd-ksKsZd-mWPk3d):focus .VfPpkd-jY41G-V67aGc,
     .WbUJNb:active .VfPpkd-jY41G-V67aGc {
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
     .VfPpkd-YVzG2b {
         border-radius: 5px;
@@ -940,26 +1169,105 @@
     .cLpBac {
         background-color: #292929;
     }
+    .QV10Af {
+        background-color: #212121;
+        border-color: var(--border-med-heavy);
+    }
 
     /* new announcement 'for' heading */
     .iLjzDc {
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
     
-    /* assignments page */
-    .tfGBod.tfGBod:not(.xp2dJ), .tfGBod.xp2dJ .jWCzBe, .tfGBod.xp2dJ .iobNdf {
-        /* expanded assignment background */
-        background-color: #292929;
+    /* assignments/classwork page */
+    .Iwp0Ue:not(:first-child) {
+        border-color: var(--border-light);
     }
+    .Iwp0Ue:not(.xp2dJ):not(.rZXyy):hover.rXdid, .Iwp0Ue:not(.xp2dJ):not(.rZXyy):hover.h7Ww0, .Iwp0Ue:not(.xp2dJ):not(.rZXyy):hover .rXdid, .Iwp0Ue:not(.xp2dJ):not(.rZXyy):hover .h7Ww0 {
+        /* closed assignment on hover */
+        background-color: #212121;
+    }
+    .Iwp0Ue:not(.xp2dJ):focus-within.JiTjnd, .Iwp0Ue:not(.xp2dJ):focus-within.h7Ww0, .Iwp0Ue:not(.xp2dJ) :focus-within.JiTjnd, .Iwp0Ue:not(.xp2dJ) :focus-within.h7Ww0, .xWw7yd:focus-within.JiTjnd, .xWw7yd:focus-within.h7Ww0, .xWw7yd :focus-within.JiTjnd, .xWw7yd :focus-within.h7Ww0 {
+        /* closed assignment on focus */
+        background-color: #1f1f1f;
+    }
+    .lXuxY .jWCzBe {
+        /* assignment title when open */
+        background-color: #212121;
+    }
+    .S9CVKb {
+        /* assignment body when open */
+        background-color: #212121;
+    }
+    .tUJKGd:not(:first-child), .RcHwO, .uO32ac, .ypv4re {
+        border-color: var(--border-normal);
+    }
+    .VKRoqe {
+        /* section headings bottom border */
+        border-color: var(--border-heavy);
+        transition: border-color 0.37s;
+    }
+    .KmLLod:hover .VKRoqe {
+        /* section headings bottom border on hover */
+        border-bottom: 1px solid var(--border-ultra-heavy);
+    }
+    
+    .nZ34k:not(:disabled) {
+        /* view more button */
+        color: var(--general-text-button);
+    }
+    .nZ34k:not(:disabled):is(:hover, :focus) {
+        /* view more button hover/focus */
+        color: var(--general-text-button-hover);
+    }
+    
+    .VfPpkd-xl07Ob .VfPpkd-StrnGf-rymPhb-IhFlZd, .VfPpkd-xl07Ob .VfPpkd-StrnGf-rymPhb-f7MjDc {
+        /* class code options icons */
+        color: var(--text-med);
+    }
+    
+    /* reuse post */
+    .WOPwXe-Wvd9Cc {
+        /* title */
+        color: var(--text-bright);
+    }
+    .cmTiyd, .t5tYqf .cmTiyd {
+        /* interior borders */
+        border-color: #555;
+    }
+    .tLDEHd-Wvd9Cc {
+        /* class and post titles */
+        color: var(--text-med-bright);
+    }
+    .uHMk6b {
+        /* checkbox interior */
+        border-color: #272727;
+    }
+    .lRaOFf[aria-selected=true], .lRaOFf[aria-selected=true]:focus {
+        /* selected post */
+        background-color: #ffffff16;
+    }
+    .lRaOFf[aria-selected=true]:hover {
+        background-color: #ffffff20;
+    }
+    .thP79c:hover {
+        /* deselected hover */
+        background-color: #ffffff10;
+    }
+    .thP79c.qs41qe, .thP79c.qs41qe:focus, .thP79c.qs41qe:hover {
+        /* being pressed */
+        background-color: #ffffff18;
+    }
+    
+    
     .jgvuAb .kRoyt {
-        
         background-color: red;
         border-color: #121212;
     }
 
     .O9YpHb {
         /* expanded assignment internal border */
-        border-color: #333;
+        border-color: var(--border-normal);
     }
     
     /* draft assignments */
@@ -970,11 +1278,11 @@
     
     .ubqkMe .jWCzBe .iobNdf svg, .J2ZeGc .jWCzBe .iobNdf svg, .svdjhb .jWCzBe .iobNdf svg {
         /* icon foreground */
-        color: #999;
+        color: var(--text-dark);
     }
     .ubqkMe .kByKEb, .RyF19b .kByKEb, .J2ZeGc .kByKEb, .svdjhb .kByKEb {
         /* text */
-        color: #999;
+        color: var(--text-dark);
     }
 
     /* create assignment page */
@@ -984,17 +1292,19 @@
     }
     .e0prFf {
         /* window title */
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
     .dKKcxf,
-    .STMvPe {
+    .STMvPe,
+    .NE9bBb {
         /* schedule material date selectors */
-        background-color: #292929;
+        background-color: #313131;
         box-shadow: 0 0 10px #12121260;
+        color: var(--text-bright)!important;
     }
     .O98Lj {
         /* date selector text */
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
     .XaepId {
         /* date picker background */
@@ -1005,7 +1315,7 @@
     }
     .XaepId {
         /* date picker month title */
-        color: #a0a0a0;
+        color: var(--text-med-dark);
     }
     .XaepId-mrubje {
         /* date picker weekday letters */
@@ -1013,7 +1323,7 @@
     }
     .XaepId-gElRsf {
         /* date picker valid dates */
-        color: #a0a0a0;
+        color: var(--text-med-dark);
     }
     .XaepId-gElRsf:not(.XaepId-lJi4pf-gElRsf, td.XaepId-gk6SMd):hover {
         /* date picker valid date hover */
@@ -1029,11 +1339,11 @@
     }
     .ECK80e {
         /* edit schedule box divider */
-        border-color: #333;
+        border-color: var(--border-normal);
     }
     .hja3X {
         /* vertical border */
-        border-color: #333;
+        border-color: var(--border-normal);
     }
     .Sl8ssb,
     .XZDC9d,
@@ -1049,7 +1359,7 @@
     .vnnr5e:not(.RDPZE):hover .I9OJHe,
     .vnnr5e:not(.RDPZE):hover .CIy9F {
         /* title field */
-        background-color: #333;
+        background-color: #ffffff08;
     }
     .jsbB5e.u3bW4e .hqfVKd,
     .jsbB5e.CDELXb.yaevDc .hqfVKd,
@@ -1061,14 +1371,14 @@
     .fWf7qe:not(.yaevDc).IhU0Je .hqfVKd,
     .AkVYk:not(.yaevDc).IhU0Je .hqfVKd {
         /* title field text */
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
     .AOhYp {
         box-shadow: 0 0 5px #212121;
     }
     .bDkUbc {
         /* topic dropdown divider */
-        border-color: #333;
+        border-color: var(--border-normal);
     }
     .HyS0Qd .n9IS1,
     .HyS0Qd:not(.RDPZE):hover .n9IS1 {
@@ -1079,26 +1389,26 @@
         /* disabled assign button */
         background-color: transparent;
     }
-    .Kqfayb {
+    .ZoO8hd {
         /* rubric editor page title */
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
     .E8HiIc,
     .ft5Sbf,
     .C4yF5e,
     .OK63Pb:not(:last-child) {
         /* borders */
-        border-color: #333;
+        border-color: var(--border-normal);
     }
     .tl5cWb {
         /* rubric editor main title */
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
     .BgHQ3e,
     .MuGjgf,
     .FMzRdf {
         /* rubric description and control labels */
-        color: #999;
+        color: var(--text-dark);
     }
     .Nep6Fb::before {
         /* plus icon background */
@@ -1123,15 +1433,15 @@
     }
     .xUvfQb {
         /* reuse rubric class dropdown text */
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
     .ShARAe {
         /* reuse rubric table border */
-        border-color: #333;
+        border-color: var(--border-normal);
     }
     .XDCFvf {
         /* reuse rubric rubric title */
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
     .RpYYWb {
         /* added rubric pill */
@@ -1146,21 +1456,25 @@
     }
     .jlfrG {
         /* view rubric text */
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
     .OK1tJe {
         /* view rubric collapsed criterion level */
-        background-color: #333;
+        background-color: #272727;
+    }
+    .Kqfayb {
+        /* rubric earned points */
+        color: var(--text-med-bright);
     }
     .RMrItf {
         /* view rubric possible points */
-        color: #999;
+        color: var(--text-dark);
     }
 
     /* saved announcements */
     .z3vRcc-J3yWx {
         /* 'saved announcements' title */
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
     :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .tUJKGd:not(.xp2dJ):not(.rZXyy):hover.j6KDAd,
     :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .tUJKGd:not(.xp2dJ):not(.rZXyy):hover.idtp4e,
@@ -1187,26 +1501,37 @@
         /* saved announcements hover color */
         background-color: #292929;
     }
-    .tUJKGd:not(:first-child),
     .G3xBUc + .G3xBUc {
         border-top: .0625rem solid #292929;
+    }
+    .pvb7Pc {
+        /* edit saved announcement top border */
+        border-color: #444;
+    }
+    
+    /* view all / view less button */
+    .LjDxcd:not(:disabled) {
+        color: var(--text-med-med-dark);
+    }
+    .LjDxcd:hover:not(:disabled), .LjDxcd.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe:not(:disabled), .LjDxcd:not(.VfPpkd-ksKsZd-mWPk3d):focus:not(:disabled), .LjDxcd:active:not(:disabled) {
+        color: var(--text-bright);
     }
 
     /* dropdowns */
     .VfPpkd-xl07Ob-XxIAqe,
     .q6oraf .VfPpkd-StrnGf-rymPhb {
         background-color: #212121;
-        color: #e0e0e0!important;
+        color: var(--text-bright)!important;
     }
     .VfPpkd-StrnGf-rymPhb-clz4Ic {
-        border-bottom-color: #606060;
+        border-bottom-color: var(--border-med-heavy);
     }
     :not(.VfPpkd-StrnGf-rymPhb-ibnC6b-OWXEXe-OWB6Me).VfPpkd-StrnGf-rymPhb-ibnC6b .VfPpkd-StrnGf-rymPhb-pZXsl::before,
     :not(.VfPpkd-StrnGf-rymPhb-ibnC6b-OWXEXe-OWB6Me).VfPpkd-StrnGf-rymPhb-ibnC6b .VfPpkd-StrnGf-rymPhb-pZXsl::after,
     :not(.VfPpkd-rymPhb-ibnC6b-OWXEXe-OWB6Me).VfPpkd-rymPhb-ibnC6b .VfPpkd-rymPhb-pZXsl::before,
     :not(.VfPpkd-rymPhb-ibnC6b-OWXEXe-OWB6Me).VfPpkd-rymPhb-ibnC6b .VfPpkd-rymPhb-pZXsl::after {
         /* list item hover color */
-        background-color: #e0e0e0;
+        background-color: var(--text-bright);
     }
     .VfPpkd-rymPhb-ibnC6b,
     .VfPpkd-StrnGf-rymPhb-ibnC6b {
@@ -1257,31 +1582,102 @@
     }
     .Pbki4b.O0HS9e::before {
         /* assignment row internal borders */
-        border-color: #333;
+        border-color: var(--border-normal);
     }
     
     /* assignment page */
+    
+    /* title */
+    .nl5VRd {
+        /* upper border */
+        border-color: var(--border-normal);
+    }
+    
+    /* your work panel */
+    .GWZ7yf {
+        /* box (and private comment box) (and 'announce something to your class' box) (and expanded class header) */
+        box-shadow: 0 0 5px #121212;
+        border: 1px solid var(--border-light);
+    }
+    
+    /* add or create button */
+    .Rj2Mlf:not(:disabled) {
+        /* button */
+        color: var(--text-med-bright)!important;
+        border-color: var(--border-med-heavy);
+        transition: color .2s .1s, background-color .1s;
+    }
+    .FL3Khc:not(:disabled):hover {
+        /* when hovered */
+        color: var(--text-bright)!important;
+        border-color: var(--border-heavy);
+        background-color: #272727;
+    }
+    .Rj2Mlf:not(:disabled):active, .Rj2Mlf:not(:disabled):focus:active {
+        /* when focused */
+        border-color: var(--border-ultra-heavy);
+        background-color: #292929;
+    }
+    .Rj2Mlf:not(:disabled).VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe, .Rj2Mlf:not(:disabled):not(.VfPpkd-ksKsZd-mWPk3d):focus {
+        /* when menu is opened */
+        border-color: var(--border-ultra-heavy);
+        background-color: #292929;
+    }
+    .Rj2Mlf .VfPpkd-Jh9lGc::before, .Rj2Mlf .VfPpkd-Jh9lGc::after {
+        /* background when menu is opened */
+        /* overrides ripple effect */
+        background-color: #333;
+    }
+    .Rj2Mlf:not(:disabled) .VfPpkd-vQzf8d {
+        color: var(--text-bright);
+    }
+    /* turn in button */
+    .Y5sE8d:not(.RDPZE) .snByac {
+        color: var(--text-bright);
+    }
+    /* turn in button on black themed classes */
+    .UvHKof .QkA63b:not(.RDPZE), .UvHKof .Y5sE8d:not(.RDPZE) {
+        background-color: #555;
+    }
+    /* add or create button on black themed classes */
+    .UvHKof .FL3Khc:not(:disabled).VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe, .UvHKof .FL3Khc:not(:disabled):not(.VfPpkd-ksKsZd-mWPk3d):focus {
+        border-color: var(--text-dark);
+    }
+    /* unsubmit button */
+    .UvHKof .AeAAkf:not(.RDPZE):hover, .UvHKof .AeAAkf:not(.RDPZE).u3bW4e, .UvHKof .BEAGS:not(.RDPZE):hover, .UvHKof .BEAGS:not(.RDPZE).u3bW4e {
+        border-color: var(--border-med-heavy);
+    }
+    /* originality report section */
+    .LDr2ne {
+        border-color: var(--border-normal);
+    }
+    
+    /* border when submitting assignment with attachments */
+    .qj5L0 {
+        border-color: #363636;
+    }
+    
     .BQ5ILd,
     .a4YS1c,
     .g5FCDc {
         /* borders */
-        border-color: #333;
+        border-color: var(--border-normal);
     }
     .DC55n td {
         background-color: inherit;
-        border-color: #333;
+        border-color: var(--border-normal);
     }
     .xlHPle .VfPpkd-fmcmS-yrriRe:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-fmcmS-wGMbrd {
         /* assignment points value selector */
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
     .xlHPle .VfPpkd-fmcmS-yrriRe:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-fmcmS-wGMbrd::placeholder {
         /* assignment points value selector placeholder */
-        color: #999;
+        color: var(--text-dark);
     }
     .xlHPle .VfPpkd-StrnGf-rymPhb {
         /* assignment points value selector dropdown */
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
     .kcAzD:focus::before {
         /* sidebar 'sort by' cell border */
@@ -1312,19 +1708,19 @@
     .Evt7cb,
     .Evt7cb:visited {
         /* sidebar section headers */
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
     .YrFhrf {
         /* turned in/assigned/graded big numbers */
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
     .yHjGtf {
         /* turned in/assigned/graded number dividers */
-        border-color: #333;
+        border-color: var(--border-normal);
     }
     .dDKhVc {
         /* light-color labels */
-        color: #999
+        color: var(--text-dark)
     }
     .I2XGyb.jgvuAb {
         /* extra space around student work filter and folder button */
@@ -1344,14 +1740,14 @@
     .IMvYId:not(table),
     .Y5vSD {
         /* lighter text on student work comment thread screen */
-        color: #999;
+        color: var(--text-dark);
     }
     table.IMvYId {
         /* text color on history table */
-        color: #a0a0a0;
+        color: var(--text-med-dark);
     }
     .nk37z {
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
     .oleV8d {
         /* private comment message field */
@@ -1363,7 +1759,7 @@
     }
     .LsqTRb {
         /* private comment message field placeholder text */
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
     .Y5FYJe.RDPZE svg {
         /* private comment message field post button - inactive */
@@ -1399,19 +1795,29 @@
     }
     .WmnPA:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-fmcmS-wGMbrd {
         /* color of text inputed in */
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
+    .xlHPle .VfPpkd-fmcmS-yrriRe:hover:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc, .WmnPA:hover:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc {
+        /* color of placeholder on hover */
+        color: var(--text-med-bright);
+    }
+    
     .xlHPle .VfPpkd-fmcmS-yrriRe:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc,
     .WmnPA:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc {
         /* color of placeholder (when inactive) */
-        color: #a0a0a0;
+        color: var(--text-med-dark);
     }
     .xSP5ic,
     .xSP5ic.yHy1rc {
         /* info icon */
-        color: #a0a0a0;
+        color: var(--text-med-dark);
     }
-
+    .gpeXDe, .meyvr, .LqHDgc, .Lp3y7d {
+        /* border between subsections */
+        border-color: var(--border-med-heavy);
+    }
+    
+    
     /* people view */
     /* disabled 'actions' button */
     .Rj2Mlf:disabled {
@@ -1441,7 +1847,7 @@
     .ATUW8c,
     .ATUW8c:hover {
         background-color: #202020;
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
     .CobWe,
     .HNcB0e,
@@ -1456,11 +1862,11 @@
     }
     .PNwDub {
         /* potential invitee names */
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
     .G1zVib {
         /* potential invitee emails */
-        color: #999999;
+        color: var(--text-dark);
     }
     .AZW99:hover {
         /* potential invitee list item hover */
@@ -1472,13 +1878,13 @@
     .LhKRUe {
         box-shadow: 0 0 5px #121212;
         background-color: #202020;
-        color: #e0e0e0;
+        color: var(--text-bright);
     }
 
     /* check box */
     .Ne8lhe .VfPpkd-muHVFf-bMcfAe:enabled:not(:checked):not(:indeterminate):not([data-indeterminate="true"]) ~ .VfPpkd-YQoJzd {
         /* inactive */
-        border-color: #a0a0a0;
+        border-color: var(--text-med-dark);
     }
     .Ne8lhe:hover .VfPpkd-muHVFf-bMcfAe:enabled:not(:checked):not(:indeterminate):not([data-indeterminate="true"]) ~ .VfPpkd-YQoJzd,
     .Ne8lhe:not(:disabled):active .VfPpkd-muHVFf-bMcfAe:enabled:checked ~ .VfPpkd-YQoJzd,
@@ -1488,13 +1894,19 @@
     .Ne8lhe.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe .VfPpkd-muHVFf-bMcfAe:enabled:not(:checked):not(:indeterminate):not([data-indeterminate="true"]) ~ .VfPpkd-YQoJzd,
     .Ne8lhe:not(.VfPpkd-ksKsZd-mWPk3d):focus .VfPpkd-muHVFf-bMcfAe:enabled:not(:checked):not(:indeterminate):not([data-indeterminate="true"]) ~ .VfPpkd-YQoJzd {
         /* on hover, focus, or that weird in-between state */
-        border-color: #e0e0e0;
+        border-color: var(--text-bright);
     }
 
-    /* view more button */
+    /* view more button, view all assignments button from upcoming panel (actually, it's a lot more than that) */
     .VfPpkd-vQzf8d {
-        color: #e0e0e0;
+        color: currentColor;
     }
+    
+    .ycbm1d {
+        /* border between teachers */
+        border-color: #444;
+    }
+    
 
     /* teacher appreciation week */
     .WagS8 {
@@ -1504,14 +1916,18 @@
     }
 
     /* youtube link popup */
+    .yb5d6c {
+        /* pre-load background */
+        background-color: #191919;
+    }
     .lGIiYb {
         /* header */
         background-color: #212121;
-        border-color: #333;
+        border-color: var(--border-normal);
     }
     .cuHavc {
         /* youtube logo */
-        background-color: #e0e0e0; //border-radius: 5px;
+        background-color: var(--text-bright);
         padding: 5px;
         clip-path: polygon(15.279135px 0px,
         calc(100% - 15.279135px) 0px,
@@ -1577,7 +1993,11 @@
     }
     .VfPpkd-Bz112c-LgbsSe {
         /* icon buttons */
-        color: #e0e0e0;
+        color: var(--icon-button);
+    }
+    .VfPpkd-Bz112c-LgbsSe:active {
+        /* active icon buttons */
+        color: var(--icon-button-active);
     }
     
     /* new sidebar */
@@ -1586,24 +2006,160 @@
     }
     
     .Tabkde {
-        border-color: #121212;
+        border-color: var(--border-light);
     }
     
-    .F4Ol1b .STek2d:hover, .F4Ol1b .STek2d:focus-within {
-          box-shadow: 0 4px 4px 0 #121212,0 8px 12px 6px #121212;
+    .F4Ol1b:not(.eXqTtb) .STek2d:hover, .F4Ol1b:not(.eXqTtb) .STek2d:focus-within {
+          box-shadow: 0 4px 4px 0 #121212, 0 8px 12px 6px #121212;
     }
     
     .vdOCJb .LlcfK {
         right: -0.1rem;
     }
+    
+    /* drive picker dialog */
+    .picker-dialog.XKSfm-Sx9Kwc {
+        background-color: red;
+        animation: lighten 1.5s;
+    }
+    
+    @keyframes lighten {
+        from {
+            background-color: #191919;
+        }
+        to {
+            background-color: white;
+        }
+    }
 
     /* header */
     .mwJvDe .KEDCCd {
         background-color: #202020;
-        border-color: #121212;
+        border-color: var(--border-light);
     }
     .sw3lj {
         box-shadow: 0 2px 6px 2px #121212;
+    }
+    
+    /* assignment grading */
+    header {
+        /* header (because it's different for whatever reason) */
+        background-color: transparent!important;
+    }
+    .gb_bd.gb_cd {
+        /* header title text */
+        color: var(--text-bright);
+    }
+    
+    .KeIaWd, .oNbfCd.iWO5td {
+        /* student selector */
+        background-color: #292929;
+    }
+    .n9QKGb {
+        /* student selector text (and probably some other things as well) */
+        color: var(--text-bright);
+    }
+    .oNbfCd {
+        /* 'sort by' label */
+        color: var(--text-med-dark);
+    }
+    .ODSVk {
+        /* student selector secondary text ('/100') */
+        color: var(--text-med-dark);
+    }
+    .YxJ1Jf, .YxJ1Jf.KKjvXb {
+        /* open student selector filters (inactive) */
+        color: var(--text-bright);
+        background-color: transparent;
+        border-color: transparent;
+    }
+    .YxJ1Jf.KKjvXb {
+        background-color: #313131;
+    }
+    .YxJ1Jf:not(.KKjvXb) {
+        border-color: var(--border-normal);
+    }
+    
+    .JWfJb, .pXCfVe {
+        /* 'files' and similar labels */
+        color: var(--text-bright);
+    }
+    
+    .cjq2Db:not(.hXuAwe) {
+        /* icons */
+        color: var(--text-bright);
+        fill: var(--text-bright);
+    }
+    .Y5FYJe.RDPZE {
+        color: #666;
+        fill: #666;
+    }
+    .Y5FYJe.RDPZE .DPvwYc {
+        color: inherit;
+        fill: inherit;
+    }
+    
+    .RmLJRd {
+        /* empty comment bank text */
+        color: var(--text-med-dark);
+    }
+    .gEOtL {
+        /* comment bank comment */
+        border-color: #313131;
+    }
+    
+    .EH8axd {
+        /* default state of grading status string */
+        color: var(--text-med-dark);
+    }
+    
+    .EJ1H8e, .ePyQFb {
+        /* previous grade string and submission time string */
+        color: var(--text-dark);
+    }
+    
+    .xU1KDc.fxlT2b {
+        /* submitted file */
+        background-color: #212121;
+    }
+    .iymVqd {
+        border-right-color: #313131;
+    }
+    
+    .AcK03d .Unei2d, .AcK03d .HNSHbb, .AcK03d .KmSns {
+        /* section borders */
+        border-color: var(--border-normal);
+    }
+    
+    .AkVYk .Yalane:before, .D3oBEe .n9IS1:before {
+        /* private comment field border and grade entry field border */
+        border-color: var(--border-ultra-heavy);
+    }
+    
+    .gjmhNd {
+        /* sidebar sidebar */
+        box-shadow: none;
+        border-right: 1px solid var(--border-normal);
+    }
+    
+    .WbZEIe {
+        /* background behind student-submitted work while drive viewer is loading */
+        background-color: #121212;
+    }
+    
+    
+    /* join class from link card page */
+    .CSivxe {
+        /* top section background */
+        background-color: #303030;
+    }
+    .Hxzuyb {
+        /* classroom logo title */
+        filter: invert(1);
+    }
+    .tLDEHd {
+        /* text description */
+        color: var(--text-bright);
     }
 }
 @-moz-document domain("ogs.google.com") {
@@ -1612,14 +2168,14 @@
         /* entire box */
         background: rgba( 0, 0, 0, 0.25);
         box-shadow: 0 0 5px #121212;
-        backdrop-filter: blur( 5px);
-        -webkit-backdrop-filter: blur( 5px);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
         border-radius: 10px;
         border: 1px solid #33333360;
     }
     .Rq5Gcb {
         /* items text */
-        color: #a0a0a0;
+        color: white;
     }
     .tX9u1b:hover,
     .tX9u1b:active,
