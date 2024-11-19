@@ -8,6 +8,86 @@ The theme is available through [userstyles.world](http://www.userstyles.world) v
 
 
 ### Changelog
+v.1.5.7
+Fix minor bugs introduced by Google
+Improve rich text control consistency
+
+v.1.5.6
+Improve the look of items and sections in the classwork page
+
+v.1.5.5
+Fix critical bugs introduced by Google
+
+v.1.5.3
+Very minor improvements
+
+v.1.5.2
+Improve text color declaration
+
+v.1.5.1
+Improve links, rubrics, text input labels, and picker dialogs
+
+v.1.5.0
+Improve visual coherence across pages and elements
+
+v.1.4.13
+Minor improvements
+
+v.1.4.12
+Style join class card from link
+Fix loading bar
+Add slight border to most card items
+
+v.1.4.11 - Back to School Fall 2024
+Fix a few changes made by Google
+
+v.1.4.10 -
+Fix some big changes made by Google
+Improve the consistency of certain colors and effects across the platform
+Known Issue: Teacher view is still slightly affected by Google's changes in some minor areas. This will be addressed soon in the next update.
+
+v.1.4.9 -
+Fix a couple of minor details that broke due to changes made by Google
+Lighten up some of the borders for a more clean design
+
+v.1.4.8 -
+Bug fixes
+
+v.1.4.7 -
+Fix a couple of minor details that broke due to changes made by Google
+
+v.1.4.6 -
+Miscellaneous improvements for both student and teacher views
+
+v.1.4.5 -
+Improve behavior of assignments on classwork page
+Improve behavior of link cards within assignments
+
+v.1.4.4 -
+Unify sidebar elements on hover and focus
+Minor fix for hover color of non-clickable section titles
+
+v.1.4.3 -
+Improve the work section of the student assignment page
+Improve the 'announce something to your class' area
+
+v.1.4.2 -
+Improve the to-do page
+
+v.1.4.1 -
+Improve the upcoming assignments panel within classes
+Improve schemes of several border and text colors throughout the interface
+
+v.1.4.0 -
+Darken the assignment review page
+Fix a few minor details to keep up with changes from Google
+
+v.1.3.2 -
+Improve visibility of several elements on hover
+
+v.1.3.1 -
+Fix text color within apps popout
+
 v.1.3.0 -
 Add support for the new sidebar design, as well as a few tweaks to keep everything looking great.
 
