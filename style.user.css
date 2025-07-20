@@ -1,13 +1,19 @@
 /* ==UserStyle==
-@name         Google Classroom Dark Mode
-@version      1.5.7
-@namespace    userstyles.world/user/colebot
-@description  Dark Theme for Google Classroom - Supports both student and teacher views!
-@author       colebot
-@license      CC BY-SA - Creative Commons Attribution-ShareAlike
+@name           Google Classroom Dark Mode
+@namespace      userstyles.world/user/colebot
+@version        2.0.0
+@description    Dark mode for Google Classroom
+@author         Colebot
 ==/UserStyle== */
+
 @-moz-document domain("classroom.google.com") {
     :root {
+        --curtain: #000000aa;
+        --bg-0: #191919;
+        --bg-1: #202020;
+        --bg-2: #272727;
+        --bg-3: #2a2a2a;
+        
         --border-ultra-heavy: #666666;
         --border-heavy: #555555;
         --border-med-heavy: #444444;
@@ -21,6 +27,8 @@
         --text-med-med-dark: #b0b0b0;
         --text-med-dark: #a0a0a0;
         --text-dark: #999999;
+        --text-ultra-dark: #666666;
+        --text-ultra-ultra-dark: #4a4a4a;
         
         --general-text-button: var(--text-med-med-dark);
         --general-text-button-hover: var(--text-bright);
@@ -29,2194 +37,517 @@
         --icon-button-active: var(--text-med-med-dark);
     }
     
-    :root {
-        /* the color for the background ripple effect on icon buttons */
-        --mdc-ripple-color: #666;
+    /* GENERAL */
+    body, .fXYYpf .T4LgNb {
+        /* scroll edges */
+        background-color: var(--bg-0);
+        
+        /* misc text */
+        color: var(--text-med);
+    }
+    .pYTkkf-Bz112c-LgbsSe {
+        /* icon buttons */
+        color: var(--text-med);
+        --gm3-ripple-hover-color: var(--text-dark);
+    }
+    .pYTkkf-Bz112c-LgbsSe:hover, .pYTkkf-Bz112c-LgbsSe:focus {
+        /* icon buttons hover/focus */
+        color: var(--text-bright);
+    }
+    .Aopndd, .d4Fe0d {
+        /* plain items with border */
+        background-color: var(--bg-0);
+        border-color: var(--border-normal);
+    }
+    .A6dC2c {
+        /* link cards */
+        color: var(--text-med-dark);
+    }
+    .N6nSod {
+        /* help button */
+        background-color: var(--bg-3);
+    }
+    /* add comment fields */
+    .q1Kmyc {
+        /* input */
+        border-color: var(--border-heavy);
+    }
+    .EN2Rfc:not(.RDPZE) .XTO5bf:hover, .EN2Rfc:not(.RDPZE) .XTO5bf.y7OZL {
+        /* hover format buttons */
+        color: var(--text-med-bright);
+    }
+    .EN2Rfc:not(.RDPZE) .XTO5bf.y7OZL {
+        /* active format buttons */
+        background-color: var(--bg-3);
+    }
+    .pYTkkf-Bz112c-LgbsSe:disabled {
+        /* disabled send button */
+        color: var(--text-ultra-ultra-dark);
+    }
+    /* context menus */
+    .O68mGe-xl07Ob {
+        /* main background */
+        background-color: var(--bg-1);
+    }
+    .W7g1Rb-rymPhb-KkROqb:has(.W7g1Rb-rymPhb-Abojl), .W7g1Rb-rymPhb-fpDzbe-fmcmS {
+        /* list item icons/text */
+        color: var(--text-med-dark);
+    }
+    .W7g1Rb-rymPhb-ibnC6b:hover .W7g1Rb-rymPhb-KkROqb:has(.W7g1Rb-rymPhb-Abojl), .W7g1Rb-rymPhb-ibnC6b:hover .W7g1Rb-rymPhb-fpDzbe-fmcmS {
+        /* list item hover icons/text */
+        color: var(--text-med-bright);
+    }
+    .W7g1Rb-rymPhb-ibnC6b:hover {
+        /* hover item background */
+        background-color: var(--bg-2);
+    }
+    .W7g1Rb-rymPhb-ibnC6b:active {
+        /* active item background */
+        background-color: var(--bg-3);
+    }
+    .W7g1Rb-rymPhb-ibnC6b[aria-selected=true] {
+        /* selected item background */
+        background-color: var(--bg-3);
+    }
+    .W7g1Rb-rymPhb-ibnC6b-OWXEXe-gk6SMd .W7g1Rb-rymPhb-fpDzbe-fmcmS {
+        color: var(--text-bright);
+    }
+    .W7g1Rb-rymPhb-ibnC6b:focus .W7g1Rb-rymPhb-fpDzbe-fmcmS {
+        /* focus item text */
+        color: var(--text-med);
+    }
+    .W7g1Rb-rymPhb-ibnC6b-OWXEXe-gk6SMd:focus .W7g1Rb-rymPhb-fpDzbe-fmcmS {
+        /* selected focus item text */
+        color: var(--text-bright);
+    }
+    .W7g1Rb-clz4Ic {
+        /* interior border */
+        background-color: var(--border-heavy);
+    }
+    /* popup dialogs */
+    .cC1eCc .VfPpkd-IE5DDf, .cC1eCc .VfPpkd-P5QLlc-GGAcbc {
+        /* curtain */
+        background-color: var(--curtain);
+    }
+    .cC1eCc .VfPpkd-P5QLlc {
+        /* main background */
+        background-color: var(--bg-1);
+    }
+    .cC1eCc .VfPpkd-k2Wrsb {
+        /* title text */
+        color: var(--text-med);
+    }
+    .Fgl6fe-fmcmS-yrriRe-OWXEXe-MFS4be:not(.Fgl6fe-fmcmS-yrriRe-OWXEXe-OWB6Me) {
+        /* input */
+        background-color: var(--bg-2);
+    }
+    .Fgl6fe-fmcmS-yrriRe:not(.Fgl6fe-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.Fgl6fe-fmcmS-yrriRe-OWXEXe-XpnDCe):hover {
+        /* input hover */
+        background-color: var(--bg-3);
+    }
+    .Fgl6fe-fmcmS-yrriRe:not(.Fgl6fe-fmcmS-yrriRe-OWXEXe-OWB6Me) .Fgl6fe-fmcmS-wGMbrd, .Fgl6fe-fmcmS-yrriRe:not(.Fgl6fe-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.Fgl6fe-fmcmS-yrriRe-OWXEXe-XpnDCe):hover .Fgl6fe-fmcmS-wGMbrd, .Fgl6fe-fmcmS-yrriRe:not(.Fgl6fe-fmcmS-yrriRe-OWXEXe-OWB6Me).Fgl6fe-fmcmS-yrriRe-OWXEXe-XpnDCe .Fgl6fe-fmcmS-wGMbrd {
+        /* input text */
+        color: var(--text-med);
+    }
+    .Fgl6fe-fmcmS-wGMbrd::placeholder {
+        /* input placeholder */
+        color: var(--text-med);
+    }
+    .Fgl6fe-fmcmS-yrriRe-OWXEXe-UJflGc:not(.Fgl6fe-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.Fgl6fe-fmcmS-yrriRe-OWXEXe-XpnDCe):hover {
+        /* input placeholder hover */
+        --gm3-floating-label-label-text-color: var(--text-med);
+    }
+    .mUIrbf-LgbsSe:disabled .mUIrbf-vQzf8d {
+        /* disabled confirm button */
+        color: var(--text-ultra-ultra-dark);
+    }
+    /* drop-down selectors */
+    .w482V-CZC2Ab-i5vt6e {
+        /* border */
+        --gm3-notched-outline-border-color: var(--border-normal);
+    }
+    .w482V-O1htCb:hover .w482V-CZC2Ab-i5vt6e {
+        /* hover border */
+        --gm3-notched-outline-border-color: var(--border-heavy);
+    }
+    .rHGeGc-uusGie-fmcmS {
+        /* display item text */
+        color: var(--text-med);
+    }
+    .rHGeGc-O1htCb:hover .rHGeGc-uusGie-fmcmS {
+        /* hover display item text */
+        color: var(--text-med-bright);
+    }
+    .rHGeGc-O1htCb.rHGeGc-O1htCb-OWXEXe-XpnDCe .rHGeGc-uusGie-fmcmS {
+        /* focused display item text */
+        color: var(--text-med-bright);
     }
     
     
-    body {
-        background-color: #191919;
-        color: var(--text-bright);
-    }
-    .B7SYid {
-        /* assignment detail page heading */
-        color: var(--text-bright);
-    }
-    .VfPpkd-I9GLp-yrriRe {
-        /* certain type of text label */
-        color: Var(--text-med-bright);
-    }
-    /* nav bar */
+    /* NAVIGATION */
+    /* header */
     .joJglb {
+        background-color: var(--bg-1);
+    }
+    .y183Ub {
+        /* logo text */
+        color: var(--text-med);
+    }
+    .r9JCQd {
+        /* class name */
+        color: var(--text-med);
+    }
+    .tWeh6 {
+        /* class section */
+        color: var(--text-med-dark);
+    }
+    .LNBrBd {
+        /* other title */
+        color: var(--text-med);
+    }
+    .xSP5ic:not([disabled]), .xSP5ic:not([disabled]).yHy1rc, .xSP5ic:not([disabled]).pYTkkf-Bz112c-LgbsSe {
+        /* toolbar control buttons */
+        color: var(--text-med);
+        fill: var(--text-med);
+    }
+    .gb_Fa svg, .gb_Qc svg, .gb_td .gb_ud, .gb_3c .gb_ud {
+        /* google apps button */
+        color: var(--text-med);
+        fill: var(--text-med);
+    }
+    .gb_B[aria-expanded="true"] .gb_F {
+        /* google apps button expanded */
+        fill: var(--text-med-bright);
+    }
+    /* sidebar */
+    .tCcYY {
+        /* main background */
+        background-color: var(--bg-1);
+    }
+    .ykp8pd {
+        /* icons */
+        color: var(--text-med);
+    }
+    .HqpJve {
+        /* section headers */
+        color: var(--text-med-dark);
+    }
+    .GRvzhf {
+        /* class name */
+        color: var(--text-med-med-dark);
+    }
+    .DWJNgb {
+        /* class section */
+        color: var(--text-dark);
+    }
+    .uTwgne:hover .pzaVke, .ug8OTc:hover .pzaVke {
+        /* hover link backdrop */
+        background-color: var(--bg-2);
+    }
+    .wQiG5d {
+        /* active link backdrop */
+        background-color: var(--bg-3);
+    }
+    .XL4gNd, .mefVYc {
+        /* active link text */
+        color: var(--text-bright);
+    }
+    .m2eIad {
+        /* active link icon */
+        color: var(--text-bright);
+        fill: var(--text-bright);
+    }
+    /* corner piece */
+    .g0zrjc, .OkLq5b {
+        fill: var(--bg-1);
+    }
+    
+    
+    /* HOME PAGE */
+    .SZ0kZe {
+        border-color: var(--border-normal);
+    }
+    .avfKs {
+        /* home page background */
+        background-color: var(--bg-0);
+    }
+    /* join class dialog */
+    .aHij0b-WsjYwc, .aHij0b-WsjYwc:hover {
+        /* current account panel */
+        background-color: transparent;
+        border-color: var(--border-med-heavy);
+    }
+    
+    /* class cards */
+    .rZXyy.YwNp1, .rZXyy:not(.u0dx8e):not(.ILo0B):not(.xp2dJ):hover, .rZXyy:not(.u0dx8e):not(.ILo0B):not(.xp2dJ):focus {
+        box-shadow: 0 0 0 0.0625rem var(--border-normal);
+    }
+    /* move class dialog */
+    .W7g1Rb-rymPhb-ibnC6b {
+        /* class elements */
+        background-color: var(--bg-1);
+    }
+    .W7g1Rb-rymPhb-ibnC6b-OWXEXe-OWB6Me .W7g1Rb-rymPhb-KkROqb:has(.W7g1Rb-rymPhb-Abojl) {
+        /* disabled icon */
+        color: var(--text-dark);
+    }
+    .W7g1Rb-rymPhb-Gtdoyb, .W7g1Rb-rymPhb-ibnC6b-OWXEXe-OWB6Me .W7g1Rb-rymPhb-L8ivfd-fmcmS, .W7g1Rb-rymPhb-ibnC6b-OWXEXe-OWB6Me .W7g1Rb-rymPhb-fpDzbe-fmcmS {
+        /* disabled text */
+        color: var(--text-dark);
+    }
+    .W7g1Rb-rymPhb-L8ivfd-fmcmS {
+        /* enabled section */
+        color: var(--text-dark);
+    }
+    
+    
+    /* CLASS PAGE */
+    .mwJvDe .KEDCCd {
+        /* class tab bar */
+        background-color: var(--bg-0);
+        border-color: var(--border-normal);
+    }
+    .wZTANe .J1raN {
+        /* tab text */
+        color: var(--text-dark);
+    }
+    .wZTANe .J1raN:hover {
+        /* tab text hover */
+        color: var(--text-med);
+    }
+    /* STREAM TAB */
+    .IzVHde {
+        /* extra class info */
+        background-color: var(--bg-0);
+    }
+    /* upcoming assignments panel */
+    .EZrbnd {
+        /* 'upcoming' text */
+        color: var(--text-med);
+    }
+    .vMBnqb .xo2x2e {
+        /* empty message */
+        color: var(--text-dark);
+    }
+    /* new announcement box */
+    /* collapsed */
+    .K6Ovqd {
+        /* placeholder text */
+        color: var(--text-med-dark);
+    }
+    .GWZ7yf {
+        /* backdrop */
+        box-shadow: none;
+        border: 1px solid var(--border-normal);
+    }
+    .qk0lee:focus::after {
+        /* backdrop focus */
+        background-color: var(--bg-1);
+    }
+    /* expanded */
+    .hgjBDc {
+        /* main body */
+        background-color: var(--bg-1);
+    }
+    .svNSpd {
+        /* new attachment circles */
+        border-color: var(--border-med-heavy);
+    }
+    .vnnr5e .I9OJHe, .vnnr5e .CIy9F {
+        /* text field */
+        background-color: var(--bg-2);
+    }
+    .vnnr5e:not(.RDPZE):not(.u3bW4e):hover .I9OJHe, .vnnr5e:not(.RDPZE):not(.u3bW4e):hover .CIy9F {
+        /* text field hover */
+        background-color: var(--bg-3);
+    }
+    .zuzKle.xVPuB, .zuzKle.vnnr5e {
+        /* text field text */
+        color: var(--text-med);
+    }
+    .xVPuB .snByac, .vnnr5e .snByac {
+        /* text field placeholder */
+        color: var(--text-med-dark);
+    }
+    .vnnr5e:not(.RDPZE):not(.u3bW4e):hover .I9OJHe.vTcY1d .snByac {
+        /* text field hover placeholder */
+        color: var(--text-med-bright);
+    }
+    .UywwFc-LgbsSe:disabled {
+        /* disabled post button */
+        background-color: var(--bg-2);
+    }
+    .UywwFc-LgbsSe:disabled .UywwFc-vQzf8d {
+        /* disabled post button text */
+        color: var(--text-ultra-ultra-dark);
+    }
+    /* class stream items */
+    .asQXV {
+        /* headers */
+        color: var(--text-med-dark);
+    }
+    .Iwp0Ue:not(.xp2dJ):not(.rZXyy):hover.rXdid, .Iwp0Ue:not(.xp2dJ):not(.rZXyy):hover.h7Ww0, .Iwp0Ue:not(.xp2dJ):not(.rZXyy):hover .rXdid, .Iwp0Ue:not(.xp2dJ):not(.rZXyy):hover .h7Ww0, .xWw7yd:hover.rXdid, .xWw7yd:hover.h7Ww0, .xWw7yd:hover .rXdid, .xWw7yd:hover .h7Ww0 {
+        /* item hover/focus */
+        background-color: var(--bg-1);
+    }
+    /* announcement items */
+    .s2g3Xd {
+        /* inner border */
+        border-color: var(--border-normal);
+    }
+    /* CLASSWORK TAB */
+    /* section headers */
+    .onkcGd, .onkcGd:visited, .WPhuJf, .WPhuJf:visited {
+        /* hover text */
+        color: var(--text-med);
+    }
+    .VKRoqe {
         /* bottom border */
         border-color: var(--border-normal);
     }
-    .joJglb .QRiHXd {
-        background-color: inherit;
-    }
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .P3W0Dd-Ysl7Fe:focus,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof).maXJsd:focus .P3W0Dd-Ysl7Fe,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .maXJsd:focus .P3W0Dd-Ysl7Fe,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .UISY8d-Ysl7Fe:hover,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof).MymH0d:hover .UISY8d-Ysl7Fe,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .MymH0d:hover .UISY8d-Ysl7Fe,
-    .wZTANe .J1raN:hover, .hN1OOc.eumXzf:hover, .hN1OOc.eumXzf:focus {
-        /* nav buttons, focus/hover */
-        background-color: #272727;
-    }
-    .wZTANe .J1raN:hover {
-        /* non-current tab text color */
-        color: var(--text-bright);
-    }
-    
-    .joJglb .bFjUmb-Ysl7Fe, .kYtXye .bFjUmb-Ysl7Fe.kRqvHe, .bFjUmb-Ysl7Fe.aP3ZPb, .Po14Kd {
-        /* loading bar (for loading the entire page, loading subpages, and loading posts in stream) */
-        background-color: #272727;
-    }
-    
-    .Xi8cpb:hover .LlcfK, .qr5cDe:hover .LlcfK {
-        /* sidebar items on hover */
-        background-color: #ffffff12!important;
-    }
-    
-    .bFjUmb-Ysl7Fe.Fh209b {
-        /* sidebar items when active/selected */
-        background-color: #ffffff20!important;
-    }
-    
-    .VfPpkd-rymPhb-clz4Ic {
-        background-color: var(--border-normal);
-    }
-    
-    .A6dC2c-J3yWx {
-        /* class title */
-        color: var(--text-bright);
-    }
-    
-    /* classroom title text */
-    .rpo4wf-J3yWx {
-        color: var(--text-bright)!important;
-    }
-
-    /* icons */
-    
-    .xSP5ic:not([disabled]), .xSP5ic:not([disabled]).yHy1rc {
-        /* side bar icons */
-        color: var(--text-med-dark);
-        fill: var(--text-med-dark);
-    }
-    
-    .gb_Na svg, .gb_Rc svg, .gb_dd .gb_ld, .gb_3c .gb_ld, .gb_d[aria-expanded=true] .gb_i {
-        /* google apps icon */
-        color: var(--text-med-bright);
-        fill: var(--text-med-bright);
-    }
-    /* icon button hover */
-    .VfPpkd-Bz112c-LgbsSe:hover, .gb_Fc .gb_Qd.gb_me button:hover svg, .gb_Qd button:hover svg, .gb_d:hover {
-        background-color: #ffffff20;
-        border-radius: 500px;
-        transition: background-color 0.1s;
-    }
-
-    /* logo text */
-    .IqJTee {
-        color: var(--text-med-bright);
-    }
-
-    .QNajvd {
-        color: var(--text-med-bright);
-    }
-
-    /* classes grid */
-    .JwPp0e li {
-        /* class options menu items */
-        background-color: #202020;
-        border-color: #202020;
-        box-shadow: none;
-    }
-
-    .JwPp0e li:hover {
-        /* class options menu items hover */
-        box-shadow: none;
-    }
-
-    .JwPp0e li .QRiHXd {
-        /* class options menu items text */
-        background-color: inherit;
-    }
-    
-    .rZXyy.YwNp1, .rZXyy:not(.u0dx8e):not(.ILo0B):not(.xp2dJ):hover, .rZXyy:not(.u0dx8e):not(.ILo0B):not(.xp2dJ):focus {
-        /* remove extra box shadow for class cards */
-        box-shadow: none;
-    }
-    
-    /* underneath dragged class */
-    .TisIWb .kKn9Nc::before {
-        background-color: transparent;
-    }
-    
-    /* move class pop-up */
-    .dDKhVc-Wvd9Cc {
-        /* 'after' text label */
-        color: var(--text-dark);
-    }
-
-    /* add attachment popup item icons */
-    .xSP5ic, .xSP5ic.yHy1rc {
-        color: var(--text-bright);
-        fill: var(--text-bright);
-    }
-    
-    /* upcoming assignments panel */
-    /* box */
-    .d4Fe0d {
-        background-color: #202020;
-        border-color: var(--border-light);
-    }
-    /* multiple upcoming assignment divider */
-    .WMQb5e .oBSRLe {
-        border-color: #363636;
-    }
-    /* upcoming assignment due date headers */
-    .oBSRLe {
-        color: var(--text-med-dark);
-    }
-    /* view all assignments button */
-    .n42Gr:not(:disabled) {
-        color: var(--general-text-button)!important;
-        transition: color .2s;
-    }
-    /* view all assignments button on hover */
-    .n42Gr:not(:disabled):is(:hover, :active, :focus) {
-        color: var(--general-text-button-hover)!important;
-    }
-    
-    .J9GwTe img, .J9GwTe .DPvwYc {
-        /* link attachment icon */
-        color: var(--text-bright);
-    }
-    
-    .UvHKof .HyS0Qd:not(.RDPZE).u3bW4e .snByac, .UvHKof .HyS0Qd input:not([disabled]):focus~.snByac, .UvHKof .fWf7qe:not(.RDPZE).u3bW4e .snByac, .UvHKof .D3oBEe:not(.RDPZE).u3bW4e .snByac, .UvHKof .D3oBEe input:not([disabled]):focus~.snByac, .UvHKof .AkVYk:not(.RDPZE).u3bW4e .snByac, .UvHKof .vnnr5e:not(.RDPZE).u3bW4e .snByac {
-        /* accent text on black-themed classes */
-        color: var(--text-med-dark);
-    }
-    
-    /* help button in corner */
-    .N6nSod {
-        background-color: #272727d9;
-    }
-    
-    
-    /* class card middle border */
-    .SZ0kZe {
-        border-top: none;
-    }
-    
-    /* input fields content */
-    .zuzKle.xVPuB, .zuzKle.vnnr5e {
-        color: var(--text-med-bright);
-    }
-
-    .apFsO.onkcGd,
-    .apFsO.onkcGd:visited {
-        color: var(--text-med-bright);
-    }
-
-    .JPdR6b.hVNH5c.qjTEB {
-        background-color: transparent;
-    }
-
-    .JAPqpe {
-        background-color: #272727;
-        border-color: #272727;
-        border-radius: 5px;
-    }
-
-    .z80M1 {
-        color: var(--text-bright);
-    }
-
-    .z80M1:hover {
-        background-color: #313131;
-    }
-
-    .I7OXgf {
-        background-color: #202020;
-    }
-
-    .joJglb {
-        background-color: #202020;
-    }
-
-    .Qks78e,
-    .QRiHXd {
-        background-color: inherit;
-    }
-
-    .thP79c:hover {
-        background-color: #181818;
-    }
-
-    .Shk6y {
-        color: var(--text-bright);
-    }
-
-    .asQXV {
-        color: var(--text-med-bright);
-    }
-
-    .EZrbnd {
-        color: var(--text-bright);
-    }
-
-    .nforOe, .onkcGd:not(.Vx8Sxd), .onkcGd:not(.Vx8Sxd):hover * {
-        /* links on hover */
-        color: var(--text-bright)!important;
-    }
-
-    .OX4Vcb {
-        background-color: #202020;
-    }
-
-    .FLgDTb {
-        background-color: #191919;
-        border-color: #191919;
-    }
-
-    .E5f6Vd {
-        border-color: #666;
-    }
-
-    .ipmZkd {
-        color: var(--text-bright);
-    }
-
-    /* secondary description text in several places */
-    .tLDEHd {
-        color: var(--text-med-dark);
-    }
-
-    .EfLcNb {
-        color: var(--text-bright);
-    }
-
-    .X65jac {
-        color: var(--text-bright);
-    }
-
-    /* setting labels */
-    .ViCi4 {
-        color: var(--text-med);
-    }
-
-    .rpo4wf {
-        color: var(--text-bright);
-    }
-
-    .n4xnA {
-        filter: none;
-    }
-
-    /* class comments */
-    .s2g3Xd,
-    .ar1wE .eqqrO,
-    .ySjuvd .eqqrO,
-    .PeGHgb.Q8U8uc .Ono85c + .oh9CFb,
-    .PeGHgb.Q8U8uc .ruTJle + .fETHd,
-    .ZNE4y {
-        border-color: var(--border-normal);
-        border-width: 1px;
-    }
-
-    .pco8Kc {
-        color: var(--text-med-bright);
-    }
-
-    .zOtZye {
-        background-color: #202020;
-        color: var(--text-med-bright);
-    }
-    
-    
-    /* 'announce something to your class' bar */
-    .qk0lee .K6Ovqd {
-        /* label text */
-        color: var(--text-med);
-    }
-    .qk0lee:hover .K6Ovqd {
-        /* label text on hover */
-        color: var(--text-bright);
-    }
-
-    .hgjBDc {
-        background-color: #202020;
-    }
-
-    .WOPwXe {
-        color: var(--text-bright);
-    }
-
-    .I2pI {
-        color: var(--text-bright);
-    }
-
-    .oJeWuf {
-        color: var(--text-bright);
-    }
-    
-    .arstne {
-        border-left-color: #e0e0e1;
-    }
-
-    .OA0qNb {
-        background-color: #202020;
-    }
-    
-    .ybOdnf .OA0qNb {
-        /* shadow behind dropdown menus */
-        box-shadow: 0 0 10px #121212;
-    }
-
-    .jgvuAb {
-        border-color: #313131;
-    }
-
-    .mbHMhf {
-        background-color: #313131;
-    }
-
-    .ncFHed .MocG8c.KKjvXb {
-        background-color: #191919;
-    }
-
-    .DShyMc-AaTFfe .UISY8d-Ysl7Fe:hover,
-    .DShyMc-AaTFfe.MymH0d:hover .UISY8d-Ysl7Fe,
-    .DShyMc-AaTFfe .MymH0d:hover .UISY8d-Ysl7Fe {
-        background-color: #121212;
-    }
-
-    .wZTANe .J1raN {
-        color: var(--text-med-bright);
-    }
-
-    .uqpvt {
-        filter: invert(.88);
-    }
-
-    .snByac {
-        /* button text */
-        color: var(--text-med-med-dark);
-        transition: all .3s cubic-bezier(0.4,0,0.2,1);
-    }
-    :is(.Y5sE8d.RDPZE, .YhQJj.RDPZE, .An19kf.RDPZE) .snByac {
-        /* disabled button text */
-        color: #606060;
-    }
-    .l3F1ye .snByac {
-        /* accented button text */
-        color: var(--text-bright);
-    }
-
-    .NjE5zd {
-        color: var(--text-bright);
-    }
-
-    .W4hhKd {
-        color: var(--text-bright);
-    }
-    
-    /* join class page */
-    /* top border */
-    .gKkZCe {
-        border-color: #666;
-    } 
-    /* switch account button */
-    .AeAAkf {
-        border-color: #666;
-    }
-
-    /* classwork category headers */
-    .boxOzd:hover {
-        /* when clickable */
-        background-color: #202020;
-    }
-
-    .DShyMc-MzM4ODQ1NTAyODda .VnOHwf-Tvm9db {
-        color: var(--text-bright);
-    }
-
-    .DShyMc-MzM4ODQ1NTAyODda .UISY8d-Ysl7Fe:hover {
-        background-color: #121212;
-    }
-
-    .DShyMc-MzM4ODQ1NTAyODda .UISY8d-Ysl7Fe {
-        border-color: #121212;
-    }
-
-    .I2Bonc {
-        background-color: #202020;
-        border-color: #202020;
-    }
-
-    .BOW64 {
-        background-color: #121212;
-        border: 2px solid #202020;
-        border-radius: 5px;
-    }
-    
-    .pOf0gc {
-        border-color: transparent;
-        background-color: transparent;
-    }
-
-    .A6dC2c {
-        color: var(--text-bright);
-    }
-
-    .DShyMc-MTQ3MzQxMzQxODA0.VnOHwf-Tvm9db,
-    .DShyMc-MTQ3MzQxMzQxODA0 .VnOHwf-Tvm9db,
-    .DShyMc-MTQ3MzQxMzQxODA0.CNpREd .VnOHwf-Tvm9db {
-        color: var(--text-bright);
-    }
-
-    .DShyMc-MTQ3MzQxMzQxODA0 .VBEdtc-Wvd9Cc:hover,
-    .DShyMc-MTQ3MzQxMzQxODA0.MymH0d:hover .VBEdtc-Wvd9Cc,
-    .DShyMc-MTQ3MzQxMzQxODA0 .MymH0d:hover .VBEdtc-Wvd9Cc {
-        color: var(--text-bright);
-    }
-
-    .DShyMc-MTQ3MzQxMzQxODA0 .UISY8d-Ysl7Fe:hover,
-    .DShyMc-MTQ3MzQxMzQxODA0.MymH0d:hover .UISY8d-Ysl7Fe,
-    .DShyMc-MTQ3MzQxMzQxODA0 .MymH0d:hover .UISY8d-Ysl7Fe {
-        background-color: #121212;
-    }
-
-    .DShyMc-MzM4ODQ1NTAyODda .nRLOzd:hover,
-    .onkcGd:hover,
-    .onkcGd:focus {
-        color: var(--text-bright);
-    }
-
-    .ksaOtd {
-        color: var(--text-bright);
-    }
-
-    .HG7HUc:hover {
-        background-color: #191919;
-    }
-
-    .HG7HUc * {
-        background-color: transparent!important;
-    }
-
-    .lXuxY,
-    .pO6AMc,
-    .PqkECe {
-        box-shadow: 0 0 5px #121212;
-        background-color: #212121;
-    }
-    
-    /* settings */
-    .z3vRcc, .tDxNLe {
-        color: var(--text-bright);
-    }
-    
-    /* section view */
-    .xPAMbf {
-        /* assignment internal borders */
-        border-color: var(--border-normal);
-    }
-
-    /* 'your work' cards */
-    .uQ3ESd {
-        /* card expansion background */
-        background-color: #212121;
-    }
-    .P02DYb, .lXuxY .u73Apc, .VDj5V {
-        /* expanded borders */
-        border-color: var(--border-normal);
-    }
-    
-    .d6CWTd {
-        /* people list borders */
-        border-color: var(--border-normal);
-    }
-    
-
-    .wQuPk .JsqLM.N4XV7d,
-    .wQuPk .wMvEnb,
-    .wQuPk .wMvEnb.pCcXPe,
-    .wQuPk .wMvEnb.N4XV7d,
-    .wQuPk .JsqLM.pCcXPe {
-        color: var(--text-bright);
-    }
-
-    .TuHiFd {
-        border-color: var(--border-normal);
-        border-radius: 5px;
-    }
-
-    .bxp7vf {
-        border: none;
-    }
-
-    .pco8Kc html-blob span a {
-        color: var(--text-bright);
-    }
-
-    .DShyMc-MTIwNzY0OTYzOTc2 .VnOHwf-Tvm9db:hover,
-    .DShyMc-MTIwNzY0OTYzOTc2 .VnOHwf-Tvm9db:focus {
-        background-color: #191919;
-    }
-
-    .ECOutf,
-    .zaxms {
-        background-color: #313131;
-        border-color: #313131;
-        box-shadow: 0 0 5px #191919;
-    }
-
-    .D3oBEe .qTs5Xc {
-        background-color: #313131;
-    }
-
-    .WdYux {
-        color: var(--text-bright);
-    }
-
-    .SNYuNc {
-        color: var(--text-bright);
-    }
-
-    .SFCE1b {
-        background-color: transparent!important;
-        border-radius: 10px;
-    }
-
-    .OlXwxf:hover .jWCzBe.QRiHXd.idtp4e.u73Apc,
-    .jWCzBe.QRiHXd.idtp4e.u73Apc:focus-within {
-        background-color: #202020;
-    }
-
-    .OlXwxf:hover {
-        box-shadow: 0 0 5px #121212;
-    }
-    .MHxtic:not(:last-child) {
-        border-color: var(--border-normal);
-    }
-
-    .DShyMc-MTIwNzY0OTYzOTc2 .tUJKGd:not(.xp2dJ):not(.rZXyy):hover.j6KDAd,
-    .DShyMc-MTIwNzY0OTYzOTc2 .tUJKGd:not(.xp2dJ):not(.rZXyy):hover.idtp4e,
-    .DShyMc-MTIwNzY0OTYzOTc2 .tUJKGd:not(.xp2dJ):not(.rZXyy):hover .j6KDAd,
-    .DShyMc-MTIwNzY0OTYzOTc2 .tUJKGd:not(.xp2dJ):not(.rZXyy):hover .idtp4e,
-    .DShyMc-MTIwNzY0OTYzOTc2 .ZoT1D:hover.j6KDAd,
-    .DShyMc-MTIwNzY0OTYzOTc2 .ZoT1D:hover.idtp4e,
-    .DShyMc-MTIwNzY0OTYzOTc2 .ZoT1D:hover .j6KDAd,
-    .DShyMc-MTIwNzY0OTYzOTc2 .ZoT1D:hover .idtp4e {
-        border-bottom: 1px solid #202020;
-    }
-
-    /* section list items */
-    .g2MItd.MymH0d:hover .UISY8d-Ysl7Fe,
-    .g2MItd .MymH0d:hover .UISY8d-Ysl7Fe,
-    .g2MItd .UISY8d-Ysl7Fe:hover,
-    .g2MItd.maXJsd:focus .P3W0Dd-Ysl7Fe,
-    .g2MItd .maXJsd:focus .P3W0Dd-Ysl7Fe,
-    .g2MItd .P3W0Dd-Ysl7Fe:focus {
-        background-color: #202020;
-    }
-    
-    /* class selector on to-do page border */
-    .ReCbLb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me) .VfPpkd-NSFCdd-Brv4Fb, .ReCbLb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me) .VfPpkd-NSFCdd-Ra9xwd, .ReCbLb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me) .VfPpkd-NSFCdd-MpmGFe {
-        border-color: #666;
-    }
-    
-    /* class selector on to-do page border hover */
-    .ReCbLb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me):not(.VfPpkd-O1htCb-OWXEXe-XpnDCe) .VfPpkd-TkwUic:hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-Brv4Fb, .ReCbLb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me):not(.VfPpkd-O1htCb-OWXEXe-XpnDCe) .VfPpkd-TkwUic:hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-Ra9xwd, .ReCbLb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me):not(.VfPpkd-O1htCb-OWXEXe-XpnDCe) .VfPpkd-TkwUic:hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-MpmGFe {
-        border-color: var(--text-med-dark);
-    }
-    
-    /* class selector on to-do page dropdown arrow */
-    .ReCbLb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me) .VfPpkd-t08AT-Bz112c {
-        fill: #666;
-    }
-    
-    /* class selector on to-do page dropdown arrow hover */
-    .ReCbLb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me):not(.VfPpkd-O1htCb-OWXEXe-XpnDCe):hover .VfPpkd-t08AT-Bz112c {
-        fill: var(--text-med-dark);
-    }
-    
-    /* disabled icon buttons */
-    .yHy1rc:disabled {
-        color: #444;
-    }
-    
-    /* normal assignment status text ('turned in') */
-    .asQXV-FGzYL {
-        color: var(--text-med);
-    }
-    
-    .feojCc,
-    .zr19Sb .X1clqd {
-        background-color: #202020;
-        border-bottom: 1px solid #5F6368;
-    }
-
-    .DShyMc-MTc2Mjg4NzgwNzQz.VnOHwf-Tvm9db,
-    .DShyMc-MTc2Mjg4NzgwNzQz .VnOHwf-Tvm9db,
-    .DShyMc-MTc2Mjg4NzgwNzQz.CNpREd .VnOHwf-Tvm9db {
-        color: var(--text-bright);
-    }
-
-    .lziZub {
-        color: var(--text-bright);
-        background-color: inherit;
-    }
-
-    .QN3yse {
-        filter: invert(.89);
-    }
-
-    .rUtoef {
-        color: var(--text-bright);
-    }
-
-    .whsOnd {
-        color: var(--text-bright);
-    }
-
-    .dDKhVc,
-    .qEVLZc {
-        color: var(--text-bright);
-    }
-
-    .aSjeL.aSjeL td {
-        background-color: #202020;
-    }
-
-    .KKjvXb[data-value="1"][aria-selected="true"] {
-        background-color: #313131;
-    }
-
-    .xdKj9c,
-    .Je07k,
-    tbody .qwFLJb {
-        background-color: #202020;
-        border: none;
-    }
-
-    .xdKj9c.kTKNNc,
-    .Je07k.kTKNNc,
-    tbody .qwFLJb.kTKNNc {
-        background-color: #191919;
-    }
-
-    .Evt7cb {
-        color: var(--text-bright);
-    }
-
-    .udxSmc {
-        color: var(--text-bright);
-    }
-
-    .cL8LOd {
-        border-color: var(--text-bright);
-    }
-    .xVnXCf {
-        background-color: transparent;
-    }
-    
-
-    .DShyMc-MTQ3MzQxMzQxODA0 .eumXzf:after {
-        border-color: var(--text-bright);
-    }
-
-    .jrhqBd {
-        background-color: #191919;
-        border-color: #191919;
-    }
-
-    .CJXzee a.rUnD6d:focus {
-        background-color: #191919;
-    }
-
-    .DShyMc-MTQ3MzQxMzQxODA0 .P3W0Dd-Ysl7Fe:focus {
-        background-color: #191919;
-    }
-
-    .DShyMc-MTQ3NjA5NzQ4MjUz .UISY8d-Ysl7Fe:hover,
-    .DShyMc-MTQ3NjA5NzQ4MjUz.MymH0d:hover .UISY8d-Ysl7Fe,
-    .DShyMc-MTQ3NjA5NzQ4MjUz .MymH0d:hover .UISY8d-Ysl7Fe {
-        background-color: #121212;
-    }
-
-    .VSWCL {
-        background-color: inherit;
-    }
-
-    .DShyMc-MTQ3NjA5NzQ4MjUz .P3W0Dd-Ysl7Fe:focus,
-    .DShyMc-MTQ3NjA5NzQ4MjUz.maXJsd:focus .P3W0Dd-Ysl7Fe,
-    .DShyMc-MTQ3NjA5NzQ4MjUz .maXJsd:focus .P3W0Dd-Ysl7Fe {
-        background-color: #121212;
-    }
-
-    .nZC2Ae {
-        color: var(--text-dark)!important;
-    }
-
-    .qk0lee:focus {
-        background-color: #202020;
-    }
-
-    .BnYgFe {
-        filter: invert(0.9);
-    }
-
-    .poFWNe {
-        /* inputs */
-        color: var(--text-med-bright);
-    }
-    .poFWNe[disabled], .W9wDc.RDPZE .qTs5Xc {
-        color: #666;
-    }
-    .HyS0Qd.RDPZE .n9IS1 {
-        /* disabled input background */
-        background-color: #292929;
-    }
-
-    .joJglb.kLHn3 {
-        box-shadow: 0 1px 2px 0 #121212, 0 2px 6px 2px #121212;
-    }
-
-    .IzVHde {
-        background-color: #202020;
-    }
-
-    .YkTkoe {
-        background-color: #202020;
-    }
-    
-    /* archived class page */
-    .WufxEd .ynt9Dc .VfPpkd-WLXbod, .WufxEd .ynt9Dc {
-        /* banner */
-        background-color: #202020;
-        border-color: var(--border-light);
-    } 
-    .geqPvd .VfPpkd-Rj7Y9b {
-        /* banner text */
-        color: var(--text-bright);
-    }
-    
-    /* add class comment field */
-    .q1Kmyc {
-        border-color: var(--border-med-heavy);
-    }
-
-    /* background background on items in feed (and '1 class comment' section), as well as link items within assignments */
-    /* it's kind of the "card" class */
-    .Aopndd {
-        background-color: #31313160;
-        border-color: var(--border-light);
-    }
-
-    .Aopndd .RIDjNe {
-        background-color: #202020;
-        border-color: var(--border-normal);
-        border-width: 1px;
-    }
-    
-    
-    /* link cards */
-    .pOf0gc.QRiHXd.Aopndd.M4LFnf, .r0VQac.QRiHXd.Aopndd {
-        background-color: #ffffff10;
-    }
-    .pOf0gc.QRiHXd.Aopndd.M4LFnf:has(.yixX5e:is(:hover, :focus)), .r0VQac.QRiHXd.Aopndd:has(.yixX5e:is(:hover, :focus)) {
-        /* on hover and focus */
-        background-color: #ffffff20;
-    }
-    .Qks78e, .QRiHXd {
-        /* foreground section */
-        background-color: transparent;
-    }
-    .Niache {
-        /* background on preview */
-        background-color: white;
-    }
-    .onkcGd:hover, .onkcGd:focus, .etFl5b, .etFl5b:visited, .etFl5b:hover, .etFl5b:focus, .eL9Cfb, .eL9Cfb:visited, .eL9Cfb:hover, .eL9Cfb:focus, .L5mE7d, .L5mE7d:visited, .L5mE7d:hover, .L5mE7d:focus, .OGhwGf:hover, .OGhwGf:focus, .UtdKPb:hover, .UtdKPb:focus, .yixX5e:hover .UtdKPb, .yixX5e:focus .UtdKPb {
-        color: var(--text-bright);
-    }
-    
-    .MymH0d:hover .VBEdtc-Wvd9Cc, .MymH0d:focus .VBEdtc-Wvd9Cc {
-        /* assignment link hover color */
-        color: var(--text-bright)!important;
-    }
-
-    .Eajscb .vT1Gyc.N4XV7d {
-        color: #888888;
-    }
-
-    .Eajscb .vT1Gyc.pCcXPe {
-        color: #aaaaaa;
-    }
-
-    /* classwork page grades while loading */
-    .neggzd {
-        text-shadow: 0 0 .7em #666;
-    }
-
-    /* to-do page list items */
-    .MHxtic:hover {
-        background-color: #202020;
-        box-shadow: 0 0 5px #121212;
-        border-color: transparent;
-    }
-    .MHxtic:focus-within {
-        box-shadow: 0 0 10px #121212;
-        border-color: transparent;
-    }
-
-    /* 'announce something to your class' box */
-    .qk0lee:focus::after {
-        background-color: transparent;
-    }
-    .xVPuB .snByac, .vnnr5e .snByac {
-        /* input box label when un-focused */
-        color: #777;
-    }
-    
-    /* rich text controls */
-    .xVPuB .Aworge, .vnnr5e .Aworge {
-        /* default color */
-        color: var(--text-med-dark);
-    }
-    .EN2Rfc:not(.RDPZE) .XTO5bf:hover, .EN2Rfc:not(.RDPZE) .XTO5bf.y7OZL {
-        /* hover (darken icon fill color) */
-        color: var(--text-ultra-bright);
-    }
-    .U26fgb[aria-pressed=true] {
-        /* active */
-        background-color: #ffffff12!important;
-    }
-    .fKz7Od:not(.RDPZE):hover, .WzwrXb:not(.RDPZE):not(.K2mXPb):hover {
-        /* prevent fading */
-        opacity: 1;
-    }
-    .fKz7Od .VTBa7b {
-        /* active radial effect */
-        background: var(--border-normal);
-    }
-    /* attach content buttons */
-    .svNSpd {
-        /* border */
-        border-color: #444;
-    }
-    .LgeCif {
-        color: var(--text-med)!important;
-    }
-    .LgeCif:hover {
-        color: var(--text-bright)!important;
-    }
-    /* post button on black themed classes */
-    .UvHKof .bDxw8b:not(:disabled) {
-        background-color: #555;
-    }
-
-    /* to-do page class selector menu */
-    .VfPpkd-uusGie-fmcmS {
-        color: var(--text-bright)!important;
-    }
-
-    .VfPpkd-xl07Ob-XxIAqe.VfPpkd-xl07Ob-XxIAqe-OWXEXe-tsQazb.VfPpkd-xl07Ob.VfPpkd-YPmvEd.s8kOBc.dmaMHc.VfPpkd-xl07Ob-XxIAqe-OWXEXe-uxVfW-FNFY6c-uFfGwd.VfPpkd-xl07Ob-XxIAqe-OWXEXe-FNFY6c {
-        background-color: #202020;
-    }
-
-    .VfPpkd-rymPhb-fpDzbe-fmcmS {
-        color: var(--text-bright)!important;
-    }
-
-    .MCs1Pd.HiC7Nc.VfPpkd-OkbHre.VfPpkd-aJasdd-RWgCYc-wQNmvb.VfPpkd-rymPhb-ibnC6b.VfPpkd-rymPhb-ibnC6b-OWXEXe-gk6SMd.VfPpkd-rymPhb-ibnC6b-OWXEXe-SfQLQb-Woal0c-RWgCYc,
-    .MCs1Pd.HiC7Nc.VfPpkd-OkbHre.VfPpkd-aJasdd-RWgCYc-wQNmvb.VfPpkd-rymPhb-ibnC6b.VfPpkd-rymPhb-ibnC6b-OWXEXe-gk6SMd.VfPpkd-rymPhb-ibnC6b-OWXEXe-SfQLQb-Woal0c-RWgCYc:is(:hover, :focus) {
-        background-color: transparent;
-    }
-
-    /* side navigation slide-out */
-    .ETRkCe {
-        box-shadow: 0 4px 4px 0 #121212, 0 8px 12px 6px #121212;
-    }
-    .OX4Vcb {
-        padding-right: 10px;
-    }
-
-    .FLgDTb.pEwOBc.Aopndd {
-        background-color: #212121;
-        box-shadow: 0 0 12px 1px #121212;
-    }
-
-    /* 'your work' title */
-    .z3vRcc {
-        color: var(--text-bright);
-    }
-
-    /* corners of turn in button */
-    .CG2qQ.QRiHXd {
-        background-color: transparent;
-    }
-
-    /* context menu */
-    .kCtYwe {
-        /* separator */
-        border-color: var(--border-normal);
-    }
-    .z80M1.qs41qe > .aBBjbd {
-        /* click spread effect */
-        background-image: radial-gradient(circle farthest-side, #424242, #424242 80%, rgba(189, 189, 189, 0) 100%);
-    }
-
-    /* report abuse screen */
-    .V0wXVe,
-    .QKgWhf .nalYvf {
-        /* background */
-        background-color: #212121;
-    }
-    .QKgWhf .ffVw8c {
-        /* title */
-        color: var(--text-bright);
-    }
-    .DY3Y7 .APALFe {
-        /* card background */
-        background-color: #292929;
-        border-radius: 5px;
-        transition: background-color 0.2s
-    }
-    .QKgWhf .DY3Y7 .APALFe:hover {
-        /* card background hover */
-        background-color: #333;
-    }
-    
-    /* class header */
-    .v9TZ3c:not(.GWZ7yf) {
-        /* when not expanded */
-        border: 1px solid transparent;
-    }
-
-    /* items in stream */
-    /* fade forward animation */
-    .ZoT1D.idtp4e {
-        transition: box-shadow 0.1s;
-    }
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .xWw7yd:hover.h7Ww0 {
-        background-color: unset;
-        box-shadow: 0px 0px 10px 5px #141414;
-    }
-    
-    .xWw7yd:hover.rXdid, .xWw7yd:hover.h7Ww0, .xWw7yd:hover .rXdid, .xWw7yd:hover .h7Ww0 {
-        /* items in stream background hover */
-        background-color: #272727;
-    }
-    
-    /* small screen assignment popup */
-    .mCb5vb .df5yGe {
-        /* top border */
-        border-color: var(--border-heavy);
-    }
-    
-    /* small link items */
-    .VkhHKd {
-        border-color: var(--border-med-heavy);
-    }
-    .VkhHKd:hover {
-        border-color: var(--border-heavy);
-    }
-    .VkhHKd:active {
-        border-color: var(--border-ultra-heavy);
-    }
-    
-    .cSyPgb {
-        color: var(--text-med-dark);
-    }
-
-    .tCD5Mc.Aopndd {
-        background-color: #212121;
-        box-shadow: 0 0 12px 1px #121212;
-    }
-
-    .yPbwG.QRiHXd.Aopndd.tWKJ2 {
-        background-color: #282828;
-        border-radius: 5px;
-    }
-
-    .Fnu4gf,
-    .bqfGyf {
-        filter: invert(0.8);
-    }
-
-    .gb_na svg,
-    .gb_yc svg,
-    .gb_Uc .gb_Wd,
-    .gb_Kc .gb_Wd {
-        color: var(--text-bright);
-    }
-
-    /* 'google apps' icon (this one is tricky because google keeps changing it) */
-    [class*="gb_"] svg, [class*="gb_"] [class*="gb_"] {
-        /* google apps icon collapsed */
-        color: var(--icon-button);
-        fill: var(--icon-button);
-    }
-    .gb_d[aria-expanded="true"] [class*="gb_"] {
-        /* google apps icon expanded */
-        color: var(--icon-button-active);
-        fill: var(--icon-button-active);
-    }
-
-    .gb_A[aria-expanded=true] .gb_Ne,
-    .gb_A[aria-expanded=true] .gb_Oe {
-        fill: var(--text-med);
-    }
-
-    .cfWmIb:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-fmcmS-wGMbrd {
-        color: var(--text-bright);
-    }
-    
-    /* input fields */
-    .cfWmIb:hover:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc:not(.VfPpkd-NLUYnc-V67aGc-OWXEXe-TATcMc-KLRBe) {
-        /* placeholder when inactive + hover */
-        color: var(--text-bright);
-    }
-    .cfWmIb:hover:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe) .VfPpkd-NLUYnc-V67aGc {
-        /* placeholder when filled + inactive + hover */
-        color: var(--text-bright);
-    }
-    .cfWmIb:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc {
-        /* placeholder when inactive */
-        color: var(--text-med-dark);
-    }
-    .cfWmIb:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-Brv4Fb,
-    .cfWmIb:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-Ra9xwd,
-    .cfWmIb:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-MpmGFe {
-        border-color: var(--text-bright);
-    }
-    
-    .cfWmIb.VfPpkd-fmcmS-yrriRe-OWXEXe-UJflGc:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-Brv4Fb, .cfWmIb.VfPpkd-fmcmS-yrriRe-OWXEXe-UJflGc:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-Ra9xwd, .cfWmIb.VfPpkd-fmcmS-yrriRe-OWXEXe-UJflGc:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-MpmGFe, .cfWmIb.VfPpkd-fmcmS-yrriRe-OWXEXe-UJflGc:hover:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc, .cfWmIb.VfPpkd-fmcmS-yrriRe-OWXEXe-UJflGc:hover:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me)+.VfPpkd-fmcmS-yrriRe-W0vJo-RWgCYc .VfPpkd-fmcmS-yrriRe-W0vJo-fmcmS {
-        /* border when error + hover */
-        border-color: red;
-        color: red;
-    }
-
-    .I7OXgf {
-        box-shadow: 0 0 5px #121212;
-    }
-
-    /* assignment title */
-    .UvHKof.CNpREd.VnOHwf-Tvm9db,
-    .UvHKof.CNpREd .VnOHwf-Tvm9db,
-    .UvHKof.VnOHwf-Tvm9db,
-    .UvHKof .VnOHwf-Tvm9db {
-        color: var(--text-bright);
-        fill: var(--text-bright);
-    }
-    .UvHKof .eumXzf:after {
-        border-color: var(--text-bright);
-    }
-
-    .UvHKof .n42Gr:not(:disabled),
-    .UvHKof .n42Gr:not(:disabled).VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe,
-    .UvHKof .n42Gr:not(:disabled):hover,
-    .UvHKof .n42Gr:not(:disabled):not(.VfPpkd-ksKsZd-mWPk3d):focus {
-        color: var(--text-bright);
-    }
-
-    /* teacher mode */
-    .fyExH {
-        /* no school use warning checkbox */ 
-        background-color: #292929;
-        border-radius: 10px;
-    }
-    
-    .gMIble {
-        /* checkboxes */
-        filter: invert(1);
-    }
-    
-    
-    /* customize button */
-    .YhQJj {
-        background-color: #00000070;
-        backdrop-filter: blur(5px);
-    }
-
-    /* 'select stream header image' buttons */
-    .wlZwYd:not(:disabled) {
-        background-color: #292929!important;
-    }
-
-    /* theme image selector tab buttons */
-    .WbUJNb .VfPpkd-jY41G-V67aGc {
-        color: var(--text-med-dark);
-    }
-    .WbUJNb:hover .VfPpkd-jY41G-V67aGc,
-    .WbUJNb.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe .VfPpkd-jY41G-V67aGc,
-    .WbUJNb:not(.VfPpkd-ksKsZd-mWPk3d):focus .VfPpkd-jY41G-V67aGc,
-    .WbUJNb:active .VfPpkd-jY41G-V67aGc {
-        color: var(--text-bright);
-    }
-    .VfPpkd-YVzG2b {
-        border-radius: 5px;
-    }
-
-    /* new announcement class/student selectors */
-    .cLpBac {
-        background-color: #292929;
-    }
-    .QV10Af {
-        background-color: #212121;
-        border-color: var(--border-med-heavy);
-    }
-
-    /* new announcement 'for' heading */
-    .iLjzDc {
-        color: var(--text-bright);
-    }
-    
-    /* assignments/classwork page */
-    .Iwp0Ue:not(:first-child) {
-        border-color: var(--border-light);
-    }
-    .Iwp0Ue:not(.xp2dJ):not(.rZXyy):hover.rXdid, .Iwp0Ue:not(.xp2dJ):not(.rZXyy):hover.h7Ww0, .Iwp0Ue:not(.xp2dJ):not(.rZXyy):hover .rXdid, .Iwp0Ue:not(.xp2dJ):not(.rZXyy):hover .h7Ww0 {
-        /* closed assignment on hover */
-        background-color: #212121;
-    }
     .Iwp0Ue:not(.xp2dJ):focus-within.JiTjnd, .Iwp0Ue:not(.xp2dJ):focus-within.h7Ww0, .Iwp0Ue:not(.xp2dJ) :focus-within.JiTjnd, .Iwp0Ue:not(.xp2dJ) :focus-within.h7Ww0, .xWw7yd:focus-within.JiTjnd, .xWw7yd:focus-within.h7Ww0, .xWw7yd :focus-within.JiTjnd, .xWw7yd :focus-within.h7Ww0 {
-        /* closed assignment on focus */
-        background-color: #1f1f1f;
+        /* focus-within background */
+        background-color: var(--bg-1);
     }
-    .lXuxY .jWCzBe {
-        /* assignment title when open */
-        background-color: #212121;
+    /* collapsed classwork items */
+    .wCDkmf {
+        /* normal due date */
+        color: var(--text-ultra-dark);
     }
-    .S9CVKb {
-        /* assignment body when open */
-        background-color: #212121;
+    .Iwp0Ue:not(:first-child) {
+        /* border between items */
+        border-color: var(--border-light);
     }
-    .tUJKGd:not(:first-child), .RcHwO, .uO32ac, .ypv4re {
+    /* expanded classwork items */
+    .lXuxY, .pO6AMc, .PqkECe {
+        /* expanded box */
+        box-shadow: none;
+        border: 1px solid var(--border-normal);
+    }
+    .lXuxY .u73Apc, .RcHwO {
+        /* title section */
         border-color: var(--border-normal);
     }
-    .VKRoqe {
-        /* section headings bottom border */
-        border-color: var(--border-heavy);
-        transition: border-color 0.37s;
-    }
-    .KmLLod:hover .VKRoqe {
-        /* section headings bottom border on hover */
-        border-bottom: 1px solid var(--border-ultra-heavy);
-    }
-    
-    .nZ34k:not(:disabled) {
-        /* view more button */
-        color: var(--general-text-button);
-    }
-    .nZ34k:not(:disabled):is(:hover, :focus) {
-        /* view more button hover/focus */
-        color: var(--general-text-button-hover);
-    }
-    
-    .VfPpkd-xl07Ob .VfPpkd-StrnGf-rymPhb-IhFlZd, .VfPpkd-xl07Ob .VfPpkd-StrnGf-rymPhb-f7MjDc {
-        /* class code options icons */
-        color: var(--text-med);
-    }
-    
-    /* reuse post */
-    .WOPwXe-Wvd9Cc {
-        /* title */
-        color: var(--text-bright);
-    }
-    .cmTiyd, .t5tYqf .cmTiyd {
-        /* interior borders */
-        border-color: #555;
-    }
-    .tLDEHd-Wvd9Cc {
-        /* class and post titles */
-        color: var(--text-med-bright);
-    }
-    .uHMk6b {
-        /* checkbox interior */
-        border-color: #272727;
-    }
-    .lRaOFf[aria-selected=true], .lRaOFf[aria-selected=true]:focus {
-        /* selected post */
-        background-color: #ffffff16;
-    }
-    .lRaOFf[aria-selected=true]:hover {
-        background-color: #ffffff20;
-    }
-    .thP79c:hover {
-        /* deselected hover */
-        background-color: #ffffff10;
-    }
-    .thP79c.qs41qe, .thP79c.qs41qe:focus, .thP79c.qs41qe:hover {
-        /* being pressed */
-        background-color: #ffffff18;
-    }
-    
-    
-    .jgvuAb .kRoyt {
-        background-color: red;
-        border-color: #121212;
-    }
-
     .O9YpHb {
-        /* expanded assignment internal border */
-        border-color: var(--border-normal);
-    }
-    
-    /* draft assignments */
-    .ubqkMe .jWCzBe .iobNdf, .J2ZeGc .jWCzBe .iobNdf, .svdjhb .jWCzBe .iobNdf {
-        /* icon background */
-        background-color: #333;
-    }
-    
-    .ubqkMe .jWCzBe .iobNdf svg, .J2ZeGc .jWCzBe .iobNdf svg, .svdjhb .jWCzBe .iobNdf svg {
-        /* icon foreground */
-        color: var(--text-dark);
-    }
-    .ubqkMe .kByKEb, .RyF19b .kByKEb, .J2ZeGc .kByKEb, .svdjhb .kByKEb {
-        /* text */
-        color: var(--text-dark);
-    }
-
-    /* create assignment page */
-    .TdC1bb {
-        /* main background */
-        background-color: #212121;
-    }
-    .e0prFf {
-        /* window title */
-        color: var(--text-bright);
-    }
-    .dKKcxf,
-    .STMvPe,
-    .NE9bBb {
-        /* schedule material date selectors */
-        background-color: #313131;
-        box-shadow: 0 0 10px #12121260;
-        color: var(--text-bright)!important;
-    }
-    .O98Lj {
-        /* date selector text */
-        color: var(--text-bright);
-    }
-    .XaepId {
-        /* date picker background */
-        background-color: #202020;
-        border-color: transparent;
-        border-radius: 5px;
-        box-shadow: 0 0 10px #121212;
-    }
-    .XaepId {
-        /* date picker month title */
-        color: var(--text-med-dark);
-    }
-    .XaepId-mrubje {
-        /* date picker weekday letters */
-        color: #666;
-    }
-    .XaepId-gElRsf {
-        /* date picker valid dates */
-        color: var(--text-med-dark);
-    }
-    .XaepId-gElRsf:not(.XaepId-lJi4pf-gElRsf, td.XaepId-gk6SMd):hover {
-        /* date picker valid date hover */
-        background-color: #333;
-    }
-    .XaepId-lJi4pf-gElRsf {
-        /* date picker invalid dates */
-        color: #333;
-    }
-    .y2d25 {
-        /* edit schedule box */
-        background-color: #262626;
-    }
-    .ECK80e {
-        /* edit schedule box divider */
-        border-color: var(--border-normal);
-    }
-    .hja3X {
-        /* vertical border */
-        border-color: var(--border-normal);
-    }
-    .Sl8ssb,
-    .XZDC9d,
-    .ry3kXd {
-        /* drop-downs */
-        background-color: #272727;
-        box-shadow: 0 0 10px #12121260;
-    }
-    .fWf7qe .Yalane,
-    .fWf7qe:not(.RDPZE):hover .Yalane,
-    .vnnr5e .I9OJHe,
-    .vnnr5e .CIy9F,
-    .vnnr5e:not(.RDPZE):hover .I9OJHe,
-    .vnnr5e:not(.RDPZE):hover .CIy9F {
-        /* title field */
-        background-color: #ffffff08;
-    }
-    .jsbB5e.u3bW4e .hqfVKd,
-    .jsbB5e.CDELXb.yaevDc .hqfVKd,
-    .jsbB5e.IbzNie.yaevDc .hqfVKd,
-    .fWf7qe:not(.yaevDc).u3bW4e .hqfVKd,
-    .AkVYk:not(.yaevDc).u3bW4e .hqfVKd,
-    .fWf7qe:not(.yaevDc).CDELXb .hqfVKd,
-    .AkVYk:not(.yaevDc).CDELXb .hqfVKd,
-    .fWf7qe:not(.yaevDc).IhU0Je .hqfVKd,
-    .AkVYk:not(.yaevDc).IhU0Je .hqfVKd {
-        /* title field text */
-        color: var(--text-bright);
-    }
-    .AOhYp {
-        box-shadow: 0 0 5px #212121;
-    }
-    .bDkUbc {
-        /* topic dropdown divider */
-        border-color: var(--border-normal);
-    }
-    .HyS0Qd .n9IS1,
-    .HyS0Qd:not(.RDPZE):hover .n9IS1 {
-        /* create topic field */
-        background-color: #292929;
-    }
-    .Y5sE8d.RDPZE, .YhQJj.RDPZE, .An19kf.RDPZE {
-        /* disabled assign button */
-        background-color: transparent;
-    }
-    .ZoO8hd {
-        /* rubric editor page title */
-        color: var(--text-bright);
-    }
-    .E8HiIc,
-    .ft5Sbf,
-    .C4yF5e,
-    .OK63Pb:not(:last-child) {
-        /* borders */
-        border-color: var(--border-normal);
-    }
-    .tl5cWb {
-        /* rubric editor main title */
-        color: var(--text-bright);
-    }
-    .BgHQ3e,
-    .MuGjgf,
-    .FMzRdf {
-        /* rubric description and control labels */
-        color: var(--text-dark);
-    }
-    .Nep6Fb::before {
-        /* plus icon background */
-        background-color: #202020;
-    }
-    .cTRCQc .oJeWuf::before,
-    .cTRCQc.RDPZE:hover .oJeWuf::before,
-    .cTRCQc.u3bW4e.RDPZE .oJeWuf::before,
-    .cTRCQc:hover .oJeWuf::before,
-    .cTRCQc.u3bW4e .oJeWuf::before {
-        /* reuse rubric class dropdown */
-        background-color: #292929;
-        box-shadow: 0 0 10px #12121260;
-    }
-    .Dp5sUc .WvJxMd[data-expanded="true"] .oJeWuf::before {
-        /* reuse rubric class dropdown expanded */
-        background-color: #333;
-    }
-    .vPNssb .jBmls {
-        /* reuse rubric class dropdown expansion */
-        background-color: #313131;
-    }
-    .xUvfQb {
-        /* reuse rubric class dropdown text */
-        color: var(--text-bright);
-    }
-    .ShARAe {
-        /* reuse rubric table border */
-        border-color: var(--border-normal);
-    }
-    .XDCFvf {
-        /* reuse rubric rubric title */
-        color: var(--text-bright);
-    }
-    .RpYYWb {
-        /* added rubric pill */
-        background-color: #292929;
-        border-color: #292929;
-        box-shadow: 0 0 10px #12121260;
-    }
-    .jlfrG::before,
-    .jlfrG::after {
-        /* weird pieces we don't need */
-        display: none;
-    }
-    .jlfrG {
-        /* view rubric text */
-        color: var(--text-bright);
-    }
-    .OK1tJe {
-        /* view rubric collapsed criterion level */
-        background-color: #272727;
-    }
-    .Kqfayb {
-        /* rubric earned points */
-        color: var(--text-med-bright);
-    }
-    .RMrItf {
-        /* view rubric possible points */
-        color: var(--text-dark);
-    }
-
-    /* saved announcements */
-    .z3vRcc-J3yWx {
-        /* 'saved announcements' title */
-        color: var(--text-bright);
-    }
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .tUJKGd:not(.xp2dJ):not(.rZXyy):hover.j6KDAd,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .tUJKGd:not(.xp2dJ):not(.rZXyy):hover.idtp4e,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .tUJKGd:not(.xp2dJ):not(.rZXyy):hover .j6KDAd,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .tUJKGd:not(.xp2dJ):not(.rZXyy):hover .idtp4e,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ZoT1D:hover.j6KDAd,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ZoT1D:hover.idtp4e,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ZoT1D:hover .j6KDAd,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ZoT1D:hover .idtp4e,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .tUJKGd:not(.xp2dJ):focus-within.boxOzd,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .tUJKGd:not(.xp2dJ):focus-within.idtp4e,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .tUJKGd:not(.xp2dJ) :focus-within.boxOzd,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .tUJKGd:not(.xp2dJ) :focus-within.idtp4e,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ZoT1D:focus-within.boxOzd,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ZoT1D:focus-within.idtp4e,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ZoT1D :focus-within.boxOzd,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ZoT1D :focus-within.idtp4e,
-    .kYtXye .UISY8d-Ysl7Fe:hover,
-    .kYtXye.MymH0d:hover .UISY8d-Ysl7Fe,
-    .kYtXye .MymH0d:hover .UISY8d-Ysl7Fe,
-    .kYtXye .P3W0Dd-Ysl7Fe:focus,
-    .kYtXye.maXJsd:focus .P3W0Dd-Ysl7Fe,
-    .kYtXye .maXJsd:focus .P3W0Dd-Ysl7Fe {
-        /* saved announcements hover color */
-        background-color: #292929;
-    }
-    .G3xBUc + .G3xBUc {
-        border-top: .0625rem solid #292929;
-    }
-    .pvb7Pc {
-        /* edit saved announcement top border */
-        border-color: #444;
-    }
-    
-    /* view all / view less button */
-    .LjDxcd:not(:disabled) {
-        color: var(--text-med-med-dark);
-    }
-    .LjDxcd:hover:not(:disabled), .LjDxcd.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe:not(:disabled), .LjDxcd:not(.VfPpkd-ksKsZd-mWPk3d):focus:not(:disabled), .LjDxcd:active:not(:disabled) {
-        color: var(--text-bright);
-    }
-
-    /* dropdowns */
-    .VfPpkd-xl07Ob-XxIAqe,
-    .q6oraf .VfPpkd-StrnGf-rymPhb {
-        background-color: #212121;
-        color: var(--text-bright)!important;
-    }
-    .VfPpkd-StrnGf-rymPhb-clz4Ic {
-        border-bottom-color: var(--border-med-heavy);
-    }
-    :not(.VfPpkd-StrnGf-rymPhb-ibnC6b-OWXEXe-OWB6Me).VfPpkd-StrnGf-rymPhb-ibnC6b .VfPpkd-StrnGf-rymPhb-pZXsl::before,
-    :not(.VfPpkd-StrnGf-rymPhb-ibnC6b-OWXEXe-OWB6Me).VfPpkd-StrnGf-rymPhb-ibnC6b .VfPpkd-StrnGf-rymPhb-pZXsl::after,
-    :not(.VfPpkd-rymPhb-ibnC6b-OWXEXe-OWB6Me).VfPpkd-rymPhb-ibnC6b .VfPpkd-rymPhb-pZXsl::before,
-    :not(.VfPpkd-rymPhb-ibnC6b-OWXEXe-OWB6Me).VfPpkd-rymPhb-ibnC6b .VfPpkd-rymPhb-pZXsl::after {
-        /* list item hover color */
-        background-color: var(--text-bright);
-    }
-    .VfPpkd-rymPhb-ibnC6b,
-    .VfPpkd-StrnGf-rymPhb-ibnC6b {
-        /* list item */
-        border-radius: 5px;
-    }
-    .bzD7fd {
-        /* create assignment dropdown */
-        border-radius: 20px;
-        padding: 10px 5px 5px 5px;
-    }
-
-    /* gradebook */
-    .fHar6b,
-    .RUkyfb,
-    thead .vvqDLc,
-    .fum4Tb,
-    .go6aXd,
-    tbody .vvqDLc {
-        /* table background */
-        background-color: inherit;
-    }
-    .go6aXd.xAKnLc,
-    .fum4Tb.xAKnLc,
-    tbody .vvqDLc.xAKnLc {
-        /* class average row background */
-        background-color: #212121;
-    }
-    .fHar6b,
-    .RUkyfb,
-    .go6aXd,
-    .fum4Tb,
-    .vvqDLc {
-        /* table borders */
-        border-color: #484848;
-    }
-    .fHar6b.tLDEHd {
-        /* center 'sort by' dropdown using flexbox on container */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .N8HYTb {
-        /* 'sort by' dropdown */
-        padding-left: 2.875rem;
-        padding-right: 2.125rem;
-        margin: 0;
-    }
-    .Pbki4b.O0HS9e::before {
-        /* assignment row internal borders */
-        border-color: var(--border-normal);
-    }
-    
-    /* assignment page */
-    
-    /* title */
-    .nl5VRd {
-        /* upper border */
-        border-color: var(--border-normal);
-    }
-    
-    /* your work panel */
-    .GWZ7yf {
-        /* box (and private comment box) (and 'announce something to your class' box) (and expanded class header) */
-        box-shadow: 0 0 5px #121212;
-        border: 1px solid var(--border-light);
-    }
-    
-    /* add or create button */
-    .Rj2Mlf:not(:disabled) {
-        /* button */
-        color: var(--text-med-bright)!important;
-        border-color: var(--border-med-heavy);
-        transition: color .2s .1s, background-color .1s;
-    }
-    .FL3Khc:not(:disabled):hover {
-        /* when hovered */
-        color: var(--text-bright)!important;
-        border-color: var(--border-heavy);
-        background-color: #272727;
-    }
-    .Rj2Mlf:not(:disabled):active, .Rj2Mlf:not(:disabled):focus:active {
-        /* when focused */
-        border-color: var(--border-ultra-heavy);
-        background-color: #292929;
-    }
-    .Rj2Mlf:not(:disabled).VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe, .Rj2Mlf:not(:disabled):not(.VfPpkd-ksKsZd-mWPk3d):focus {
-        /* when menu is opened */
-        border-color: var(--border-ultra-heavy);
-        background-color: #292929;
-    }
-    .Rj2Mlf .VfPpkd-Jh9lGc::before, .Rj2Mlf .VfPpkd-Jh9lGc::after {
-        /* background when menu is opened */
-        /* overrides ripple effect */
-        background-color: #333;
-    }
-    .Rj2Mlf:not(:disabled) .VfPpkd-vQzf8d {
-        color: var(--text-bright);
-    }
-    /* turn in button */
-    .Y5sE8d:not(.RDPZE) .snByac {
-        color: var(--text-bright);
-    }
-    /* turn in button on black themed classes */
-    .UvHKof .QkA63b:not(.RDPZE), .UvHKof .Y5sE8d:not(.RDPZE) {
-        background-color: #555;
-    }
-    /* add or create button on black themed classes */
-    .UvHKof .FL3Khc:not(:disabled).VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe, .UvHKof .FL3Khc:not(:disabled):not(.VfPpkd-ksKsZd-mWPk3d):focus {
-        border-color: var(--text-dark);
-    }
-    /* unsubmit button */
-    .UvHKof .AeAAkf:not(.RDPZE):hover, .UvHKof .AeAAkf:not(.RDPZE).u3bW4e, .UvHKof .BEAGS:not(.RDPZE):hover, .UvHKof .BEAGS:not(.RDPZE).u3bW4e {
-        border-color: var(--border-med-heavy);
-    }
-    /* originality report section */
-    .LDr2ne {
-        border-color: var(--border-normal);
-    }
-    
-    /* border when submitting assignment with attachments */
-    .qj5L0 {
-        border-color: #363636;
-    }
-    
-    .BQ5ILd,
-    .a4YS1c,
-    .g5FCDc {
-        /* borders */
-        border-color: var(--border-normal);
-    }
-    .DC55n td {
-        background-color: inherit;
-        border-color: var(--border-normal);
-    }
-    .xlHPle .VfPpkd-fmcmS-yrriRe:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-fmcmS-wGMbrd {
-        /* assignment points value selector */
-        color: var(--text-bright);
-    }
-    .xlHPle .VfPpkd-fmcmS-yrriRe:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-fmcmS-wGMbrd::placeholder {
-        /* assignment points value selector placeholder */
-        color: var(--text-dark);
-    }
-    .xlHPle .VfPpkd-StrnGf-rymPhb {
-        /* assignment points value selector dropdown */
-        color: var(--text-bright);
-    }
-    .kcAzD:focus::before {
-        /* sidebar 'sort by' cell border */
-        border-color: transparent;
-    }
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ybOdnf:not(.RDPZE).iWO5td,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .ybOdnf:not(.RDPZE) .OA0qNb .LMgvRb[aria-selected="true"],
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .NqFm6:not(.RDPZE) .tWfTvb [role="option"][aria-selected="true"],
-    .ncFHed .MocG8c.KKjvXb {
-        /* sidebar 'sort by' dropdown */
-        background-color: #292929;
-        border-radius: 5px;
-    }
-    .jgvuAb .kRoyt {
-        /* sidebar 'sort by' click effect */
-        background-color: #313131;
-    }
-    .TJtJXb:hover td,
-    .tYQn5c:hover td,
-    .DC55n:hover td {
-        /* sidebar student list items hover */
-        background-color: #272727;
-    }
-    .oqnjOc td.Fk0vXe {
-        /* sidebar student list item internal borders */
-        border-left-color: #333;
-    }
-    .Evt7cb,
-    .Evt7cb:visited {
-        /* sidebar section headers */
-        color: var(--text-bright);
-    }
-    .YrFhrf {
-        /* turned in/assigned/graded big numbers */
-        color: var(--text-bright);
-    }
-    .yHjGtf {
-        /* turned in/assigned/graded number dividers */
+        /* bottom section */
         border-color: var(--border-normal);
     }
     .dDKhVc {
-        /* light-color labels */
-        color: var(--text-dark)
-    }
-    .I2XGyb.jgvuAb {
-        /* extra space around student work filter and folder button */
-        margin-top: 10px;
-        margin-left: 0;
-    }
-    .hYt5f.EfvGO {
-        /* extra space above student work cards */
-        margin-top: 20px;
-    }
-    .hYt5f.EfvGO .WkZsyc {
-        /* student work card */
-        background-color: #212121;
-        border-radius: 5px;
-    }
-    .J33wTc,
-    .IMvYId:not(table),
-    .Y5vSD {
-        /* lighter text on student work comment thread screen */
-        color: var(--text-dark);
-    }
-    table.IMvYId {
-        /* text color on history table */
+        /* body text in full expanded view */
         color: var(--text-med-dark);
     }
-    .nk37z {
-        color: var(--text-bright);
+    /* your work page */
+    .i1wJG {
+        /* top border */
+        border-color: var(--border-normal);
     }
-    .oleV8d {
-        /* private comment message field */
-        border-color: #484848;
-    }
-    .bswVrf {
-        /* private comment message field placeholder text */
-        color: #484848;
-    }
-    .LsqTRb {
-        /* private comment message field placeholder text */
-        color: var(--text-bright);
-    }
-    .Y5FYJe.RDPZE svg {
-        /* private comment message field post button - inactive */
-        color: #484848;
-        fill: #484848;
-    }
-    .kbngx tr {
-        /* history table - odd rows */
-        background-color: #292929;
-    }
-    .kbngx tr:nth-child(2n) {
-        /* history table - even rows */
-        background-color: #252525;
-    }
-
-
-    /* teacher class settings */
-    .XKbOjc {
-        /* give each section a lighter color and a box-shadow */
-        background-color: #292929;
-        box-shadow: 0 0 10px #212121;
-    }
-    .nCP5yc:disabled .VfPpkd-vQzf8d {
-        /* disabled save button */
-        color: #484848;
-    }
-    /* input fields and drop-down boxes */
-    .WmnPA:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me),
-    .xlHPle .VfPpkd-fmcmS-yrriRe:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me),
-    .hqBSCb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me) .VfPpkd-TkwUic {
-        background-color: #31313160;
-        box-shadow: 0 0 10px #12121260;
-    }
-    .WmnPA:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-fmcmS-wGMbrd {
-        /* color of text inputed in */
-        color: var(--text-bright);
-    }
-    .xlHPle .VfPpkd-fmcmS-yrriRe:hover:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc, .WmnPA:hover:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc {
-        /* color of placeholder on hover */
+    .ksaOtd {
+        /* score */
         color: var(--text-med-bright);
     }
-    
-    .xlHPle .VfPpkd-fmcmS-yrriRe:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc,
-    .WmnPA:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc {
-        /* color of placeholder (when inactive) */
-        color: var(--text-med-dark);
-    }
-    .xSP5ic,
-    .xSP5ic.yHy1rc {
-        /* info icon */
-        color: var(--text-med-dark);
-    }
-    .gpeXDe, .meyvr, .LqHDgc, .Lp3y7d {
-        /* border between subsections */
-        border-color: var(--border-med-heavy);
-    }
-    
-    
-    /* people view */
-    /* disabled 'actions' button */
-    .Rj2Mlf:disabled {
-        border-color: #666666;
-    }
-    .Rj2Mlf:disabled .VfPpkd-vQzf8d,
-    .Rj2Mlf:disabled .VfPpkd-kBDsod svg {
-        color: #666666;
-    }
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .UISY8d-Ysl7Fe:hover,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof).MymH0d:hover .UISY8d-Ysl7Fe,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .MymH0d:hover .UISY8d-Ysl7Fe,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .P3W0Dd-Ysl7Fe:focus,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof).maXJsd:focus .P3W0Dd-Ysl7Fe,
-    :is(.Ag4wUb, .WFUiUb, .zvzLKc, .g2MItd, .S3aLQd, .Mupove, .ee1HBc, .UvHKof) .maXJsd:focus .P3W0Dd-Ysl7Fe {
-        /* student row hover color */
-        background-color: #212121;
-    }
-    /* invite pop-up */
-    .t1IGPc,
-    .pIQtMd,
-    .AZW99,
-    .Co16uf,
-    .I4p4db,
-    .TCFlue,
-    .c1x9qf,
-    .ATUW8c,
-    .ATUW8c:hover {
-        background-color: #202020;
-        color: var(--text-bright);
-    }
-    .CobWe,
-    .HNcB0e,
-    .bNkTzb {
-        /* the no-longer mysterious borders */
-        border-bottom-color: #484848;
-    }
-    .ATUW8c,
-    .ATUW8c:hover {
-        /* added invitees */
-        box-shadow: 0 0 0 1px #484848 inset;
-    }
-    .PNwDub {
-        /* potential invitee names */
-        color: var(--text-bright);
-    }
-    .G1zVib {
-        /* potential invitee emails */
+    .udxSmc {
+        /* submission status */
         color: var(--text-dark);
     }
-    .AZW99:hover {
-        /* potential invitee list item hover */
-        background-color: #292929;
-        border-radius: 10px;
+    .uQ3ESd {
+        /* expanded classwork item */
+        background-color: var(--bg-0);
     }
-
-    /* popup message bottom left */
-    .LhKRUe {
-        box-shadow: 0 0 5px #121212;
-        background-color: #202020;
-        color: var(--text-bright);
+    .VDj5V {
+        /* bottom section */
+        border-color: var(--border-normal);
     }
-
-    /* check box */
-    .Ne8lhe .VfPpkd-muHVFf-bMcfAe:enabled:not(:checked):not(:indeterminate):not([data-indeterminate="true"]) ~ .VfPpkd-YQoJzd {
-        /* inactive */
-        border-color: var(--text-med-dark);
-    }
-    .Ne8lhe:hover .VfPpkd-muHVFf-bMcfAe:enabled:not(:checked):not(:indeterminate):not([data-indeterminate="true"]) ~ .VfPpkd-YQoJzd,
-    .Ne8lhe:not(:disabled):active .VfPpkd-muHVFf-bMcfAe:enabled:checked ~ .VfPpkd-YQoJzd,
-    .Ne8lhe:not(:disabled):active .VfPpkd-muHVFf-bMcfAe:enabled:indeterminate ~ .VfPpkd-YQoJzd,
-    .Ne8lhe:not(:disabled):active .VfPpkd-muHVFf-bMcfAe[data-indeterminate="true"]:enabled ~ .VfPpkd-YQoJzd,
-    .Ne8lhe:not(:disabled):active .VfPpkd-muHVFf-bMcfAe:enabled:not(:checked):not(:indeterminate):not([data-indeterminate="true"]) ~ .VfPpkd-YQoJzd,
-    .Ne8lhe.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe .VfPpkd-muHVFf-bMcfAe:enabled:not(:checked):not(:indeterminate):not([data-indeterminate="true"]) ~ .VfPpkd-YQoJzd,
-    .Ne8lhe:not(.VfPpkd-ksKsZd-mWPk3d):focus .VfPpkd-muHVFf-bMcfAe:enabled:not(:checked):not(:indeterminate):not([data-indeterminate="true"]) ~ .VfPpkd-YQoJzd {
-        /* on hover, focus, or that weird in-between state */
-        border-color: var(--text-bright);
-    }
-
-    /* view more button, view all assignments button from upcoming panel (actually, it's a lot more than that) */
-    .VfPpkd-vQzf8d {
-        color: currentColor;
-    }
-    
-    .ycbm1d {
-        /* border between teachers */
-        border-color: #444;
-    }
-    
-
-    /* teacher appreciation week */
-    .WagS8 {
-        background-color: #202020;
-        border-bottom-color: #121212;
-        /*box-shadow: 0 0 5px #121212;*/
-    }
-
-    /* youtube link popup */
-    .yb5d6c {
-        /* pre-load background */
-        background-color: #191919;
-    }
-    .lGIiYb {
+    /* MATERIAL/ASSIGNMENT PAGE */
+    .B7SYid {
         /* header */
-        background-color: #212121;
-        border-color: var(--border-normal);
+        color: var(--text-med);
     }
-    .cuHavc {
-        /* youtube logo */
-        background-color: var(--text-bright);
-        padding: 5px;
-        clip-path: polygon(15.279135px 0px,
-        calc(100% - 15.279135px) 0px,
-        calc(100% - 13.674921px) 0.007572px,
-        calc(100% - 12.071563px) 0.055599px,
-        calc(100% - 10.472733px) 0.181094px,
-        calc(100% - 8.887202px) 0.420528px,
-        calc(100% - 7.334257px) 0.818771px,
-        calc(100% - 5.843606px) 1.405951px,
-        calc(100% - 4.454662px) 2.201942px,
-        calc(100% - 3.437545px) 3.437545px,
-        calc(100% - 2.641554px) 4.826489px,
-        calc(100% - 2.054374px) 6.31714px,
-        calc(100% - 1.656131px) 7.870085px,
-        calc(100% - 1.416697px) 9.455616px,
-        calc(100% - 1.291202px) 11.054446px,
-        calc(100% - 1.243175px) 12.657804px,
-        calc(100% - 1.243175px) calc(100% - 12.657804px),
-        calc(100% - 1.291202px) calc(100% - 11.054446px),
-        calc(100% - 1.416697px) calc(100% - 9.455616px),
-        calc(100% - 1.656131px) calc(100% - 7.870085px),
-        calc(100% - 2.054374px) calc(100% - 6.31714px),
-        calc(100% - 2.641554px) calc(100% - 4.826489px),
-        calc(100% - 3.437545px) calc(100% - 3.437545px),
-        calc(100% - 4.454662px) calc(100% - 2.201942px),
-        calc(100% - 5.843606px) calc(100% - 1.405951px),
-        calc(100% - 7.334257px) calc(100% - 0.818771px),
-        calc(100% - 8.887202px) calc(100% - 0.420528px),
-        calc(100% - 10.472733px) calc(100% - 0.181094px),
-        calc(100% - 12.071563px) calc(100% - 0.055599px),
-        calc(100% - 13.674921px) calc(100% - 0.007572px),
-        calc(100% - 15.279135px) 100%,
-        15.279135px 100%,
-        13.674921px calc(100% - 0.007572px),
-        12.071563px calc(100% - 0.055599px),
-        10.472733px calc(100% - 0.181094px),
-        8.887202px calc(100% - 0.420528px),
-        7.334257px calc(100% - 0.818771px),
-        5.843606px calc(100% - 1.405951px),
-        4.454662px calc(100% - 2.201942px),
-        3.437545px calc(100% - 3.437545px),
-        2.641554px calc(100% - 4.826489px),
-        2.054374px calc(100% - 6.31714px),
-        1.656131px calc(100% - 7.870085px),
-        1.416697px calc(100% - 9.455616px),
-        1.291202px calc(100% - 11.054446px),
-        1.243175px calc(100% - 12.657804px),
-        1.243175px 12.657804px,
-        1.291202px 11.054446px,
-        1.416697px 9.455616px,
-        1.656131px 7.870085px,
-        2.054374px 6.31714px,
-        2.641554px 4.826489px,
-        3.437545px 3.437545px,
-        4.454662px 2.201942px,
-        5.843606px 1.405951px,
-        7.334257px 0.818771px,
-        8.887202px 0.420528px,
-        10.472733px 0.181094px,
-        12.071563px 0.055599px,
-        13.674921px 0.007572px,
-        15.279135px 0px);
-    }
-    .VfPpkd-Bz112c-LgbsSe {
-        /* icon buttons */
-        color: var(--icon-button);
-    }
-    .VfPpkd-Bz112c-LgbsSe:active {
-        /* active icon buttons */
-        color: var(--icon-button-active);
-    }
-    
-    /* new sidebar */
-    .Tabkde .OX4Vcb {
-        background-color: #202020;
-    }
-    
-    .Tabkde {
-        border-color: var(--border-light);
-    }
-    
-    .F4Ol1b:not(.eXqTtb) .STek2d:hover, .F4Ol1b:not(.eXqTtb) .STek2d:focus-within {
-          box-shadow: 0 4px 4px 0 #121212, 0 8px 12px 6px #121212;
-    }
-    
-    .vdOCJb .LlcfK {
-        right: -0.1rem;
-    }
-    
-    /* drive picker dialog */
-    .picker-dialog.XKSfm-Sx9Kwc {
-        background-color: red;
-        animation: lighten 1.5s;
-    }
-    
-    @keyframes lighten {
-        from {
-            background-color: #191919;
-        }
-        to {
-            background-color: white;
-        }
-    }
-
-    /* header */
-    .mwJvDe .KEDCCd {
-        background-color: #202020;
-        border-color: var(--border-light);
-    }
-    .sw3lj {
-        box-shadow: 0 2px 6px 2px #121212;
-    }
-    
-    /* assignment grading */
-    header {
-        /* header (because it's different for whatever reason) */
-        background-color: transparent!important;
-    }
-    .gb_bd.gb_cd {
-        /* header title text */
-        color: var(--text-bright);
-    }
-    
-    .KeIaWd, .oNbfCd.iWO5td {
-        /* student selector */
-        background-color: #292929;
-    }
-    .n9QKGb {
-        /* student selector text (and probably some other things as well) */
-        color: var(--text-bright);
-    }
-    .oNbfCd {
-        /* 'sort by' label */
-        color: var(--text-med-dark);
-    }
-    .ODSVk {
-        /* student selector secondary text ('/100') */
-        color: var(--text-med-dark);
-    }
-    .YxJ1Jf, .YxJ1Jf.KKjvXb {
-        /* open student selector filters (inactive) */
-        color: var(--text-bright);
-        background-color: transparent;
-        border-color: transparent;
-    }
-    .YxJ1Jf.KKjvXb {
-        background-color: #313131;
-    }
-    .YxJ1Jf:not(.KKjvXb) {
-        border-color: var(--border-normal);
-    }
-    
-    .JWfJb, .pXCfVe {
-        /* 'files' and similar labels */
-        color: var(--text-bright);
-    }
-    
-    .cjq2Db:not(.hXuAwe) {
-        /* icons */
-        color: var(--text-bright);
-        fill: var(--text-bright);
-    }
-    .Y5FYJe.RDPZE {
-        color: #666;
-        fill: #666;
-    }
-    .Y5FYJe.RDPZE .DPvwYc {
-        color: inherit;
-        fill: inherit;
-    }
-    
-    .RmLJRd {
-        /* empty comment bank text */
-        color: var(--text-med-dark);
-    }
-    .gEOtL {
-        /* comment bank comment */
-        border-color: #313131;
-    }
-    
-    .EH8axd {
-        /* default state of grading status string */
-        color: var(--text-med-dark);
-    }
-    
-    .EJ1H8e, .ePyQFb {
-        /* previous grade string and submission time string */
+    .cSyPgb {
+        /* sub-header */
         color: var(--text-dark);
     }
-    
-    .xU1KDc.fxlT2b {
-        /* submitted file */
-        background-color: #212121;
-    }
-    .iymVqd {
-        border-right-color: #313131;
-    }
-    
-    .AcK03d .Unei2d, .AcK03d .HNSHbb, .AcK03d .KmSns {
-        /* section borders */
+    .nl5VRd {
+        /* entire header */
         border-color: var(--border-normal);
-    }
-    
-    .AkVYk .Yalane:before, .D3oBEe .n9IS1:before {
-        /* private comment field border and grade entry field border */
-        border-color: var(--border-ultra-heavy);
-    }
-    
-    .gjmhNd {
-        /* sidebar sidebar */
-        box-shadow: none;
-        border-right: 1px solid var(--border-normal);
-    }
-    
-    .WbZEIe {
-        /* background behind student-submitted work while drive viewer is loading */
-        background-color: #121212;
-    }
-    
-    
-    /* join class from link card page */
-    .CSivxe {
-        /* top section background */
-        background-color: #303030;
-    }
-    .Hxzuyb {
-        /* classroom logo title */
-        filter: invert(1);
     }
     .tLDEHd {
-        /* text description */
-        color: var(--text-bright);
+        /* content */
+        color: var(--text-med);
     }
-}
-@-moz-document domain("ogs.google.com") {
-    /* google apps menu */
-    .EHzcec {
-        /* entire box */
-        background: rgba( 0, 0, 0, 0.25);
-        box-shadow: 0 0 5px #121212;
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        border-radius: 10px;
-        border: 1px solid #33333360;
+    .ar1wE .eqqrO, .ySjuvd .eqqrO {
+        /* comment section */
+        border-color: var(--border-normal);
     }
-    .Rq5Gcb {
-        /* items text */
-        color: white;
+    .z3vRcc {
+        /* 'your work' title */
+        color: var(--text-med-dark);
     }
-    .tX9u1b:hover,
-    .tX9u1b:active,
-    .tX9u1b:active:focus {
-        /* items hover */
-        background-color: #00000048;
+    .Niache {
+        /* attachment inner border */
+        border-color: var(--border-normal);
     }
-    .tX9u1b:hover .Rq5Gcb,
-    .tX9u1b:active:hover .Rq5Gcb,
-    .o07G5 .tX9u1b:active .Rq5Gcb,
-    .o07G5 .tX9u1b:active:hover .Rq5Gcb {
-        /* items hover/drag text */
-        background-color: transparent;
+    /* TODO PAGE */
+    .WOPwXe {
+        /* section titles */
+        color: var(--text-med);
     }
-    .o07G5 .tX9u1b:active,
-    .o07G5 .tX9u1b:active:focus {
-        /* items drag */
-        background-color: #00000048;
-        border-color: transparent;
+    .MHxtic:not(:last-child), .LKqFXc {
+        /* border between classwork items */
+        border-color: var(--border-normal);
+    }
+    .MHxtic:hover {
+        /* classwork item on hover */
         box-shadow: none;
+        background-color: var(--bg-1);
     }
-    .dGrefb {
-        /* borders */
-        border-color: #33333360;
+    .asQXV-FGzYL {
+        /* submission status / grade info */
+        color: var(--text-med-dark);
     }
-    .NQV3m {
-        /* 'more from google workplace' button */
-        background-color: #00000060;
-        border-color: #33333360;
-        transition: box-shadow 0.2s;
+    /* CALENDAR PAGE */
+    .Eajscb .vT1Gyc.N4XV7d {
+        /* date */
+        color: var(--text-med);
     }
-    .NQV3m:hover,
-    .NQV3m:active,
-    .NQV3m:active:focus {
-        /* 'more from google workplace' button hover */
-        background-color: #00000080;
-        border-color: #33333360;
-        box-shadow: 0 0 5px #12121260;
+    .RIDjNe {
+        /* border between days */
+        border-color: var(--border-normal);
     }
-    
-    .LVal7b {
-        background-color: transparent;
+    /* SETTINGS PAGE */
+    .saYe1e {
+        /* setting section titles */
+        color: var(--text-med-bright);
+    }
+    .ViCi4 {
+        /* setting descriptions */
+        color: var(--text-med-dark);
+    }
+    .eBlXUe-l6JLsf::before {
+        /* switch track */
+        background-color: var(--bg-2);
+        border-color: var(--border-normal);
+    }
+    .eBlXUe-scr2fc-OWXEXe-uqeOfd:hover .eBlXUe-l6JLsf::before {
+        /* switch track hover */
+        background-color: var(--bg-3);
+        border-color: var(--border-med-heavy);
+    }
+    .eBlXUe-uMhiad::before {
+        /* switch button */
+        background-color: var(--text-med);
+        border-color: var(--border-heavy);
+    }
+    .eBlXUe-scr2fc-OWXEXe-uqeOfd:hover .eBlXUe-uMhiad::before {
+        /* switch button hover */
+        background-color: var(--text-med-bright);
+        border-color: var(--border-ultra-heavy);
+    }
+    .E5f6Vd {
+        /* separation border */
+        border-color: var(--border-normal);
+    }
+    .tDxNLe {
+        /* collapsed section title */
+        color: var(--text-med-bright);
     }
 }
