@@ -8,6 +8,13 @@ The theme is available through [userstyles.world](http://www.userstyles.world) v
 
 
 ### Changelog
+v.2.0.0
+Thanks to Google's material redesign, much of my existing code was broken. So much so that I opted to completely rewrite this style. As a by-product, it's now much smaller and cleaner. And of course, it supports the latest version of Google Classroom.
+Unfortunately, this version does not yet support the teacher view, but a version with teacher support is coming soon.
+
+v.1.5.8
+Fix bugs introduced by Google
+
 v.1.5.7
 Fix minor bugs introduced by Google
 Improve rich text control consistency
